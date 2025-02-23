@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hermes Rollerskate Academy - Learn, practice, and enjoy roller skating with expert guidance.">
+    <title>Hermes Rollerskate Academy</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="icon" href="photo/logo.png">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    
+</head>
+    <body>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get current page URL
+                let currentPage = window.location.pathname.split("/").pop();
+        
+                // Select all navigation links
+                let navLinks = document.querySelectorAll(".nav-link");
+        
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === currentPage) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        </script>
+        
+        <!-- HEADER -->
+        <header>
+            <h1 id="welcomeText"></h1>
+        </header>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const text = "Welcome to Hermes Rollerskate Academy!";
+                let index = 0;
+                function typeEffect() {
+                    if (index < text.length) {
+                        document.getElementById("welcomeText").innerHTML += text.charAt(index);
+                        index++;
+                        setTimeout(typeEffect, 100);
+                    }
+                }
+                typeEffect();
+            });
+        </script>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="HomePage.html">
+                        <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
+                    </a>
+                </li>
+                <li><a href="whoweare.html" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
+                <li><a href="classes.html" data-en="Classes" data-gr="Μαθήματα">Classes</a></li>
+                <li><a href="activities.html" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
+                <li><a href="prices-discounts.html" data-en="Prices & Discounts" data-gr="Τιμές & Εκπτώσεις">Prices & Discounts</a></li>
+                <li><a href="benefits.html" data-en="Benefits" data-gr="Οφέλη">Benefits</a></li>
+                <li><a href="merchandise.html" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- News Section -->
+            <section class="news">
+                <h2 data-en="Latest News" data-gr="Τελευταία Νέα">Latest News</h2>
+                <p data-en="Stay updated with our latest events and announcements!" data-gr="Μείνετε ενημερωμένοι με τα τελευταία μας νέα και ανακοινώσεις!">Stay updated with our latest events and announcements!</p>
+            </section>
+
+            <!-- Three Column Layout -->
+            <section class="grid-container">
+                <div class="grid-item">
+                    <h3 data-en="Classes" data-gr="Μαθήματα">Classes</h3>
+                    <p data-en="📍 Saturday 13:55-14:55, Sunday 13:55-14:55" data-gr="📍 Σάββατο 13:55-14:55, Κυριακή 13:55-14:55">📍 Saturday 13:55-14:55, Sunday 13:55-14:55</p>
+                    <p data-en="📍 Location: [Your Academy's Location]" data-gr="📍 Τοποθεσία: [Η Τοποθεσία της Ακαδημίας σας]">📍 Location: [Your Academy's Location]</p>
+                </div>
+                <div class="grid-item">
+                    <h3 data-en="Levels" data-gr="Επίπεδα">Levels</h3>
+                    <p data-en="1️⃣ Beginner" data-gr="1️⃣ Άρχαριοι">1️⃣ Beginner</p>
+                    <p data-en="2️⃣ Intermediate" data-gr="2️⃣ Μεσαίο">2️⃣ Intermediate</p>
+                    <p data-en="3️⃣ Advanced" data-gr="3️⃣ Προχωρημένο">3️⃣ Advanced</p>
+                </div>
+                <div class="grid-item">
+                    <h3 data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</h3>
+                    <p data-en="🏏 Snow Ski Lessons" data-gr="🏏 Μαθήματα Σκι στο Χιόνι">🏏 Snow Ski Lessons</p>
+                    <p data-en="🏉 Other Fun Activities Coming Soon!" data-gr="🏉 Άλλες Διασκεδαστικές Δραστηριότητες Έρχονται Σύντομα!">🏉 Other Fun Activities Coming Soon!</p>
+                </div>
+            </section>
+
+
+            <!-- Merchandise Section -->
+            <section class="merchandise">
+                <h2 data-en="Merchandise" data-gr="Εμπορεύματα">Merchandise</h2>
+                <p data-en="👕 Get your official academy T-shirts and more!" data-gr="👕 Αποκτήστε τα επίσημα μπλουζάκια της ακαδημίας και άλλα!">👕 Get your official academy T-shirts and more!</p>
+            </section>
+
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-container">
+
+                <!-- Newsletter Signup -->
+                <div class="footer-section">
+                    <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
+                    <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers." data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">Subscribe to our newsletter for the latest class schedules, events, and special offers.</p>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Policies & Information in Footer -->
+                <div class="footer-section">
+                    <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
+                    <ul>
+                        <li><a href="policies.html#terms" data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
+                        <li><a href="policies.html#privacy" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
+                        <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
+                        <li><a href="policies.html#safety" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+
+            <!-- Find us -->
+            <div class="footer-section">
+                <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
+                <p data-en="Learn more about our mission, instructors, and training programs." 
+                data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
+                    Learn more about our mission, instructors, and training programs.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
+                    <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
+                    <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="footer-section">
+                <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+                <p><strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
+                    <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank" 
+                    data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">Zografou, Attica</a>
+                </p>            
+                <p><strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
+                    <a href="tel:+306955655189">+306955655189</a>
+                </p>
+                <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
+                data-en="📧 Email: andreaskountouras@hotmail.com"
+                data-gr="📧 Email: andreaskountouras@hotmail.com">📧 Email: andreaskountouras@hotmail.com</a>
+                <p><strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong> 
+                    <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New" 
+                        data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
+                        Saturday 13:55-14:55, Sunday 13:55-14:55 New
+                    </span>
+                </p>
+                <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
+            </div>
+
+            <!-- Network Partners -->
+            <div class="footer-section partners">
+                <h2 data-en="Network Partners" data-gr="Συνεργάτες Δικτύου">Network Partners</h2>
+                <div class="partners-logos">
+                    <a href="https://archimedes.uoa.gr/" target="_blank">
+                        <img src="photo/archimedes.png" alt="Archimedes UOA" 
+                            data-en="Archimedes UOA" data-gr="Αρχιμήδης ΕΚΠΑ">
+                    </a>
+                    <a href="https://powerskate.eu/" target="_blank">
+                        <img src="photo/powerskate.png" alt="PowerSkate">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved." 
+                 data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+                    &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+        
+    </body>
+</html>
