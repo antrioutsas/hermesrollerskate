@@ -97,9 +97,3 @@ button {
 button:hover {
     background: #005bb5;
 }
-
-/* Ensure the page allows scrolling */
-html, body {
-    height: 100%;
-    overflow-y: auto;
-}
