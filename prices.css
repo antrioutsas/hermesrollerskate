@@ -33,6 +33,34 @@ th {
     color: white;
 }
 
+/* Styling for Schools Pricing */
+#schools table {
+    border: 2px solid #0073e6; /* Slightly thicker border */
+}
+
+#schools th {
+    background-color: #005bb5; /* Slightly darker blue for distinction */
+}
+
+#schools tbody tr:nth-child(odd) {
+    background-color: #f1f7ff; /* Light blue alternating rows */
+}
+
+#schools tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
 /* Lists */
 ul {
     list-style-type: none;
@@ -69,8 +97,9 @@ button {
 button:hover {
     background: #005bb5;
 }
+
 /* Ensure the page allows scrolling */
 html, body {
     height: 100%;
-    overflow-y: auto; /* Ensures vertical scrolling is possible */
+    overflow-y: auto;
 }
