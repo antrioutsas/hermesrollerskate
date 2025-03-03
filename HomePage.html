@@ -123,28 +123,38 @@
            data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">
            Subscribe to our newsletter for the latest class schedules, events, and special offers.
         </p>
-        
-        <!-- ENGLISH Newsletter Form (replace 'Dx8yTp' with your actual English form ID if needed) -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
 
-        <!-- GREEK Newsletter Button (replace 'ebE82x' with your actual Greek form ID if needed) -->
-        <!-- Visible text will switch based on chosen language. -->
-        <button class="ml-onclick-form"
-                onclick="ml('show', 'ebE82x', true)"
-                data-en="Click here to show the Greek newsletter form"
-                data-gr="Κάντε κλικ εδώ για να εμφανίσετε τη φόρμα στα Ελληνικά">
-          Click here to show the Greek newsletter form
-        </button>
+        <!-- ENGLISH Newsletter Form (data-en-only) -->
+        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
+
+        <!-- GREEK Newsletter Form (data-gr-only) -->
+        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
       </div>
 
       <!-- Policies & Information in Footer -->
       <div class="footer-section">
         <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
         <ul>
-          <li><a href="policies.html#terms"   data-en="Terms & Conditions"        data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-          <li><a href="policies.html#privacy" data-en="Privacy Policy"            data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-          <li><a href="policies.html#refund"  data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-          <li><a href="policies.html#safety"  data-en="Safety Guidelines"         data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+          <li>
+            <a href="policies.html#terms"
+               data-en="Terms & Conditions"
+               data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="policies.html#privacy"
+               data-en="Privacy Policy"
+               data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="policies.html#refund"
+               data-en="Refund & Cancellation Policy"
+               data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a>
+          </li>
+          <li>
+            <a href="policies.html#safety"
+               data-en="Safety Guidelines"
+               data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a>
+          </li>
         </ul>
       </div>
 
@@ -228,11 +238,13 @@
     }
 
     function updateLanguage(lang) {
+      // Stop typed animation if it's running
       if (typedTimer) {
         clearTimeout(typedTimer);
         typedTimer = null;
       }
 
+      // Switch flag icon
       const flagImage = document.querySelector('#language-button img');
       if (lang === 'en') {
         flagImage.src = 'photo/greeceflag.png';
@@ -242,6 +254,7 @@
         flagImage.alt = 'English Language';
       }
 
+      // Update all data-en/data-gr text
       const elements = document.querySelectorAll('[data-en]');
       elements.forEach(el => {
         if (el.tagName.toLowerCase() === 'title') {
@@ -250,7 +263,7 @@
           (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
           && el.hasAttribute('placeholder')
         ) {
-          // For form inputs placeholders
+          // For form placeholders
           el.placeholder = el.getAttribute(`data-${lang}`);
         } else if (el.tagName.toLowerCase() === 'option') {
           // For select options
@@ -261,7 +274,7 @@
         }
       });
 
-      // Re-run typed text on welcomeElement
+      // Typed text effect for the heading
       const welcomeElement = document.getElementById('welcomeText');
       if (welcomeElement) {
         welcomeElement.innerHTML = '';
@@ -278,6 +291,18 @@
         typeEffect();
       }
 
+      // Finally, show/hide correct newsletter form
+      const enForms = document.querySelectorAll('[data-en-only]');
+      const grForms = document.querySelectorAll('[data-gr-only]');
+      if (lang === 'en') {
+        enForms.forEach(f => f.style.display = 'block');
+        grForms.forEach(f => f.style.display = 'none');
+      } else {
+        enForms.forEach(f => f.style.display = 'none');
+        grForms.forEach(f => f.style.display = 'block');
+      }
+
+      // Set <html> lang attribute
       document.documentElement.lang = lang;
     }
 
