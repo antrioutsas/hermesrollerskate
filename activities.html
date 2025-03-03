@@ -33,12 +33,12 @@
           <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
         </a>
       </li>
-      <li><a href="whoweare.html"       class="nav-link" data-en="Who We Are"       data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"        class="nav-link" data-en="Classes"          data-gr="Μαθήματα">Classes</a></li>
-      <li><a href="activities.html"     class="nav-link" data-en="More Activities"  data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html"class="nav-link" data-en="Prices & Policies"data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-      <li><a href="benefits.html"       class="nav-link" data-en="Benefits"         data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html"    class="nav-link" data-en="Merchandise"      data-gr="Προϊόντα">Merchandise</a></li>
+      <li><a href="whoweare.html"        class="nav-link" data-en="Who We Are"        data-gr="Ποιοι Είμαστε">Who We Are</a></li>
+      <li><a href="classes.html"         class="nav-link" data-en="Classes"           data-gr="Μαθήματα">Classes</a></li>
+      <li><a href="activities.html"      class="nav-link" data-en="More Activities"   data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
+      <li><a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
+      <li><a href="benefits.html"        class="nav-link" data-en="Benefits"          data-gr="Οφέλη">Benefits</a></li>
+      <li><a href="merchandise.html"     class="nav-link" data-en="Merchandise"       data-gr="Προϊόντα">Merchandise</a></li>
       <li class="nav-lang">
         <button id="language-button" onclick="toggleLanguage()">
           <img src="photo/greeceflag.png" alt="Greece Language">
@@ -113,32 +113,26 @@
          <strong>What You Will Learn:</strong>
       </p>
       <ul>
-        <li data-en="✅ Proper stance and weight distribution on skis" 
-            data-gr="✅ Σωστή στάση και κατανομή βάρους στα σκι">
-            ✅ Proper stance and weight distribution on skis
+        <li data-en="✅ Proper stance and weight distribution on skis" data-gr="✅ Σωστή στάση και κατανομή βάρους στα σκι">
+          ✅ Proper stance and weight distribution on skis
         </li>
-        <li data-en="✅ Basic movement, turns, and stopping techniques"
-            data-gr="✅ Βασική κίνηση, στροφές και τεχνικές σταματήματος">
-            ✅ Basic movement, turns, and stopping techniques
+        <li data-en="✅ Basic movement, turns, and stopping techniques" data-gr="✅ Βασική κίνηση, στροφές και τεχνικές σταματήματος">
+          ✅ Basic movement, turns, and stopping techniques
         </li>
-        <li data-en="✅ Introduction to small slopes and ski control"
-            data-gr="✅ Εισαγωγή σε μικρές πλαγιές και έλεγχος σκι">
-            ✅ Introduction to small slopes and ski control
+        <li data-en="✅ Introduction to small slopes and ski control" data-gr="✅ Εισαγωγή σε μικρές πλαγιές και έλεγχος σκι">
+          ✅ Introduction to small slopes and ski control
         </li>
       </ul>
       <p data-en="<strong>Class Details:</strong>" data-gr="<strong>Λεπτομέρειες Μαθήματος:</strong>">
          <strong>Class Details:</strong>
       </p>
-      <p data-en="<strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)"
-         data-gr="<strong>🕒 Διάρκεια:</strong> Μάθημα μισής ημέρας (3–4 ώρες)">
+      <p data-en="<strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)" data-gr="<strong>🕒 Διάρκεια:</strong> Μάθημα μισής ημέρας (3–4 ώρες)">
          <strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)
       </p>
-      <p data-en="<strong>👥 Group Size:</strong> 8–12 students"
-         data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> 8–12 μαθητές">
+      <p data-en="<strong>👥 Group Size:</strong> 8–12 students" data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> 8–12 μαθητές">
          <strong>👥 Group Size:</strong> 8–12 students
       </p>
-      <p data-en="<strong>📍 Location:</strong> Ski resort (to be announced)"
-         data-gr="<strong>📍 Τοποθεσία:</strong> Χιονοδρομικό κέντρο (θα ανακοινωθεί)">
+      <p data-en="<strong>📍 Location:</strong> Ski resort (to be announced)" data-gr="<strong>📍 Τοποθεσία:</strong> Χιονοδρομικό κέντρο (θα ανακοινωθεί)">
          <strong>📍 Location:</strong> Ski resort (to be announced)
       </p>
     </div>
@@ -187,10 +181,11 @@
            Subscribe to our newsletter for the latest class schedules, events, and special offers.
         </p>
 
-        <!-- Αντί για form action="subscribe.php", βάζουμε MailerLite embed -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
-        <!-- ↑ Αντικαταστήστε το Dx8yTp με το ID της φόρμας σας από το MailerLite -->
+        <!-- ENGLISH Newsletter Form -->
+        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
 
+        <!-- GREEK Newsletter Form (hidden by default) -->
+        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
       </div>
 
       <!-- Policies & Information in Footer -->
@@ -317,7 +312,18 @@
         }
       });
 
-      // set <html> lang attribute
+      // Show/hide the correct newsletter form
+      const enForms = document.querySelectorAll('[data-en-only]');
+      const grForms = document.querySelectorAll('[data-gr-only]');
+      if (lang === 'en') {
+        enForms.forEach(f => f.style.display = 'block');
+        grForms.forEach(f => f.style.display = 'none');
+      } else {
+        enForms.forEach(f => f.style.display = 'none');
+        grForms.forEach(f => f.style.display = 'block');
+      }
+
+      // Set <html> lang attribute
       document.documentElement.lang = lang;
     }
   </script>
@@ -328,7 +334,7 @@
     l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
     n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 
-    // Βάλτε το δικό σας account ID αντί για 1363757
+    // Replace 1363757 with your real MailerLite account ID
     ml('account', '1363757');
   </script>
 
