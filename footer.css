@@ -1,67 +1,65 @@
-/* ============================= */
-/* FOOTER */
-/* ============================= */
+/* =============================
+   FOOTER BASE STYLES
+============================= */
+
 footer {
     background-color: #1a1a1a;
     color: #fff;
     padding: 50px 20px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    position: relative; /* Ensure the footer is relative */
-}
-
-.footer-container {
+    position: relative;
+  }
+  
+  .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
-}
-
-.footer-section {
+  }
+  
+  .footer-section {
     flex: 1;
     min-width: 200px;
     margin: 10px;
     text-align: center;
-
-}
-
-.footer-section h3 {
+  }
+  
+  .footer-section h3 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #ffcc00;
     font-weight: 600;
     position: relative;
     display: inline-block;
-}
-
-.footer-section h3::after {
+  }
+  .footer-section h3::after {
     content: '';
     display: block;
     height: 2px;
     background-color: #ffcc00;
     margin-top: 5px;
-}
-
-.footer-section p,
-.footer-section a {
+  }
+  
+  .footer-section p,
+  .footer-section a {
     font-size: 14px;
     color: #ccc;
     text-decoration: none;
     line-height: 1.8;
     transition: color 0.3s ease-in-out;
-}
-
-.footer-section a:hover {
+  }
+  .footer-section a:hover {
     color: #ffcc00;
-}
-
-.footer-section form {
+  }
+  
+  /* FORM STYLES (manually-coded forms) */
+  .footer-section form {
     margin-top: 15px;
-}
-
-.footer-section input {
+  }
+  .footer-section input {
     width: 100%;
     padding: 12px;
     border: 1px solid #444;
@@ -71,14 +69,12 @@ footer {
     background-color: #2a2a2a;
     color: #fff;
     transition: border-color 0.3s ease-in-out;
-}
-
-.footer-section input:focus {
+  }
+  .footer-section input:focus {
     border-color: #ffcc00;
     outline: none;
-}
-
-.footer-section button {
+  }
+  .footer-section button {
     background-color: #ffcc00;
     color: #1a1a1a;
     border: none;
@@ -88,30 +84,78 @@ footer {
     font-size: 14px;
     font-weight: 600;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.footer-section button:hover {
+  }
+  .footer-section button:hover {
     background-color: #ffaa00;
     transform: scale(1.05);
-}
-
-.footer-bottom {
-    margin-top: 40px;
-    font-size: 12px;
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    color: #aaa;
-    text-align: center; /* Center the footer bottom text */
-}
-.footer-bottom {
+  }
+  
+  /* FOOTER BOTTOM */
+  .footer-bottom {
     margin-top: 40px;
     font-size: 12px;
     border-top: 1px solid #444;
     padding-top: 20px;
     color: #aaa;
     text-align: center;
-    width: 100%; /* Ensures it spans the entire width */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    align-items: center; /* Aligns content vertically */
-}
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* =============================
+     NEWSLETTER (MAILERLITE EMBED)
+  ============================= */
+  
+  /* Αφορά το αυτόματο form της MailerLite (ml-embedded) */
+  .footer-section .ml-embedded form {
+    /* Παραδείγματα στυλ, διαλέγετε ελεύθερα */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* για κενό πάνω-κάτω */
+    gap: 10px;        /* απόσταση μεταξύ πεδίων */
+  }
+  
+  /* Πεδίο email του MailerLite */
+  .footer-section .ml-embedded input[type="email"] {
+    width: 100%;
+    max-width: 300px; /* Προαιρετικά, για να μη γίνει τεράστιο σε μεγάλα screens */
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: #2a2a2a;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .footer-section .ml-embedded input[type="email"]:focus {
+    border-color: #ffcc00;
+    outline: none;
+  }
+  
+  /* Κουμπί υποβολής MailerLite */
+  .footer-section .ml-embedded button[type="submit"] {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  .footer-section .ml-embedded button[type="submit"]:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+  }
+  
+  /* Προαιρετικά, κρύψτε τυχόν default MailerLite branding, αν το πλάνο σας το επιτρέπει:
+  .footer-section .ml-embedded .powered-by {
+    display: none !important;
+  }
+  */
+  
