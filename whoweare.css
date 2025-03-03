@@ -1,0 +1,125 @@
+/* ============================= */
+/* WHO WE ARE SECTION */
+/* ============================= */
+
+#who-we-are {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Flexbox Layout for Content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Text Content */
+.about-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h3 {
+    color: #0073e6;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.about-text li:hover {
+    transform: translateX(8px);
+    color: #0073e6;
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+/* ============================= */
+/* MEET THE TEAM SECTION */
+/* ============================= */
+#meet-the-team {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.staff-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.staff-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.staff-member h4 {
+    color: #0073e6;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.staff-member p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
