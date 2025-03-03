@@ -1,160 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who We Are</title>
-    <link rel="stylesheet" href="whoweare.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="icon" href="photo/logo.png">
-    <link rel="stylesheet" href="navigation.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</title>
+  <link rel="stylesheet" href="whoweare.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="icon" href="photo/logo.png">
+  <link rel="stylesheet" href="navigation.css">
 </head>
-    <body>
-        <!-- NAVIGATION -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="HomePage.html">
-                        <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-                    </a>
-                </li>
-                <li><a href="whoweare.html" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-                <li><a href="classes.html" data-en="Classes" data-gr="Μαθήματα">Classes</a></li>
-                <li><a href="activities.html" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-                <li><a href="prices-policies.html" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-                <li><a href="benefits.html" data-en="Benefits" data-gr="Οφέλη">Benefits</a></li>
-                <li><a href="merchandise.html" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a></li>
-                <li class="nav-lang">
-                    <button id="language-button">
-                        <img src="photo/greeceflag.png" alt="Greece Language">
-                    </button>
-                </li>                              
-            </ul>
-        </nav>
+<body>
 
-        <!-- WHO WE ARE -->
-        <section id="who-we-are">
-            <div class="container">
-                <h2>Who We Are</h2>
-                <p>
-                    Welcome to <strong>Hermes Roller Skating Academy</strong>, a place where passion for skating meets expert coaching.
-                    Whether you are a beginner or an advanced skater, we are here to guide you on your journey to mastering roller skating.
-                </p>
+  <!-- Optional script for highlighting current nav link -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Our Mission</h3>
-                        <p>
-                            Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages.
-                            We believe in fostering skills, confidence, and a sense of community through our structured training programs.
-                        </p>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li>
+        <a href="HomePage.html">
+          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
+        </a>
+      </li>
+      <li><a href="whoweare.html"       class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
+      <li><a href="classes.html"        class="nav-link" data-en="Classes"    data-gr="Μαθήματα">Classes</a></li>
+      <li><a href="activities.html"     class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
+      <li><a href="prices-policies.html"class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
+      <li><a href="benefits.html"       class="nav-link" data-en="Benefits"   data-gr="Οφέλη">Benefits</a></li>
+      <li><a href="merchandise.html"    class="nav-link" data-en="Merchandise"data-gr="Προϊόντα">Merchandise</a></li>
+      <li class="nav-lang">
+        <button id="language-button" onclick="toggleLanguage()">
+          <img src="photo/greeceflag.png" alt="Greece Language">
+        </button>
+      </li>
+    </ul>
+  </nav>
 
-                        <h3>What Makes Us Different?</h3>
-                        <ul>
-                            <li>🏆 <strong>Expert Coaches</strong>: Certified and experienced trainers.</li>
-                            <li>🛼 <strong>Diverse Classes</strong>: From beginners to freestyle, racing, and dancing.</li>
-                            <li>🌍 <strong>Community & Events</strong>: Skating meetups, competitions, and city tours.</li>
-                            <li>🎓 <strong>Progressive Training</strong>: Learn at your own pace with personalized coaching.</li>
-                        </ul>
-                    </div>
+  <!-- WHO WE ARE -->
+  <section id="who-we-are">
+    <div class="container">
+      <h2 data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</h2>
+      <p data-en="Welcome to <strong>Hermes Roller Skating Academy</strong>, a place where passion for skating meets expert coaching. Whether you are a beginner or an advanced skater, we are here to guide you on your journey to mastering roller skating." 
+         data-gr="Καλώς ήρθατε στην <strong>Ακαδημία Hermes Roller Skating</strong>, ένα μέρος όπου το πάθος για το πατινάζ συναντά την εξειδικευμένη καθοδήγηση. Είτε είστε αρχάριος είτε προχωρημένος, είμαστε εδώ για να σας καθοδηγήσουμε στο ταξίδι προς την τελειοποίηση του πατινάζ.">
+         Welcome to <strong>Hermes Roller Skating Academy</strong>, a place where passion for skating meets expert coaching. Whether you are a beginner or an advanced skater, we are here to guide you on your journey to mastering roller skating.
+      </p>
 
-                    <div class="about-image">
-                        <img src="photo/whoweare.png" alt="Hermes Academy Photo">
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 data-en="Our Mission" data-gr="Η Αποστολή Μας">Our Mission</h3>
+          <p data-en="Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs." 
+             data-gr="Η αποστολή μας είναι να προωθούμε τη χαρά του πατινάζ, παρέχοντας ένα διασκεδαστικό και ασφαλές περιβάλλον για όλες τις ηλικίες. Πιστεύουμε στην ανάπτυξη δεξιοτήτων, αυτοπεποίθησης και μιας αίσθησης κοινότητας μέσω των δομημένων προγραμμάτων εκπαίδευσης.">
+             Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs.
+          </p>
 
-        <!-- MEET THE TEAM -->
-        <section id="meet-the-team">
-            <div class="container">
-                <h2>Meet Our Team</h2>
-                <p>Our dedicated team consists of passionate professionals who make skating safe, fun, and educational.</p>
+          <h3 data-en="What Makes Us Different?" data-gr="Τι Μας Κάνει Διαφορετικούς;">What Makes Us Different?</h3>
+          <ul>
+            <li data-en="🏆 <strong>Expert Coaches</strong>: Certified and experienced trainers."
+                data-gr="🏆 <strong>Πιστοποιημένοι Προπονητές</strong>: Πιστοποιημένοι και έμπειροι προπονητές.">
+                🏆 <strong>Expert Coaches</strong>: Certified and experienced trainers.
+            </li>
+            <li data-en="🛼 <strong>Diverse Classes</strong>: From beginners to freestyle, racing, and dancing."
+                data-gr="🛼 <strong>Ποικίλα Μαθήματα</strong>: Από αρχάριους μέχρι freestyle, αγωνιστικό και χορευτικό.">
+                🛼 <strong>Diverse Classes</strong>: From beginners to freestyle, racing, and dancing.
+            </li>
+            <li data-en="🌍 <strong>Community & Events</strong>: Skating meetups, competitions, and city tours."
+                data-gr="🌍 <strong>Κοινότητα & Εκδηλώσεις</strong>: Συναντήσεις πατινάζ, αγώνες και περιηγήσεις στην πόλη.">
+                🌍 <strong>Community & Events</strong>: Skating meetups, competitions, and city tours.
+            </li>
+            <li data-en="🎓 <strong>Progressive Training</strong>: Learn at your own pace with personalized coaching."
+                data-gr="🎓 <strong>Προοδευτική Εκπαίδευση</strong>: Μάθετε με τον δικό σας ρυθμό με εξατομικευμένη καθοδήγηση.">
+                🎓 <strong>Progressive Training</strong>: Learn at your own pace with personalized coaching.
+            </li>
+          </ul>
+        </div>
 
-                <div class="staff-list">
-                    <div class="staff-member">
-                        <img src="photo/instructor-andreas.png" alt="Instructor Andreas Kountouras">
-                        <h4>🏅 Instructor: Andreas Kountouras</h4>
-                        <p>Our head coach, a certified skating expert with years of experience in training and competitions.</p>
-                    </div>
+        <div class="about-image">
+          <img src="photo/whoweare.png" alt="Hermes Academy Photo">
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    <div class="staff-member">
-                        <img src="photo/assistant-georgia.png" alt="Assistant Georgia Papazoglou">
-                        <h4>🛼 Assistant: Georgia Papazoglou</h4>
-                        <p>Supporting skaters in perfecting their techniques and boosting confidence on wheels.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- MEET THE TEAM -->
+  <section id="meet-the-team">
+    <div class="container">
+      <h2 data-en="Meet Our Team" data-gr="Γνωρίστε την Ομάδα μας">Meet Our Team</h2>
+      <p data-en="Our dedicated team consists of passionate professionals who make skating safe, fun, and educational."
+         data-gr="Η αφοσιωμένη ομάδα μας αποτελείται από επαγγελματίες με πάθος που καθιστούν το πατινάζ ασφαλές, διασκεδαστικό και εκπαιδευτικό.">
+         Our dedicated team consists of passionate professionals who make skating safe, fun, and educational.
+      </p>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="footer-container">
+      <div class="staff-list">
+        <div class="staff-member">
+          <img src="photo/instructor-andreas.png" alt="Instructor Andreas Kountouras">
+          <h4 data-en="🏅 Instructor: Andreas Kountouras" data-gr="🏅 Εκπαιδευτής: Ανδρέας Κουντούρας">
+            🏅 Instructor: Andreas Kountouras
+          </h4>
+          <p data-en="Our head coach, a certified skating expert with years of experience in training and competitions."
+             data-gr="Ο επικεφαλής προπονητής μας, πιστοποιημένος ειδικός στο πατινάζ με πολυετή εμπειρία σε εκπαίδευση και αγώνες.">
+             Our head coach, a certified skating expert with years of experience in training and competitions.
+          </p>
+        </div>
 
-                <!-- Newsletter Signup -->
-                <div class="footer-section">
-                    <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-                    <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers." data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">Subscribe to our newsletter for the latest class schedules, events, and special offers.</p>
-                    <form action="#" method="post">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
-                    </form>
-                </div>
+        <div class="staff-member">
+          <img src="photo/assistant-georgia.png" alt="Assistant Georgia Papazoglou">
+          <h4 data-en="🛼 Assistant: Georgia Papazoglou" data-gr="🛼 Βοηθός: Γεωργία Παπαζόγλου">
+            🛼 Assistant: Georgia Papazoglou
+          </h4>
+          <p data-en="Supporting skaters in perfecting their techniques and boosting confidence on wheels."
+             data-gr="Υποστηρίζει τους αθλούμενους στη βελτίωση των τεχνικών τους και την ενίσχυση της αυτοπεποίθησης πάνω στις ρόδες.">
+             Supporting skaters in perfecting their techniques and boosting confidence on wheels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Policies & Information in Footer -->
-                <div class="footer-section">
-                    <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
-                    <ul>
-                        <li><a href="policies.html#terms" data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-                        <li><a href="policies.html#privacy" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-                        <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-                        <li><a href="policies.html#safety" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
-                    </ul>
-                </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
 
-            <!-- Find us -->
-            <div class="footer-section">
-                <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-                <p data-en="Learn more about our mission, instructors, and training programs." 
-                data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-                    Learn more about our mission, instructors, and training programs.
-                </p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-                    <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-                    <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-                    <a href="#" target="_blank">YouTube</a>
-                </div>
-            </div>
+      <!-- Newsletter Signup (MailerLite) -->
+      <div class="footer-section">
+        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
+        <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers."
+           data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">
+           Subscribe to our newsletter for the latest class schedules, events, and special offers.
+        </p>
+        <!-- MailerLite Embedded Form -->
+        <div class="ml-embedded" data-form="Dx8yTp"></div>
+        <!-- Αλλάξτε το Dx8yTp με το ID της δικής σας φόρμας MailerLite -->
+      </div>
 
-            <!-- Contact Us -->
-            <div class="footer-section">
-                <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
-                <p><strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
-                    <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank" 
-                    data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">Zografou, Attica</a>
-                </p>            
-                <p><strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
-                    <a href="tel:+306955655189">+306955655189</a>
-                </p>
-                <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-                data-en="📧 Email: andreaskountouras@hotmail.com"
-                data-gr="📧 Email: andreaskountouras@hotmail.com">📧 Email: andreaskountouras@hotmail.com</a>
-                <p><strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong> 
-                    <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New" 
-                        data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-                        Saturday 13:55-14:55, Sunday 13:55-14:55 New
-                    </span>
-                </p>
-                <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
-            </div>
+      <!-- Policies & Information in Footer -->
+      <div class="footer-section">
+        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
+        <ul>
+          <li><a href="policies.html#terms"  data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
+          <li><a href="policies.html#privacy"data-en="Privacy Policy"     data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
+          <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
+          <li><a href="policies.html#safety" data-en="Safety Guidelines"  data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+        </ul>
+      </div>
 
-            <div class="footer-bottom">
-                <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved." 
-                 data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-                    &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
-                </p>
-            </div>
-        </footer>
-    </body>
+      <!-- Find us -->
+      <div class="footer-section">
+        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
+        <p data-en="Learn more about our mission, instructors, and training programs."
+           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
+           Learn more about our mission, instructors, and training programs.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
+          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
+          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
+          <a href="#" target="_blank">YouTube</a>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-section">
+        <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+        <p>
+          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
+          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
+             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
+             Zografou, Attica
+          </a>
+        </p>
+        <p>
+          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
+          <a href="tel:+306955655189">+306955655189</a>
+        </p>
+        <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
+           data-en="📧 Email: andreaskountouras@hotmail.com"
+           data-gr="📧 Email: andreaskountouras@hotmail.com">
+           📧 Email: andreaskountouras@hotmail.com
+        </a>
+        <p>
+          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
+          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
+                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
+            Saturday 13:55-14:55, Sunday 13:55-14:55 New
+          </span>
+        </p>
+        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Toggle Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const storedLang = localStorage.getItem("language") || "en";
+      updateLanguage(storedLang);
+    });
+
+    function toggleLanguage() {
+      const currentLang = localStorage.getItem("language") || "en";
+      const newLang = (currentLang === 'en') ? 'gr' : 'en';
+      localStorage.setItem("language", newLang);
+      updateLanguage(newLang);
+    }
+
+    function updateLanguage(lang) {
+      // Switch the flag image
+      const flagImage = document.querySelector('#language-button img');
+      if (lang === 'en') {
+        flagImage.src = 'photo/greeceflag.png';
+        flagImage.alt = 'Greece Language';
+      } else {
+        flagImage.src = 'photo/englandflag.jpg';
+        flagImage.alt = 'English Language';
+      }
+
+      // For all [data-en] elements
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        if (el.tagName.toLowerCase() === 'title') {
+          document.title = el.getAttribute(`data-${lang}`);
+        } else if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+                   && el.hasAttribute('placeholder')) {
+          el.placeholder = el.getAttribute(`data-${lang}`);
+        } else if (el.tagName.toLowerCase() === 'option') {
+          el.textContent = el.getAttribute(`data-${lang}`);
+        } else {
+          el.innerHTML = el.getAttribute(`data-${lang}`);
+        }
+      });
+
+      // Set HTML lang attribute
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+  <!-- MailerLite Universal Script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
+      (w[f].q=w[f].q||[]).push(arguments);},
+      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+      n.parentNode.insertBefore(l,n);})(window,document,'script',
+      'https://assets.mailerlite.com/js/universal.js','ml');
+
+    // Αλλάξτε το account ID (π.χ. 1363757) στο δικό σας
+    ml('account', '1363757');
+  </script>
+  <!-- End MailerLite Universal -->
+
+</body>
 </html>

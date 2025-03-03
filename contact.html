@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</title>
   <link rel="stylesheet" href="navigation.css">
   <link rel="stylesheet" href="footer.css">
-  <title>Contact Us</title>
+  <link rel="icon" href="photo/logo.png">
+
   <style>
     /* Basic styling for the form */
     form {
@@ -38,125 +40,218 @@
       background-color: #555;
     }
   </style>
-  </head>
-   <body>
-      <!-- NAVIGATION -->
-      <nav>
-            <ul>
-                <li>
-                    <a href="HomePage.html">
-                        <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-                    </a>
-                </li>
-                <li><a href="whoweare.html" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-                <li><a href="classes.html" data-en="Classes" data-gr="Μαθήματα">Classes</a></li>
-                <li><a href="activities.html" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-                <li><a href="prices-policies.html" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-                <li><a href="benefits.html" data-en="Benefits" data-gr="Οφέλη">Benefits</a></li>
-                <li><a href="merchandise.html" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a></li>
-                <li class="nav-lang">
-                  <button id="language-button">
-                      <img src="photo/greeceflag.png" alt="Greece Language">
-                  </button>
-              </li>   
-            </ul>
-      </nav>      
-      <h1>Contact Us</h1>
-      <form action="sendMessage.php" method="POST">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="first_name" required>
+</head>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="last_name" required>
+<body>
+  <!-- SCRIPT: Highlight current nav link (optional) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li>
+        <a href="HomePage.html">
+          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
+        </a>
+      </li>
+      <li><a href="whoweare.html"       data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
+      <li><a href="classes.html"        data-en="Classes"    data-gr="Μαθήματα">Classes</a></li>
+      <li><a href="activities.html"     data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
+      <li><a href="prices-policies.html"data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
+      <li><a href="benefits.html"       data-en="Benefits"   data-gr="Οφέλη">Benefits</a></li>
+      <li><a href="merchandise.html"    data-en="Merchandise"data-gr="Προϊόντα">Merchandise</a></li>
+      <li class="nav-lang">
+        <button id="language-button" onclick="toggleLanguage()">
+          <img src="photo/greeceflag.png" alt="Greece Language">
+        </button>
+      </li>
+    </ul>
+  </nav>
 
-        <label for="category">Category:</label>
-        <select id="category" name="category">
-          <option value="general">General Inquiry</option>
-          <option value="feedback">Feedback</option>
-          <option value="support">Support</option>
-          <option value="other">Other</option>
-        </select>
+  <!-- Page Title -->
+  <h1 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h1>
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required>
+  <!-- CONTACT FORM -->
+  <form action="sendMessage.php" method="POST">
+    <label for="fname" data-en="First Name:" data-gr="Όνομα:">First Name:</label>
+    <input type="text" id="fname" name="first_name" required data-en="First Name" data-gr="Όνομα">
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="lname" data-en="Last Name:" data-gr="Επώνυμο:">Last Name:</label>
+    <input type="text" id="lname" name="last_name" required data-en="Last Name" data-gr="Επώνυμο">
 
-        <button type="submit">Send Message</button>
-      </form>
-        <!-- FOOTER -->
-        <footer>
-          <div class="footer-container">
+    <label for="email" data-en="Email:" data-gr="Ηλεκτρονικό Ταχυδρομείο:">Email:</label>
+    <input type="email" id="email" name="email" required data-en="Email" data-gr="Ηλεκτρονικό Ταχυδρομείο">
 
-            <!-- Newsletter Signup -->
-            <div class="footer-section">
-                <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-                <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers." data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">Subscribe to our newsletter for the latest class schedules, events, and special offers.</p>
-                <form action="#" method="post">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
-                  </form>
-             </div>
+    <label for="category" data-en="Category:" data-gr="Κατηγορία:">Category:</label>
+    <select id="category" name="category" data-en="Category" data-gr="Κατηγορία">
+      <option value="general"  data-en="General Inquiry" data-gr="Γενική Ερώτηση">General Inquiry</option>
+      <option value="feedback" data-en="Feedback"        data-gr="Ανατροφοδότηση">Feedback</option>
+      <option value="support"  data-en="Support"         data-gr="Υποστήριξη">Support</option>
+      <option value="other"    data-en="Other"           data-gr="Άλλο">Other</option>
+    </select>
 
-            <!-- Policies & Information in Footer -->
-            <div class="footer-section">
-              <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
-                <ul>
-                    <li><a href="policies.html#terms" data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-                    <li><a href="policies.html#privacy" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-                    <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-                    <li><a href="policies.html#safety" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
-                </ul>
-            </div>
+    <label for="title" data-en="Title:" data-gr="Τίτλος:">Title:</label>
+    <input type="text" id="title" name="title" required data-en="Title" data-gr="Τίτλος">
 
-          <!-- Find us -->
-          <div class="footer-section">
-            <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-             <p data-en="Learn more about our mission, instructors, and training programs." 
-               data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-               Learn more about our mission, instructors, and training programs.
-             </p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-              <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-              <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-              <a href="#" target="_blank">YouTube</a>
-            </div>
-          </div>
+    <label for="message" data-en="Message:" data-gr="Μήνυμα:">Message:</label>
+    <textarea id="message" name="message" rows="5" required data-en="Message" data-gr="Μήνυμα"></textarea>
 
-          <!-- Contact Us -->
-          <div class="footer-section">
-            <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
-            <p><strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
-                <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank" 
-                data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">Zografou, Attica</a>
-            </p>            
-            <p><strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
-                  <a href="tel:+306955655189">+306955655189</a>
-            </p>
-            <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-            data-en="📧 Email: andreaskountouras@hotmail.com"
-            data-gr="📧 Email: andreaskountouras@hotmail.com">📧 Email: andreaskountouras@hotmail.com</a>
-            <p><strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong> 
-                <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New" 
-                    data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-                    Saturday 13:55-14:55, Sunday 13:55-14:55 New
-                </span>
-            </p>
-            <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
-          </div>
+    <button type="submit" data-en="Send Message" data-gr="Αποστολή Μηνύματος">Send Message</button>
+  </form>
 
-         <div class="footer-bottom">
-            <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved." 
-             data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-             &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
-            </p>
-         </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Newsletter Signup (MailerLite) -->
+      <div class="footer-section">
+        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
+        <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers."
+           data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">
+           Subscribe to our newsletter for the latest class schedules, events, and special offers.
+        </p>
+        
+        <!-- Αντικαθιστούμε το form action="subscribe.php" με MailerLite embed -->
+        <div class="ml-embedded" data-form="Dx8yTp"></div>
+        <!-- Εάν το ID της φόρμας είναι διαφορετικό, αντικαταστήστε το Dx8yTp -->
+
       </div>
-    </footer>      
-  </body>
+
+      <!-- Policies & Information in Footer -->
+      <div class="footer-section">
+        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
+        <ul>
+          <li><a href="policies.html#terms"  data-en="Terms & Conditions"        data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
+          <li><a href="policies.html#privacy"data-en="Privacy Policy"           data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
+          <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
+          <li><a href="policies.html#safety" data-en="Safety Guidelines"         data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Find us -->
+      <div class="footer-section">
+        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
+        <p data-en="Learn more about our mission, instructors, and training programs."
+           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
+           Learn more about our mission, instructors, and training programs.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
+          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
+          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
+          <a href="#" target="_blank">YouTube</a>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-section">
+        <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+        <p>
+          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
+          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
+             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
+             Zografou, Attica
+          </a>
+        </p>
+        <p>
+          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
+          <a href="tel:+306955655189">+306955655189</a>
+        </p>
+        <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
+           data-en="📧 Email: andreaskountouras@hotmail.com"
+           data-gr="📧 Email: andreaskountouras@hotmail.com">
+           📧 Email: andreaskountouras@hotmail.com
+        </a>
+        <p>
+          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong> 
+          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
+                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
+            Saturday 13:55-14:55, Sunday 13:55-14:55 New
+          </span>
+        </p>
+        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+          &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Toggle Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentLang = localStorage.getItem("language") || "en";
+      updateLanguage(currentLang);
+    });
+
+    function toggleLanguage() {
+      const currentLang = localStorage.getItem("language") || "en";
+      const newLang = (currentLang === 'en') ? 'gr' : 'en';
+      localStorage.setItem('language', newLang);
+      updateLanguage(newLang);
+    }
+
+    function updateLanguage(lang) {
+      const flagImage = document.querySelector('#language-button img');
+      const elements = document.querySelectorAll('[data-en]');
+
+      // 1) Switch the flag
+      if (lang === 'en') {
+        flagImage.src = 'photo/greeceflag.png';
+        flagImage.alt = 'Greece Language';
+      } else {
+        flagImage.src = 'photo/englandflag.jpg';
+        flagImage.alt = 'English Language';
+      }
+
+      // 2) Update all data-en/data-gr elements
+      elements.forEach(el => {
+        if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+            && el.hasAttribute('placeholder')) {
+          // placeholders
+          el.placeholder = el.getAttribute(`data-${lang}`);
+        } else if (el.tagName.toLowerCase() === 'option') {
+          // <option>
+          el.textContent = el.getAttribute(`data-${lang}`);
+        } else if (el.tagName.toLowerCase() === 'title') {
+          // <title>
+          document.title = el.getAttribute(`data-${lang}`);
+        } else {
+          // default: update innerHTML
+          el.innerHTML = el.getAttribute(`data-${lang}`);
+        }
+      });
+
+      // 3) Set HTML lang
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+  <!-- MailerLite Universal Script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
+      (w[f].q=w[f].q||[]).push(arguments);},
+      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+      n.parentNode.insertBefore(l,n);})(window,document,'script',
+      'https://assets.mailerlite.com/js/universal.js','ml');
+    // Αντικαταστήστε το 1363757 με το δικό σας account ID εφόσον διαφέρει
+    ml('account', '1363757');
+  </script>
+  <!-- End MailerLite Universal -->
+
+</body>
 </html>
