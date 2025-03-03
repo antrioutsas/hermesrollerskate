@@ -11,23 +11,28 @@
   
   <script>
     function updateSizeOptions() {
-      let product = document.getElementById("product").value;
-      let tshirtSizes = document.getElementById("tshirt-sizes");
-      let skateSizes = document.getElementById("skate-sizes");
+        let product = document.getElementById("product").value;
+        let tshirtSizes = document.getElementById("tshirt-sizes");
+        let skateSizes = document.getElementById("skate-sizes");
+        let tshirtSizeSelect = document.getElementById("tshirt-size");
+        let skateSizeSelect = document.getElementById("skate-size");
 
-      if (product === "tshirt") {
-        tshirtSizes.style.display = "block";
-        skateSizes.style.display = "none";
-        document.getElementById("skate-size").value = ""; // Reset skate size
-      } else if (product === "rollerskates") {
-        tshirtSizes.style.display = "none";
-        skateSizes.style.display = "block";
-        document.getElementById("tshirt-size").value = ""; // Reset T-shirt selection
-      } else {
-        tshirtSizes.style.display = "none";
-        skateSizes.style.display = "none";
-      }
+        // Reset selection values when changing product
+        tshirtSizeSelect.value = "";
+        skateSizeSelect.value = "";
+
+        if (product === "tshirt") {
+            tshirtSizes.style.display = "block";
+            skateSizes.style.display = "none";
+        } else if (product === "rollerskates") {
+            tshirtSizes.style.display = "none";
+            skateSizes.style.display = "block";
+        } else {
+            tshirtSizes.style.display = "none";
+            skateSizes.style.display = "none";
+        }
     }
+
   </script>
 </head>
 
@@ -127,48 +132,52 @@
         <input type="tel"  name="phone"      placeholder="Phone Number" required data-en="Phone Number" data-gr="Τηλέφωνο">
 
         <label for="product" data-en="Select Product:" data-gr="Επιλέξτε Προϊόν:">Select Product:</label>
-        <select name="product" id="product" required onchange="updateSizeOptions()" data-en="Select Product" data-gr="Επιλέξτε Προϊόν">
-          <option value="" data-en="-- Choose an item --" data-gr="-- Επιλέξτε προϊόν --">-- Choose an item --</option>
-          <option value="tshirt"      data-en="🎽 Academy T-Shirt" data-gr="🎽 Μπλουζάκι Ακαδημίας">🎽 Academy T-Shirt</option>
-          <option value="rollerskates"data-en="🛼 Roller Skates"   data-gr="🛼 Πατίνια">🛼 Roller Skates</option>
+        <select name="product" id="product" required onchange="updateSizeOptions()">
+          <option value="" disabled selected data-en="-- Choose an item --" data-gr="-- Επιλέξτε προϊόν --">-- Choose an item --</option>
+          <option value="tshirt" data-en="🎽 Academy T-Shirt" data-gr="🎽 Μπλουζάκι Ακαδημίας">🎽 Academy T-Shirt</option>
+          <option value="rollerskates" data-en="🛼 Roller Skates" data-gr="🛼 Πατίνια">🛼 Roller Skates</option>
         </select>
+        
+        
 
         <!-- T-Shirt Sizes (Only for T-Shirts) -->
         <div id="tshirt-sizes" style="display: none;">
-          <label for="tshirt-size" data-en="Select T-Shirt Size:" data-gr="Επιλέξτε Μέγεθος Μπλουζακιού:">Select T-Shirt Size:</label>
-          <select name="tshirt-size" id="tshirt-size" data-en="Select T-Shirt Size" data-gr="Επιλέξτε Μέγεθος Μπλουζακιού">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-          </select>
-        </div>
+            <label for="tshirt-size" data-en="Select T-Shirt Size:" data-gr="Επιλέξτε Μέγεθος Μπλουζακιού:">Select T-Shirt Size:</label>
+            <select name="tshirt-size" id="tshirt-size">
+              <option value="S" data-en="Small (S)" data-gr="Μικρό (S)">Small (S)</option>
+              <option value="M" data-en="Medium (M)" data-gr="Μεσαίο (M)">Medium (M)</option>
+              <option value="L" data-en="Large (L)" data-gr="Μεγάλο (L)">Large (L)</option>
+              <option value="XL" data-en="Extra Large (XL)" data-gr="Πολύ Μεγάλο (XL)">Extra Large (XL)</option>
+              <option value="XXL" data-en="XX-Large (XXL)" data-gr="Υπερβολικά Μεγάλο (XXL)">XX-Large (XXL)</option>
+            </select>
+          </div>
+          
 
         <!-- Roller Skate Sizes (Only for Roller Skates) -->
         <div id="skate-sizes" style="display: none;">
-          <label for="skate-size" data-en="Select Skate Size:" data-gr="Επιλέξτε Μέγεθος Πατινιών:">Select Skate Size:</label>
-          <select name="skate-size" id="skate-size" data-en="Select Skate Size" data-gr="Επιλέξτε Μέγεθος Πατινιών">
-            <option value="30">EU 30</option>
-            <option value="31">EU 31</option>
-            <option value="32">EU 32</option>
-            <option value="33">EU 33</option>
-            <option value="34">EU 34</option>
-            <option value="35">EU 35</option>
-            <option value="36">EU 36</option>
-            <option value="37">EU 37</option>
-            <option value="38">EU 38</option>
-            <option value="39">EU 39</option>
-            <option value="40">EU 40</option>
-            <option value="41">EU 41</option>
-            <option value="42">EU 42</option>
-            <option value="43">EU 43</option>
-            <option value="44">EU 44</option>
-            <option value="45">EU 45</option>
-            <option value="46">EU 46</option>
-            <option value="47">EU 47</option>
-          </select>
-        </div>
+            <label for="skate-size" data-en="Select Skate Size:" data-gr="Επιλέξτε Μέγεθος Πατινιών:">Select Skate Size:</label>
+            <select name="skate-size" id="skate-size">
+              <option value="30" data-en="EU 30" data-gr="ΕΕ 30">EU 30</option>
+              <option value="31" data-en="EU 31" data-gr="ΕΕ 31">EU 31</option>
+              <option value="32" data-en="EU 32" data-gr="ΕΕ 32">EU 32</option>
+              <option value="33" data-en="EU 33" data-gr="ΕΕ 33">EU 33</option>
+              <option value="34" data-en="EU 34" data-gr="ΕΕ 34">EU 34</option>
+              <option value="35" data-en="EU 35" data-gr="ΕΕ 35">EU 35</option>
+              <option value="36" data-en="EU 36" data-gr="ΕΕ 36">EU 36</option>
+              <option value="37" data-en="EU 37" data-gr="ΕΕ 37">EU 37</option>
+              <option value="38" data-en="EU 38" data-gr="ΕΕ 38">EU 38</option>
+              <option value="39" data-en="EU 39" data-gr="ΕΕ 39">EU 39</option>
+              <option value="40" data-en="EU 40" data-gr="ΕΕ 40">EU 40</option>
+              <option value="41" data-en="EU 41" data-gr="ΕΕ 41">EU 41</option>
+              <option value="42" data-en="EU 42" data-gr="ΕΕ 42">EU 42</option>
+              <option value="43" data-en="EU 43" data-gr="ΕΕ 43">EU 43</option>
+              <option value="44" data-en="EU 44" data-gr="ΕΕ 44">EU 44</option>
+              <option value="45" data-en="EU 45" data-gr="ΕΕ 45">EU 45</option>
+              <option value="46" data-en="EU 46" data-gr="ΕΕ 46">EU 46</option>
+              <option value="47" data-en="EU 47" data-gr="ΕΕ 47">EU 47</option>
+            </select>
+          </div>
+          
 
         <input type="number" name="quantity" placeholder="Quantity" min="1" required data-en="Quantity" data-gr="Ποσότητα">
         <button type="submit" data-en="Reserve Now" data-gr="Κάντε Κράτηση">Reserve Now</button>
