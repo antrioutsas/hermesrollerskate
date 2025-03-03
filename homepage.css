@@ -77,14 +77,14 @@ main {
 /* partners SECTION */
 /* ============================= */
 .partners {
-    background: #f8f8f8;
+    background: #444;
     padding: 50px 20px;
     text-align: center;
 }
 
 .partners h2 {
     font-size: 24px;
-    color: #222;
+    color: #fff;
     margin-bottom: 20px;
     font-weight: bold;
 }
