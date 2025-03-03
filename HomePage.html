@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><!-- 1) Δηλώνουμε αρχικά τη γλώσσα ως 'en' -->
+<html lang="en"><!-- Ορίζουμε αρχικά lang="en" -->
 <head>
-  <!-- 2) Βασικές ρυθμίσεις κεφαλίδας -->
   <meta charset="UTF-8">
   <meta name="description" content="Hermes Rollerskate Academy - Learn, practice, and enjoy roller skating with expert guidance.">
-  
-  <!-- 3) Εναλλακτικός τίτλος στα Αγγλικά/Ελληνικά μέσω data-en/data-gr -->
+
+  <!-- Τίτλος σε Αγγλικά/Ελληνικά μέσω data-en/data-gr -->
   <title data-en="Hermes Rollerskate Academy" data-gr="Ακαδημία Hermes Rollerskate">
     Hermes Rollerskate Academy
   </title>
-  
-  <!-- 4) Ενσωμάτωση CSS αρχείων -->
+
+  <!-- CSS αρχεία -->
   <link rel="stylesheet" href="homepage.css">
   <link rel="icon" href="photo/logo.png">
   <link rel="stylesheet" href="navigation.css">
@@ -18,15 +17,11 @@
 </head>
 
 <body>
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       NAV-LINK HIGHLIGHT LOGIC
-       Απλή λογική για να "φωτίζει" (active) το τρέχον link στο μενού.
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- SCRIPT: τονίζει το τρέχον link στο μενού -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const currentPage = window.location.pathname.split('/').pop();
       const navLinks = document.querySelectorAll('.nav-link');
-
       navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
           link.classList.add('active');
@@ -34,56 +29,43 @@
       });
     });
   </script>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       HEADER - με H1 που θα πληκτρολογείται 
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- HEADER με typed text -->
   <header>
-    <!-- 5) h1 με τα data-en/data-gr. Παραμένει άδειο, γεμίζει μέσω updateLanguage() -->
+    <!-- h1 αρχικά κενό. Θα γραφτεί δυναμικά με typed text -->
     <h1 
       id="welcomeText"
       data-en="Welcome to Hermes Rollerskate Academy!"
       data-gr="Καλώς ήρθατε στην Ακαδημία Hermes Rollerskate!"
     >
-      <!-- Παραμένει κενό με σχόλιο - θα γραφτεί δυναμικά -->
     </h1>
   </header>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       NAVIGATION
-       Περιέχει τα links σε άλλες σελίδες + κουμπί εναλλαγής γλώσσας
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li>
-        <a href="HomePage.html">
+        <a href="HomePage.html" class="nav-link">
           <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
         </a>
       </li>
-      <li><a href="whoweare.html"  class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"    class="nav-link" data-en="Classes" data-gr="Μαθήματα">Classes</a></li>
-      <li><a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-      <li><a href="benefits.html"   class="nav-link" data-en="Benefits" data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a></li>
+      <li><a href="whoweare.html"       class="nav-link" data-en="Who We Are"       data-gr="Ποιοι Είμαστε">Who We Are</a></li>
+      <li><a href="classes.html"        class="nav-link" data-en="Classes"          data-gr="Μαθήματα">Classes</a></li>
+      <li><a href="activities.html"     class="nav-link" data-en="More Activities"  data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
+      <li><a href="prices-policies.html"class="nav-link" data-en="Prices & Policies"data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
+      <li><a href="benefits.html"       class="nav-link" data-en="Benefits"         data-gr="Οφέλη">Benefits</a></li>
+      <li><a href="merchandise.html"    class="nav-link" data-en="Merchandise"      data-gr="Προϊόντα">Merchandise</a></li>
       <li class="nav-lang">
-        <!-- 6) Το κουμπί εναλλαγής γλώσσας με σημαία -->
         <button id="language-button" onclick="toggleLanguage()">
           <img src="photo/greeceflag.png" alt="Greece Language">
         </button>
       </li>
     </ul>
   </nav>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       MAIN CONTENT
-       Περιλαμβάνει διάφορες ενότητες (news, grid, merchandise κ.λπ.)
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- News Section -->
+    <!-- Παράδειγμα News Section -->
     <section class="news">
       <h2 data-en="Latest News" data-gr="Τελευταία Νέα">Latest News</h2>
       <p data-en="Stay updated with our latest events and announcements!"
@@ -92,7 +74,7 @@
       </p>
     </section>
 
-    <!-- Grid (3 columns) -->
+    <!-- Παράδειγμα: Τρεις στήλες -->
     <section class="grid-container">
       <div class="grid-item">
         <h3 data-en="Classes" data-gr="Μαθήματα">Classes</h3>
@@ -113,7 +95,7 @@
       </div>
       <div class="grid-item">
         <h3 data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</h3>
-        <p data-en="🏏 Snow Ski Lessons"           data-gr="🏏 Μαθήματα Σκι στο Χιόνι">🏏 Snow Ski Lessons</p>
+        <p data-en="🏏 Snow Ski Lessons" data-gr="🏏 Μαθήματα Σκι στο Χιόνι">🏏 Snow Ski Lessons</p>
         <p data-en="🏉 Other Fun Activities Coming Soon!"
            data-gr="🏉 Άλλες Διασκεδαστικές Δραστηριότητες Έρχονται Σύντομα!">
            🏉 Other Fun Activities Coming Soon!
@@ -130,40 +112,35 @@
       </p>
     </section>
   </main>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       FOOTER
-       Περιέχει φόρμα MailerLite, links για πολιτικές, social media κ.λπ.
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
 
-      <!-- Newsletter Signup -->
+      <!-- Newsletter (MailerLite) -->
       <div class="footer-section">
         <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
         <p data-en="Subscribe to our newsletter for the latest class schedules, events, and special offers."
            data-gr="Εγγραφείτε στο newsletter μας για τα τελευταία προγράμματα μαθημάτων, εκδηλώσεις και ειδικές προσφορές.">
            Subscribe to our newsletter for the latest class schedules, events, and special offers.
         </p>
-        
-        <!-- Ενσωμάτωση MailerLite Embed Form (ID=Dx8yTp ως παράδειγμα) -->
+        <!-- Ενσωμάτωση MailerLite embed φόρμα -->
         <div class="ml-embedded" data-form="Dx8yTp"></div>
-
+        <!-- Αλλάξτε το Dx8yTp με το δικό σας MailerLite Form ID -->
       </div>
 
-      <!-- Policies & Information -->
+      <!-- Policies & Information in Footer -->
       <div class="footer-section">
         <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
         <ul>
-          <li><a href="policies.html#terms" data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-          <li><a href="policies.html#privacy" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
+          <li><a href="policies.html#terms"  data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
+          <li><a href="policies.html#privacy"data-en="Privacy Policy"     data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
           <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-          <li><a href="policies.html#safety" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+          <li><a href="policies.html#safety" data-en="Safety Guidelines"  data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
         </ul>
       </div>
 
-      <!-- Find us / Social Media -->
+      <!-- Social Media -->
       <div class="footer-section">
         <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
         <p data-en="Learn more about our mission, instructors, and training programs."
@@ -182,14 +159,14 @@
       <div class="footer-section">
         <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
         <p>
-          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
+          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
           <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
              data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
              Zografou, Attica
           </a>
         </p>
         <p>
-          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
+          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
           <a href="tel:+306955655189">+306955655189</a>
         </p>
         <a href="mailto:andreaskountouras@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
@@ -198,10 +175,10 @@
            📧 Email: andreaskountouras@hotmail.com
         </a>
         <p>
-          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong> 
+          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
           <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
                 data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-                Saturday 13:55-14:55, Sunday 13:55-14:55 New
+            Saturday 13:55-14:55, Sunday 13:55-14:55 New
           </span>
         </p>
         <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
@@ -229,12 +206,12 @@
       </div>
     </div>
   </footer>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       JAVASCRIPT ΓΙΑ ΕΝΑΛΛΑΓΗ ΓΛΩΣΣΑΣ & TYPE-EFFECT
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- JS: Language Toggle + Typed Text -->
   <script>
+    let typedTimer = null; // χρησιμοποιείται αν θέλουμε να κάνουμε clearTimeout
+    let typedIndex = 0;    // τρέχον γράμμα
+
     function toggleLanguage() {
       const currentLang = localStorage.getItem('language') || 'en';
       const newLang = (currentLang === 'en') ? 'gr' : 'en';
@@ -243,7 +220,13 @@
     }
 
     function updateLanguage(lang) {
-      // 1. Αλλάζουμε σημαία
+      // Αν τρέχει ήδη typed timer, το σταματάμε
+      if (typedTimer) {
+        clearTimeout(typedTimer);
+        typedTimer = null;
+      }
+
+      // Αλλαγή σημαίας
       const flagImage = document.querySelector('#language-button img');
       if (lang === 'en') {
         flagImage.src = 'photo/greeceflag.png';
@@ -253,7 +236,7 @@
         flagImage.alt = 'English Language';
       }
 
-      // 2. Ενημέρωση κειμένων data-en/data-gr
+      // Ενημέρωση όλων των data-en/data-gr
       const elements = document.querySelectorAll('[data-en]');
       elements.forEach(el => {
         if (el.tagName.toLowerCase() === 'title') {
@@ -270,52 +253,43 @@
         }
       });
 
-      // 3. Επαναφορά του typed text (για να μην διπλασιάζεται)
+      // Typed text στο welcomeText
       const welcomeElement = document.getElementById('welcomeText');
       if (welcomeElement) {
-        welcomeElement.innerHTML = ''; // καθαρίζει το H1
-        let typedIndex = 0;
+        welcomeElement.innerHTML = ''; // καθαρίζουμε
+        typedIndex = 0;                // reset
         const typedString = welcomeElement.getAttribute(`data-${lang}`) || '';
 
         function typeEffect() {
           if (typedIndex < typedString.length) {
             welcomeElement.innerHTML += typedString.charAt(typedIndex);
             typedIndex++;
-            setTimeout(typeEffect, 100);
+            typedTimer = setTimeout(typeEffect, 100); // αποθηκεύουμε για πιθανή ακύρωση
           }
         }
         typeEffect();
       }
 
-      // 4. Ορισμός lang στο <html>
+      // Ορισμός <html lang>
       document.documentElement.lang = lang;
     }
 
-    // Στην πρώτη φόρτωση σελίδας:
+    // Όταν φορτώνει η σελίδα
     document.addEventListener('DOMContentLoaded', function() {
       const storedLang = localStorage.getItem('language') || 'en';
-      // Κάνουμε μόνο updateLanguage, αντί να επανα-καλέσουμε typeEffect ξεχωριστά
       updateLanguage(storedLang);
     });
   </script>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
 
-  <!-- ───────────────────────────────────────────────────────────────────────────────
-       MAILERLITE UNIVERSAL SCRIPT
-       Απαραίτητο για να φορτώνεται σωστά η φόρμα <div class="ml-embedded" data-form="Dx8yTp"></div>.
-  ─────────────────────────────────────────────────────────────────────────────── -->
+  <!-- MailerLite Universal Script -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
       (w[f].q=w[f].q||[]).push(arguments);},
-      l=d.createElement(e),l.async=1,l.src=u,
-      n=d.getElementsByTagName(e)[0],
-      n.parentNode.insertBefore(l,n);
-    })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-
-    // Το account ID (π.χ. 1363757) αντιστοιχεί στο λογαριασμό σας στο MailerLite
+      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+      n.parentNode.insertBefore(l,n);})(window,document,'script',
+      'https://assets.mailerlite.com/js/universal.js','ml');
+    // Προσαρμόστε το 1363757 στο δικό σας MailerLite account ID
     ml('account', '1363757');
   </script>
-  <!-- ─────────────────────────────────────────────────────────────────────────────── -->
-
 </body>
 </html>
