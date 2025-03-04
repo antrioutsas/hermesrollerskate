@@ -147,6 +147,74 @@
       </div>
     </div>
   </section>
+
+  <!-- CLASS ENROLLMENT FORM -->
+<section id="enrollment">
+    <div class="container">
+      <h2 data-en="Enroll in a Class" data-gr="Εγγραφείτε σε ένα Μάθημα">Enroll in a Class</h2>
+      <p data-en="Fill in your details to register for a class." data-gr="Συμπληρώστε τα στοιχεία σας για να εγγραφείτε σε ένα μάθημα.">
+         Fill in your details to register for a class.
+      </p>
+  
+      <form id="classForm" action="https://formspree.io/f/mrbenwpv" method="POST">
+          <input type="hidden" name="_next" value="thankyou.html">
+          
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="first_name" required>
+  
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="last_name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+  
+          <label for="birthdate">Birth Date:</label>
+          <input type="date" id="birthdate" name="birth_date" required>
+  
+          <label for="class">Select Class:</label>
+          <select name="class" id="class" required>
+              <option value="" disabled selected>-- Choose a class --</option>
+              <option value="beginners">🛼 Beginners Class</option>
+              <option value="advanced1">🔥 Advanced Class - Group 1</option>
+              <option value="advanced2">🔥 Advanced Class - Group 2</option>
+              <option value="advanced3">🔥 Advanced Class - Group 3</option>
+              <option value="speed1">⚡ Speed Skating Class - Group 1</option>
+              <option value="speed2">⚡ Speed Skating Class - Group 2</option>
+              <option value="speed3">⚡ Speed Skating Class - Group 3</option>
+          </select>
+  
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+    <script>
+        document.getElementById("classForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const form = this;
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = "thankyou.html"; // Redirect manually
+                } else {
+                    alert("There was an error submitting the form. Please try again.");
+                }
+            }).catch(error => {
+                alert("There was a problem with your request.");
+            });
+        });
+    </script>
+
+  
   
   <!-- FOOTER -->
   <footer>
@@ -156,9 +224,11 @@
       <div class="footer-section">
         <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
         
-        <!-- Αντικαθιστούμε το form action="subscribe.php" με MailerLite embedded -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
-        <!-- Αλλάξτε το Dx8yTp με το δικό σας Form ID από το MailerLite -->
+        <!-- ENGLISH Newsletter Form (data-en-only) -->
+        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
+        
+        <!-- GREEK Newsletter Form (data-gr-only, hidden by default) -->
+        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
 
       </div>
 
@@ -228,20 +298,20 @@
 
   <!-- Language Toggle Logic -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const storedLang = localStorage.getItem('language') || 'en';
+    document.addEventListener("DOMContentLoaded", function() {
+      const storedLang = localStorage.getItem("language") || "en";
       updateLanguage(storedLang);
     });
 
     function toggleLanguage() {
-      const currentLang = localStorage.getItem('language') || 'en';
+      const currentLang = localStorage.getItem("language") || "en";
       const newLang = (currentLang === 'en') ? 'gr' : 'en';
       localStorage.setItem('language', newLang);
       updateLanguage(newLang);
     }
 
     function updateLanguage(lang) {
-      // Switch the flag image
+      // 1. Switch the flag image
       const flagImage = document.querySelector('#language-button img');
       if (lang === 'en') {
         flagImage.src = 'photo/greeceflag.png';
@@ -251,10 +321,9 @@
         flagImage.alt = 'English Language';
       }
 
-      // Update text for all [data-en] elements
+      // 2. Update all text from data-en/data-gr
       const elements = document.querySelectorAll('[data-en]');
       elements.forEach(el => {
-        // For <title>, placeholders, <option> we do special checks
         if (el.tagName.toLowerCase() === 'title') {
           document.title = el.getAttribute(`data-${lang}`);
         } else if (
@@ -269,7 +338,18 @@
         }
       });
 
-      // set <html> lang
+      // 3. Show/hide the correct newsletter form
+      const enForms = document.querySelectorAll('[data-en-only]');
+      const grForms = document.querySelectorAll('[data-gr-only]');
+      if (lang === 'en') {
+        enForms.forEach(f => f.style.display = 'block');
+        grForms.forEach(f => f.style.display = 'none');
+      } else {
+        enForms.forEach(f => f.style.display = 'none');
+        grForms.forEach(f => f.style.display = 'block');
+      }
+
+      // 4. Set <html> lang attribute
       document.documentElement.lang = lang;
     }
   </script>
@@ -281,7 +361,7 @@
       l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
       n.parentNode.insertBefore(l,n);})(window,document,'script',
       'https://assets.mailerlite.com/js/universal.js','ml');
-    // Αλλάξτε το 1363757 με το δικό σας account ID
+    // Replace '1363757' with your own account ID
     ml('account', '1363757');
   </script>
   <!-- End MailerLite Universal -->
