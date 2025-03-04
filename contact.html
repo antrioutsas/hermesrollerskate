@@ -51,7 +51,7 @@
   <h1 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h1>
 
 
-  <form action="https://formspree.io/f/mrbenwpv" method="POST">
+  <form id="contactForm" action="https://formspree.io/f/mrbenwpv" method="POST">
     <input type="hidden" name="_next" value="https://antrioutsas.github.io/hermesrollerskate/thankyou.html">
     
     <label for="fname">First Name:</label>
@@ -65,10 +65,10 @@
 
     <label for="category">Category:</label>
     <select id="category" name="category">
-      <option value="general">General Inquiry</option>
-      <option value="feedback">Feedback</option>
-      <option value="support">Support</option>
-      <option value="other">Other</option>
+        <option value="general">General Inquiry</option>
+        <option value="feedback">Feedback</option>
+        <option value="support">Support</option>
+        <option value="other">Other</option>
     </select>
 
     <label for="title">Title:</label>
@@ -79,6 +79,29 @@
 
     <button type="submit">Send Message</button>
 </form>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        const form = this;
+
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = "https://antrioutsas.github.io/hermesrollerskate/thankyou.html"; // Redirect manually
+            } else {
+                alert("There was an error submitting the form. Please try again.");
+            }
+        }).catch(error => {
+            alert("There was a problem with your request.");
+        });
+    });
+</script>
 
 
 
