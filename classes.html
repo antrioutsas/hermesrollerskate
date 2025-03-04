@@ -157,39 +157,34 @@
       </p>
   
       <form id="classForm" action="https://formspree.io/f/mrbenwpv" method="POST">
-          <input type="hidden" name="_next" value="thankyou.html">
-          
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="first_name" required>
-  
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="last_name" required>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-  
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-  
-          <label for="birthdate">Birth Date:</label>
-          <input type="date" id="birthdate" name="birth_date" required>
-  
-          <label for="class">Select Class:</label>
-          <select name="class" id="class" required>
-              <option value="" disabled selected>-- Choose a class --</option>
-              <option value="beginners">🛼 Beginners Class</option>
-              <option value="advanced1">🔥 Advanced Class - Group 1</option>
-              <option value="advanced2">🔥 Advanced Class - Group 2</option>
-              <option value="advanced3">🔥 Advanced Class - Group 3</option>
-              <option value="speed1">⚡ Speed Skating Class - Group 1</option>
-              <option value="speed2">⚡ Speed Skating Class - Group 2</option>
-              <option value="speed3">⚡ Speed Skating Class - Group 3</option>
-          </select>
-  
-          <button type="submit">Submit</button>
-      </form>
+        <input type="hidden" name="_next" value="thankyou.html">
+    
+        <input type="text" id="fname" name="first_name" required placeholder="First_name" data-en="First_name" data-gr="Όνομα">
+        <input type="text" id="lname" name="last_name" required placeholder="Last_name" data-en="Last_name" data-gr="Επίθετο">
+        <input type="email" id="email" name="email" required placeholder="Email" data-en="Email" data-gr="Ηλεκτρονικό ταχυδρομείο">
+        <input type="tel" id="phone" name="phone" required placeholder="Phone" data-en="Phone_number" data-gr="Τηλέφωνο">
+        <input type="date" id="birth_date" name="birth_date" required data-en="YYYY-MM-DD" data-gr="ΕΕΕΕ-ΜΜ-ΗΗ">
+        <select name="class" id="class" required>
+            <option value="" disabled selected data-en="-- Choose a class --" data-gr="-- Επιλέξτε μάθημα --">
+                -- Choose a class --
+            </option>
+            <option value="beginners" data-en="🛼 Beginners Class" data-gr="🛼 Μάθημα Αρχαρίων">🛼 Beginners Class</option>
+            <option value="advanced1" data-en="🔥 Advanced Class - Group 1" data-gr="🔥 Προχωρημένο Μάθημα - Ομάδα 1">🔥 Advanced Class - Group 1</option>
+            <option value="advanced2" data-en="🔥 Advanced Class - Group 2" data-gr="🔥 Προχωρημένο Μάθημα - Ομάδα 2">🔥 Advanced Class - Group 2</option>
+            <option value="advanced3" data-en="🔥 Advanced Class - Group 3" data-gr="🔥 Προχωρημένο Μάθημα - Ομάδα 3">🔥 Advanced Class - Group 3</option>
+            <option value="speed1" data-en="⚡ Speed Skating Class - Group 1" data-gr="⚡ Μάθημα Γρήγορου Πατινάζ - Ομάδα 1">⚡ Speed Skating Class - Group 1</option>
+            <option value="speed2" data-en="⚡ Speed Skating Class - Group 2" data-gr="⚡ Μάθημα Γρήγορου Πατινάζ - Ομάδα 2">⚡ Speed Skating Class - Group 2</option>
+            <option value="speed3" data-en="⚡ Speed Skating Class - Group 3" data-gr="⚡ Μάθημα Γρήγορου Πατινάζ - Ομάδα 3">⚡ Speed Skating Class - Group 3</option>
+        </select>
+    
+        <button type="submit" data-en="Submit" data-gr="Υποβολή">Submit</button>
+    </form>
+    
+    
     </div>
   </section>
+
+  
 
     <script>
         document.getElementById("classForm").addEventListener("submit", function(event) {
@@ -351,6 +346,8 @@
 
       // 4. Set <html> lang attribute
       document.documentElement.lang = lang;
+
+    
     }
   </script>
 
