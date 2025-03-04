@@ -7,39 +7,8 @@
   <link rel="stylesheet" href="navigation.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="icon" href="photo/logo.png">
+  <link rel="stylesheet" href="contact.css">
 
-  <style>
-    /* Basic styling for the form */
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
-    }
-    button[type="submit"] {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    button[type="submit"]:hover {
-      background-color: #555;
-    }
-  </style>
 </head>
 
 <body>
@@ -81,7 +50,7 @@
   <!-- Page Title -->
   <h1 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h1>
 
-  <!-- CONTACT FORM -->
+
   <form action="sendMessage.php" method="POST">
     <label for="fname" data-en="First Name:" data-gr="Όνομα:">First Name:</label>
     <input type="text" id="fname" name="first_name" required data-en="First Name" data-gr="Όνομα">
@@ -93,11 +62,11 @@
     <input type="email" id="email" name="email" required data-en="Email" data-gr="Ηλεκτρονικό Ταχυδρομείο">
 
     <label for="category" data-en="Category:" data-gr="Κατηγορία:">Category:</label>
-    <select id="category" name="category" data-en="Category" data-gr="Κατηγορία">
-      <option value="general"  data-en="General Inquiry" data-gr="Γενική Ερώτηση">General Inquiry</option>
-      <option value="feedback" data-en="Feedback"        data-gr="Ανατροφοδότηση">Feedback</option>
-      <option value="support"  data-en="Support"         data-gr="Υποστήριξη">Support</option>
-      <option value="other"    data-en="Other"           data-gr="Άλλο">Other</option>
+    <select id="category" name="category">
+      <option value="general" data-en="General Inquiry" data-gr="Γενική Ερώτηση">General Inquiry</option>
+      <option value="feedback" data-en="Feedback" data-gr="Ανατροφοδότηση">Feedback</option>
+      <option value="support" data-en="Support" data-gr="Υποστήριξη">Support</option>
+      <option value="other" data-en="Other" data-gr="Άλλο">Other</option>
     </select>
 
     <label for="title" data-en="Title:" data-gr="Τίτλος:">Title:</label>
@@ -107,7 +76,8 @@
     <textarea id="message" name="message" rows="5" required data-en="Message" data-gr="Μήνυμα"></textarea>
 
     <button type="submit" data-en="Send Message" data-gr="Αποστολή Μηνύματος">Send Message</button>
-  </form>
+</form>
+
 
   <!-- FOOTER -->
   <footer>
@@ -117,9 +87,11 @@
       <div class="footer-section">
         <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
         
-        <!-- Αντικαθιστούμε το form action="subscribe.php" με MailerLite embed -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
-        <!-- Εάν το ID της φόρμας είναι διαφορετικό, αντικαταστήστε το Dx8yTp -->
+        <!-- ENGLISH Newsletter Form (data-en-only) -->
+        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
+        
+        <!-- GREEK Newsletter Form (data-gr-only, hidden by default) -->
+        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
 
       </div>
 
@@ -190,8 +162,8 @@
   <!-- Language Toggle Logic -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const currentLang = localStorage.getItem("language") || "en";
-      updateLanguage(currentLang);
+      const storedLang = localStorage.getItem("language") || "en";
+      updateLanguage(storedLang);
     });
 
     function toggleLanguage() {
@@ -202,10 +174,8 @@
     }
 
     function updateLanguage(lang) {
+      // 1. Switch the flag image
       const flagImage = document.querySelector('#language-button img');
-      const elements = document.querySelectorAll('[data-en]');
-
-      // 1) Switch the flag
       if (lang === 'en') {
         flagImage.src = 'photo/greeceflag.png';
         flagImage.alt = 'Greece Language';
@@ -214,25 +184,35 @@
         flagImage.alt = 'English Language';
       }
 
-      // 2) Update all data-en/data-gr elements
+      // 2. Update all text from data-en/data-gr
+      const elements = document.querySelectorAll('[data-en]');
       elements.forEach(el => {
-        if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
-            && el.hasAttribute('placeholder')) {
-          // placeholders
+        if (el.tagName.toLowerCase() === 'title') {
+          document.title = el.getAttribute(`data-${lang}`);
+        } else if (
+          (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+          && el.hasAttribute('placeholder')
+        ) {
           el.placeholder = el.getAttribute(`data-${lang}`);
         } else if (el.tagName.toLowerCase() === 'option') {
-          // <option>
           el.textContent = el.getAttribute(`data-${lang}`);
-        } else if (el.tagName.toLowerCase() === 'title') {
-          // <title>
-          document.title = el.getAttribute(`data-${lang}`);
         } else {
-          // default: update innerHTML
           el.innerHTML = el.getAttribute(`data-${lang}`);
         }
       });
 
-      // 3) Set HTML lang
+      // 3. Show/hide the correct newsletter form
+      const enForms = document.querySelectorAll('[data-en-only]');
+      const grForms = document.querySelectorAll('[data-gr-only]');
+      if (lang === 'en') {
+        enForms.forEach(f => f.style.display = 'block');
+        grForms.forEach(f => f.style.display = 'none');
+      } else {
+        enForms.forEach(f => f.style.display = 'none');
+        grForms.forEach(f => f.style.display = 'block');
+      }
+
+      // 4. Set <html> lang attribute
       document.documentElement.lang = lang;
     }
   </script>
@@ -244,10 +224,12 @@
       l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
       n.parentNode.insertBefore(l,n);})(window,document,'script',
       'https://assets.mailerlite.com/js/universal.js','ml');
-    // Αντικαταστήστε το 1363757 με το δικό σας account ID εφόσον διαφέρει
+    // Replace '1363757' with your own account ID
     ml('account', '1363757');
   </script>
   <!-- End MailerLite Universal -->
+
+
 
 </body>
 </html>
