@@ -146,28 +146,55 @@
          data-gr="Συμπληρώστε τα στοιχεία σας και επιλέξτε την επιθυμητή δραστηριότητα. Θα επικοινωνήσουμε μαζί σας για περισσότερες πληροφορίες.">
          Leave your details and select your preferred activity. We will contact you for more information.
       </p>
-      <form action="#" method="POST">
-        <input type="text"  name="first-name" placeholder="First Name" required data-en="First Name" data-gr="Όνομα">
-        <input type="text"  name="last-name"  placeholder="Last Name"  required data-en="Last Name"  data-gr="Επώνυμο">
-        <input type="tel"   name="phone"       placeholder="Phone Number" required data-en="Phone Number" data-gr="Τηλέφωνο">
+        <form id="activitiesForm" action="https://formspree.io/f/mrbenwpv" method="POST">
+            <input type="hidden" name="_next" value="thankyou.html">
+            
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="first_name" required>
 
-        <label for="activity" data-en="Select Activity:" data-gr="Επιλέξτε Δραστηριότητα:">Select Activity:</label>
-        <select name="activity" id="activity" required>
-          <option value="" data-en="-- Choose an activity --" data-gr="-- Επιλέξτε δραστηριότητα --">
-            -- Choose an activity --
-          </option>
-          <option value="ice-skating"  data-en="⛸ Ice Skating" data-gr="⛸ Πατινάζ στον Πάγο">
-            ⛸ Ice Skating
-          </option>
-          <option value="snow-skiing" data-en="🎿 Snow Skiing" data-gr="🎿 Σκι στο Χιόνι">
-            🎿 Snow Skiing
-          </option>
-        </select>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="last_name" required>
 
-        <button type="submit" data-en="Submit" data-gr="Υποβολή">Submit</button>
-      </form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="activity">Select Activity:</label>
+            <select name="activity" id="activity" required>
+                <option value="ice-skating">⛸ Ice Skating</option>
+                <option value="snow-skiing">🎿 Snow Skiing</option>
+            </select>
+        
+            <button type="submit">Submit</button>
+        </form>
+    
     </div>
   </section>
+    <script>
+        document.getElementById("activitiesForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const form = this;
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = "thankyou.html"; // Redirect manually
+                } else {
+                    alert("There was an error submitting the form. Please try again.");
+                }
+            }).catch(error => {
+                alert("There was a problem with your request.");
+            });
+        });
+    </script>
+
 
   <!-- FOOTER -->
   <footer>
