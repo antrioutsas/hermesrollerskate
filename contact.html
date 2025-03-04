@@ -52,7 +52,7 @@
 
 
   <form id="contactForm" action="https://formspree.io/f/mrbenwpv" method="POST">
-    <input type="hidden" name="_next" value="https://antrioutsas.github.io/hermesrollerskate/thankyou.html">
+    <input type="hidden" name="_next" value="thankyou.html">
     
     <label for="fname">First Name:</label>
     <input type="text" id="fname" name="first_name" required>
@@ -93,7 +93,7 @@
             }
         }).then(response => {
             if (response.ok) {
-                window.location.href = "https://antrioutsas.github.io/hermesrollerskate/thankyou.html"; // Redirect manually
+                window.location.href = "thankyou.html"; // Redirect manually
             } else {
                 alert("There was an error submitting the form. Please try again.");
             }
