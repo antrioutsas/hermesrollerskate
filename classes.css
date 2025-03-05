@@ -159,22 +159,6 @@ select {
     cursor: pointer;
 }
 
-/* Button */
-button {
-    background-color: #0073e6;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-family: inherit;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
 
 /* ============================= */
 /* RESPONSIVENESS */
