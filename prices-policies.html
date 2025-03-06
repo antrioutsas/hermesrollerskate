@@ -1,357 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Policies</title>
-  <link rel="stylesheet" href="prices.css">
-  <link rel="stylesheet" href="navigation.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="icon" href="photo/logo.png">
-</head>
-<body>
-
-  <!-- Optional highlight nav link script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const currentPage = window.location.pathname.split('/').pop();
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <ul>
-      <li>
-        <a href="HomePage.html">
-          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-        </a>
-      </li>
-      <li><a href="whoweare.html"         class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"          class="nav-link" data-en="Classes"    data-gr="Μαθήματα">Classes</a></li>
-      <li><a href="activities.html"       class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html"  class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-      <li><a href="benefits.html"         class="nav-link" data-en="Benefits"   data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html"      class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a></li>
-      <li class="nav-lang">
-        <button id="language-button" onclick="toggleLanguage()">
-          <img src="photo/greeceflag.png" alt="Greece Language">
-        </button>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- PRICING SECTION -->
-  <section id="pricing">
-    <div class="container">
-      <h2 data-en="Pricing & Policies" data-gr="Τιμές & Πολιτική">Pricing & Policies</h2>
-      <p data-en="All lessons must be prepaid. Discounts cannot be combined."
-         data-gr="Όλα τα μαθήματα πρέπει να προπληρωθούν. Οι εκπτώσεις δεν συνδυάζονται.">
-         All lessons must be prepaid. Discounts cannot be combined.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th data-en="Category"               data-gr="Κατηγορία">Category</th>
-            <th data-en="Price per 4 Lessons"    data-gr="Τιμή ανά 4 Μαθήματα">Price per 4 Lessons</th>
-            <th data-en="Discount"               data-gr="Έκπτωση">Discount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-en="Individual" data-gr="Ατομικό">Individual</td>
-            <td data-en="€25"        data-gr="25€">€25</td>
-            <td data-en="Standard rate" data-gr="Βασική τιμή">Standard rate</td>
-          </tr>
-          <tr>
-            <td data-en="Students" data-gr="Φοιτητές">Students</td>
-            <td data-en="€20"       data-gr="20€">€20</td>
-            <td data-en="20% Discount" data-gr="20% Έκπτωση">20% Discount</td>
-          </tr>
-          <tr>
-            <td data-en="Referral Discount" data-gr="Έκπτωση Σύστασης">Referral Discount</td>
-            <td data-en="€5 off for the referrer" data-gr="5€ έκπτωση για τον συστήνοντα">
-              €5 off for the referrer
-            </td>
-            <td data-en="Given when referred student has an active subscription (20% discount per cycle)"
-                data-gr="Παρέχεται όταν ο νέος μαθητής έχει ενεργή συνδρομή (20% έκπτωση ανά κύκλο)">
-              Given when referred student has an active subscription (20% discount per cycle)
-            </td>
-          </tr>
-          <tr>
-            <td data-en="Second Family Member" data-gr="Δεύτερο Μέλος Οικογένειας">Second Family Member</td>
-            <td data-en="€40"       data-gr="40€">€40</td>
-            <td data-en="20% Discount (Both must have an active subscription)"
-                data-gr="20% Έκπτωση (Απαιτείται ενεργή συνδρομή και για τους δύο)">
-              20% Discount (Both must have an active subscription)
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- WORKSHOP PRICING -->
-  <section id="workshops">
-    <div class="container">
-      <h2 data-en="Workshop Pricing" data-gr="Τιμές Workshop">Workshop Pricing</h2>
-      <table>
-        <thead>
-          <tr>
-            <th data-en="Participant Type"  data-gr="Τύπος Συμμετέχοντα">Participant Type</th>
-            <th data-en="Price per Workshop" data-gr="Τιμή ανά Workshop">Price per Workshop</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-en="Subscribers (Active Skaters)" data-gr="Συνδρομητές (Ενεργοί Σκέιτερ)">Subscribers (Active Skaters)</td>
-            <td data-en="€5" data-gr="5€">€5</td>
-          </tr>
-          <tr>
-            <td data-en="Non-Subscribers (Team Members)" data-gr="Μη Συνδρομητές (Μέλη Ομάδας)">Non-Subscribers (Team Members)</td>
-            <td data-en="€8" data-gr="8€">€8</td>
-          </tr>
-          <tr>
-            <td data-en="Non-Subscribers (Non-Members)" data-gr="Μη Συνδρομητές (Εκτός Ομάδας)">Non-Subscribers (Non-Members)</td>
-            <td data-en="€10" data-gr="10€">€10</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- SCHOOLS PRICING -->
-  <section id="schools">
-    <div class="container">
-      <h2 data-en="Pricing & Discounts for Schools" data-gr="Τιμές & Εκπτώσεις για Σχολεία">Pricing & Discounts for Schools</h2>
-      <table>
-        <thead>
-          <tr>
-            <th data-en="Minimum Service Fee"          data-gr="Ελάχιστη Χρέωση Υπηρεσίας">Minimum Service Fee</th>
-            <th data-en="Price per Kid"                data-gr="Τιμή ανά Παιδί">Price per Kid</th>
-            <th data-en="Number of Kids per Month"     data-gr="Αριθμός Παιδιών ανά Μήνα">Number of Kids per Month</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-en="€100 / month" data-gr="100€ / μήνα" rowspan="5">€100 / month</td>
-            <td data-en="€20" data-gr="20€">€20</td>
-            <td data-en="5 kids / month" data-gr="5 παιδιά / μήνα">5 kids / month</td>
-          </tr>
-          <tr>
-            <td data-en="€18" data-gr="18€">€18</td>
-            <td data-en="10 kids / month" data-gr="10 παιδιά / μήνα">10 kids / month</td>
-          </tr>
-          <tr>
-            <td data-en="€16" data-gr="16€">€16</td>
-            <td data-en="15 kids / month" data-gr="15 παιδιά / μήνα">15 kids / month</td>
-          </tr>
-          <tr>
-            <td data-en="€14" data-gr="14€">€14</td>
-            <td data-en="20 kids / month" data-gr="20 παιδιά / μήνα">20 kids / month</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ATTENDANCE POLICY -->
-  <section id="attendance">
-    <div class="container">
-      <h2 data-en="Attendance & Payment Rules" data-gr="Κανόνες Παρουσίας & Πληρωμής">Attendance & Payment Rules</h2>
-      <p data-en="<strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot."
-         data-gr="<strong>❗ Προπληρωμή Μαθημάτων:</strong> Όλα τα μαθήματα προπληρώνονται για να διασφαλιστεί η θέση.">
-         <strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot.
-      </p>
-      <p data-en="<strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour."
-         data-gr="<strong>📅 Πολιτική Απουσιών:</strong> Εάν ένας μαθητής χάσει 3 μαθήματα χωρίς ενημέρωση, χάνει 1 διδακτική ώρα.">
-         <strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour.
-      </p>
-      <p data-en="<strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund."
-         data-gr="<strong>🔄 Ακύρωση Workshop:</strong> Τα workshop προπληρώνονται εξ ολοκλήρου. Εάν χαθούν, επιστρέφεται το 50%.">
-         <strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund.
-      </p>
-    </div>
-  </section>
-
-  <!-- WEATHER POLICY -->
-  <section id="weather">
-    <div class="container">
-      <h2 data-en="Weather & Cancellations" data-gr="Καιρός & Ακυρώσεις">Weather & Cancellations</h2>
-      <p data-en="Lessons will be **suspended** if:" data-gr="Τα μαθήματα θα **αναστέλλονται** εάν:">Lessons will be **suspended** if:</p>
+  <head>
+    <!-- Μεταδεδομένα και σύνδεση με τα CSS αρχεία -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">
+      Prices & Policies
+    </title>
+    <link rel="stylesheet" href="prices.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" href="photo/logo.png" />
+  </head>
+  <body>
+    <!-- Πλοήγηση (Navigation) -->
+    <nav>
       <ul>
-        <li data-en="🌧 **Rainy or wet courts**" data-gr="🌧 **Βροχερό ή βρεγμένο γήπεδο**">🌧 **Rainy or wet courts**</li>
-        <li data-en="❄ **Temperatures below 5°C**" data-gr="❄ **Θερμοκρασίες κάτω από 5°C**">❄ **Temperatures below 5°C**</li>
-        <li data-en="⚠ **Unsafe skating conditions**" data-gr="⚠ **Επικίνδυνες συνθήκες πατινάζ**">⚠ **Unsafe skating conditions**</li>
-      </ul>
-      <p data-en="Students will be notified in advance if lessons are postponed."
-         data-gr="Οι μαθητές θα ενημερώνονται εκ των προτέρων εάν τα μαθήματα αναβληθούν.">
-         Students will be notified in advance if lessons are postponed.
-      </p>
-    </div>
-  </section>
-
-  <!-- EQUIPMENT REQUEST -->
-  <section id="equipment">
-    <div class="container">
-      <h2 data-en="Need Equipment?" data-gr="Χρειάζεστε Εξοπλισμό;">Need Equipment?</h2>
-      <p data-en="If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available."
-         data-gr="Εάν δεν έχετε πατίνια ή προστατευτικό εξοπλισμό, ενημερώστε μας εκ των προτέρων. Θα τα παρέχουμε εφόσον είναι διαθέσιμα.">
-         If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available.
-      </p>
-      <form action="#" method="POST">
-        <input type="text"  name="name"  placeholder="Your Name" required  data-en="Your Name"  data-gr="Το Όνομά Σας">
-        <input type="email" name="email" placeholder="Your Email" required data-en="Your Email" data-gr="Το Email Σας">
-        <textarea name="message" placeholder="Request Equipment (e.g., skates, helmet, pads)" required
-                  data-en="Request Equipment (e.g., skates, helmet, pads)"
-                  data-gr="Αίτημα Εξοπλισμού (π.χ. πατίνια, κράνος, επιγονατίδες)">
-        </textarea>
-        <button type="submit" data-en="Request Equipment" data-gr="Αίτημα Εξοπλισμού">Request Equipment</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-
-      <!-- Newsletter Signup (MailerLite) -->
-      <div class="footer-section">
-        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-
-        <!-- Αντικαθιστούμε το form action="subscribe.php" με MailerLite embed -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
-        <!-- Αλλάξτε το Dx8yTp με το Form ID της MailerLite -->
-
-      </div>
-
-      <!-- Policies & Information in Footer -->
-      <div class="footer-section">
-        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
-        <ul>
-          <li><a href="policies.html#terms"  data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-          <li><a href="policies.html#privacy"data-en="Privacy Policy"     data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-          <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-          <li><a href="policies.html#safety" data-en="Safety Guidelines"  data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
-        </ul>
-      </div>
-
-      <!-- Find us -->
-      <div class="footer-section">
-        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-        <p data-en="Learn more about our mission, instructors, and training programs."
-           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-           Learn more about our mission, instructors, and training programs.
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-          <a href="#" target="_blank">YouTube</a>
-        </div>
-      </div>
-
-      <!-- Contact Us -->
-      <div class="footer-section">
-        <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
-        <p>
-          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
-          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
-             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
-             Zografou, Attica
+        <li>
+          <a href="HomePage.html">
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
           </a>
+        </li>
+        <li>
+          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
+            Who We Are
+          </a>
+        </li>
+        <li>
+          <a href="classes.html" class="nav-link" data-en="Classes" data-gr="Μαθήματα">
+            Classes
+          </a>
+        </li>
+        <li>
+          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
+            More Activities
+          </a>
+        </li>
+        <li>
+          <a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">
+            Prices & Discounts
+          </a>
+        </li>
+        <li>
+          <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">
+            Benefits
+          </a>
+        </li>
+        <li>
+          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">
+            Merchandise
+          </a>
+        </li>
+        <!-- Κουμπί αλλαγής γλώσσας -->
+        <li class="nav-lang">
+          <button id="language-button" onclick="toggleLanguage()">
+            <img src="photo/greeceflag.png" alt="Greece Language" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Ενότητα Τιμολόγησης -->
+    <section id="pricing">
+      <div class="container">
+        <h2 data-en="Pricing & Policies" data-gr="Τιμές & Πολιτική">
+          Pricing & Policies
+        </h2>
+        <p data-en="All lessons must be prepaid. Discounts cannot be combined."
+           data-gr="Όλα τα μαθήματα πρέπει να προπληρωθούν. Οι εκπτώσεις δεν συνδυάζονται.">
+          All lessons must be prepaid. Discounts cannot be combined.
         </p>
-        <p>
-          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
-          <a href="tel:+306955655189">+306955655189</a>
-        </p>
-        <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-           data-en="📧 Email: hermesrollerskate@hotmail.com"
-           data-gr="📧 Email: hermesrollerskate@hotmail.com">
-           📧 Email: hermesrollerskate@hotmail.com
-        </a>
-        <p>
-          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
-          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
-                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-            Saturday 13:55-14:55, Sunday 13:55-14:55 New
-          </span>
-        </p>
-        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
+
+        <!-- Πίνακας Τιμών -->
+        <table>
+          <thead>
+            <tr>
+              <th data-en="Category" data-gr="Κατηγορία">Category</th>
+              <th data-en="Price per 4 Lessons" data-gr="Τιμή ανά 4 Μαθήματα">Price per 4 Lessons</th>
+              <th data-en="Discount" data-gr="Έκπτωση">Discount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-en="Individual" data-gr="Ατομικό">Individual</td>
+              <td data-en="€25" data-gr="25€">€25</td>
+              <td data-en="Standard rate" data-gr="Βασική τιμή">Standard rate</td>
+            </tr>
+            <tr>
+              <td data-en="Students" data-gr="Φοιτητές">Students</td>
+              <td data-en="€20" data-gr="20€">€20</td>
+              <td data-en="20% Discount" data-gr="20% Έκπτωση">20% Discount</td>
+            </tr>
+            <tr>
+              <td data-en="Referral Discount" data-gr="Έκπτωση Σύστασης">Referral Discount</td>
+              <td data-en="€5 off for the referrer" data-gr="5€ έκπτωση για τον συστήνοντα">
+                €5 off for the referrer
+              </td>
+              <td data-en="Given when referred student has an active subscription (20% discount per cycle)"
+                  data-gr="Παρέχεται όταν ο νέος μαθητής έχει ενεργή συνδρομή (20% έκπτωση ανά κύκλο)">
+                Given when referred student has an active subscription (20% discount per cycle)
+              </td>
+            </tr>
+            <tr>
+              <td data-en="Second Family Member" data-gr="Δεύτερο Μέλος Οικογένειας">Second Family Member</td>
+              <td data-en="€40" data-gr="40€">€40</td>
+              <td data-en="20% Discount (Both must have an active subscription)"
+                  data-gr="20% Έκπτωση (Απαιτείται ενεργή συνδρομή και για τους δύο)">
+                20% Discount (Both must have an active subscription)
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
-           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+    <!-- Ενότητα Τιμών Workshop -->
+    <section id="workshops">
+      <div class="container">
+        <h2 data-en="Workshop Pricing" data-gr="Τιμές Workshop">
+          Workshop Pricing
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th data-en="Participant Type" data-gr="Τύπος Συμμετέχοντα">Participant Type</th>
+              <th data-en="Price per Workshop" data-gr="Τιμή ανά Workshop">Price per Workshop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-en="Subscribers (Active Skaters)" data-gr="Συνδρομητές (Ενεργοί Σκέιτερ)">
+                Subscribers (Active Skaters)
+              </td>
+              <td data-en="€5" data-gr="5€">€5</td>
+            </tr>
+            <tr>
+              <td data-en="Non-Subscribers (Team Members)" data-gr="Μη Συνδρομητές (Μέλη Ομάδας)">
+                Non-Subscribers (Team Members)
+              </td>
+              <td data-en="€8" data-gr="8€">€8</td>
+            </tr>
+            <tr>
+              <td data-en="Non-Subscribers (Non-Members)" data-gr="Μη Συνδρομητές (Εκτός Ομάδας)">
+                Non-Subscribers (Non-Members)
+              </td>
+              <td data-en="€10" data-gr="10€">€10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ενότητα Τιμών για Σχολεία -->
+    <section id="schools">
+      <div class="container">
+        <h2 data-en="Pricing & Discounts for Schools" data-gr="Τιμές & Εκπτώσεις για Σχολεία">
+          Pricing & Discounts for Schools
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th data-en="Minimum Service Fee" data-gr="Ελάχιστη Χρέωση Υπηρεσίας">Minimum Service Fee</th>
+              <th data-en="Price per Kid" data-gr="Τιμή ανά Παιδί">Price per Kid</th>
+              <th data-en="Number of Kids per Month" data-gr="Αριθμός Παιδιών ανά Μήνα">Number of Kids per Month</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-en="€100 / month" data-gr="100€ / μήνα" rowspan="5">€100 / month</td>
+              <td data-en="€20" data-gr="20€">€20</td>
+              <td data-en="5 kids / month" data-gr="5 παιδιά / μήνα">5 kids / month</td>
+            </tr>
+            <tr>
+              <td data-en="€18" data-gr="18€">€18</td>
+              <td data-en="10 kids / month" data-gr="10 παιδιά / μήνα">10 kids / month</td>
+            </tr>
+            <tr>
+              <td data-en="€16" data-gr="16€">€16</td>
+              <td data-en="15 kids / month" data-gr="15 παιδιά / μήνα">15 kids / month</td>
+            </tr>
+            <tr>
+              <td data-en="€14" data-gr="14€">€14</td>
+              <td data-en="20 kids / month" data-gr="20 παιδιά / μήνα">20 kids / month</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ενότητα Κανόνων Παρουσίας & Πληρωμής -->
+    <section id="attendance">
+      <div class="container">
+        <h2 data-en="Attendance & Payment Rules" data-gr="Κανόνες Παρουσίας & Πληρωμής">
+          Attendance & Payment Rules
+        </h2>
+        <p data-en="<strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot."
+           data-gr="<strong>❗ Προπληρωμή Μαθημάτων:</strong> Όλα τα μαθήματα προπληρώνονται για να διασφαλιστεί η θέση σας.">
+          <strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot.
+        </p>
+        <p data-en="<strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour."
+           data-gr="<strong>📅 Πολιτική Απουσιών:</strong> Εάν ένας μαθητής χάσει 3 μαθήματα χωρίς ενημέρωση, χάνει 1 διδακτική ώρα.">
+          <strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour.
+        </p>
+        <p data-en="<strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund."
+           data-gr="<strong>🔄 Ακύρωση Workshop:</strong> Τα workshop προπληρώνονται εξ ολοκλήρου. Εάν χαθούν, επιστρέφεται το 50%.">
+          <strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund.
         </p>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Inline JavaScript for Language Toggle -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const storedLang = localStorage.getItem("language") || "en";
-      updateLanguage(storedLang);
-    });
+    <!-- Ενότητα Καιρού & Ακυρώσεων -->
+    <section id="weather">
+      <div class="container">
+        <h2 data-en="Weather & Cancellations" data-gr="Καιρός & Ακυρώσεις">
+          Weather & Cancellations
+        </h2>
+        <p data-en="Lessons will be <strong>suspended</strong> if:" data-gr="Τα μαθήματα θα <strong>αναστέλλονται</strong> εάν:">
+          Lessons will be <strong>suspended</strong> if:
+        </p>
+        <div class="cancel-reasons">
+            <ul>
+            <li data-en="🌧 <strong>Rainy or wet courts</strong>" data-gr="🌧 <strong>Βροχερό ή βρεγμένο γήπεδο</strong>">
+                🌧 <strong>Rainy or wet courts</strong>
+            </li>
+            <li data-en="❄ <strong>Temperatures below 5°C</strong>" data-gr="❄ <strong>Θερμοκρασίες κάτω από 5°C</strong>">
+                ❄ <strong>Temperatures below 5°C</strong>
+            </li>
+            <li data-en="⚠ <strong>Unsafe skating conditions</strong>" data-gr="⚠ <strong>Επικίνδυνες συνθήκες πατινάζ</strong>">
+                ⚠ <strong>Unsafe skating conditions</strong>
+            </li>
+            </ul>
+        </div>
+        <p data-en="Students will be notified in advance if lessons are postponed."
+           data-gr="Οι μαθητές θα ενημερώνονται εκ των προτέρων εάν τα μαθήματα αναβληθούν.">
+          Students will be notified in advance if lessons are postponed.
+        </p>
+      </div>
+    </section>
 
-    function toggleLanguage() {
-      const currentLang = localStorage.getItem("language") || "en";
-      const newLang = (currentLang === 'en') ? 'gr' : 'en';
-      localStorage.setItem('language', newLang);
-      updateLanguage(newLang);
-    }
+    <!-- Ενότητα Αιτήματος Εξοπλισμού -->
+    <section id="equipment">
+      <div class="equipment-container">
+        <h2 data-en="Need Equipment?" data-gr="Χρειάζεστε Εξοπλισμό?">
+          Need Equipment?
+        </h2>
+        <p data-en="If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available."
+           data-gr="Εάν δεν έχετε πατίνια ή προστατευτικό εξοπλισμό, ενημερώστε μας εκ των προτέρων. Θα τα παρέχουμε εφόσον είναι διαθέσιμα.">
+          If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available.
+        </p>
+        <form action="HomePage.html" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required data-en="Name" data-gr="Όνοματεπώνυμο" />
+          <input type="email" name="email" placeholder="Your Email" required data-en="Email" data-gr="Ηλεκτρονικό ταχυδρομείο" />
+          <textarea name="message" placeholder="Request Equipment (e.g., skates, helmet, knee pads, elbow pads, wrist pads)" required
+            data-en="Request Equipment (e.g., skates, helmet, knee pads, elbow pads, wrist pads)"
+            data-gr="Αίτημα Εξοπλισμού (π.χ. πατίνια, κράνος, επιγονατίδες, επιαγκωνίδες, επικαρπίδες)">
+          </textarea>
+          <button type="submit" data-en="Request Equipment" data-gr="Αίτημα Εξοπλισμού">
+            Request Equipment
+          </button>
+        </form>
+      </div>
+    </section>
 
-    function updateLanguage(lang) {
-      const flagImage = document.querySelector('#language-button img');
-      if (lang === 'en') {
-        flagImage.src = 'photo/greeceflag.png';
-        flagImage.alt = 'Greece Language';
-      } else {
-        // English flag
-        flagImage.src = 'photo/englandflag.jpg';
-        flagImage.alt = 'English Language';
+    <!-- Υποσέλιδο (Footer) -->
+    <!-- Υποσέλιδο (Footer) -->
+    <footer>
+        <div class="footer-row">
+          <!-- Ενημερωτικό Δελτίο (Newsletter) -->
+          <div class="footer-column newsletter">
+            <h3 data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</h3>
+            <form class="newsletter-form" action="#" method="post">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                data-en-placeholder="Enter your email"
+                data-gr-placeholder="Εισάγετε το email σας"
+                required
+              />
+              <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
+            </form>
+            <p
+              data-en="Subscribe to receive our latest news."
+              data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα.">
+              Subscribe to receive our latest news and offers.
+            </p>
+            <div class="social-icons">
+              <ul>
+                <li><a href="#"><img src="photo/fb.webp" alt="Facebook" /></a></li>
+                <li><a href="#"><img src="photo/insta.png" alt="Instagram" /></a></li>
+                <li><a href="#"><img src="photo/tiktok.png" alt="TikTok" /></a></li>
+                <li><a href="#"><img src="photo/youtube.png" alt="Youtube" /></a></li>
+                <li><a href="#"><img src="photo/linkedin.png" alt="LinkedIn" /></a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Πολιτικές & Πληροφορίες (Policies & Information) -->
+          <div class="footer-column policies">
+              <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">
+                Policies &amp; Information
+              </h3>
+              <ul>
+                <li>
+                    <a href="#" data-en="Refund &amp; Cancellation Policy" data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">
+                      Refund &amp; Cancellation Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
+                      Safety Guidelines
+                    </a>
+                  </li>
+                <li>
+                  <a href="policies.html" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">
+                    Terms &amp; Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-en="FAQ" data-gr="Συχνές Ερωτήσεις">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+          </div>
+          
+          <!-- Επικοινωνία (Contact Us) -->
+          <div class="footer-column contact">
+            <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+            <p>
+                <strong data-en="📧 Email:" data-gr="📧 Email:">📧 Email:</strong>
+                <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&amp;body=Hello Hermes Team," data-en="hermesrollerskate@hotmail.com" data-gr="hermesrollerskate@hotmail.com">
+                  hermesrollerskate@hotmail.com
+                </a>
+              </p>
+            <p>
+              <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
+              <a href="#" target="_blank" data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
+                Zografou, Attica
+              </a>
+            </p>
+            <p>
+              <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
+              <a href="tel:+306955655189" data-en="+306955655189" data-gr="+306955655189">
+                +306955655189
+              </a>
+            </p>
+            <p>
+                <a href="contact.html" data-en="💬 Send a Message" data-gr="💬 Στείλτε Μήνυμα">
+                💬 Send a Message
+              </a>
+            </p>
+          </div>
+        </div>
+  
+        <!-- Carousel Εταιρικών Συνεργατών -->
+        <div class="footer-partners-carousel">
+          <div class="carousel-wrapper">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <!-- Προσθέστε επιπλέον στοιχεία για ομαλή ροή -->
+            </div>
+          </div>
+        </div>
+  
+        <!-- Οριζόντια γραμμή διαχωρισμού -->
+        <hr class="footer-separator" />
+  
+        <!-- Κάτω μέρος του υποσέλιδου -->
+        <div class="footer-bottom">
+          <p
+            data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+            data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+            &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+          </p>
+        </div>
+    </footer>
+
+    <!-- Σενάριο κίνησης του Carousel -->
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const speed = 0.5; // pixels ανά καρέ – ρυθμίστε την ταχύτητα εδώ
+
+      function animateCarousel() {
+        // Λήψη της τρέχουσας τιμής μετατόπισης (transform)
+        const style = window.getComputedStyle(track);
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        let translateX = matrix.m41 || 0;
+
+        // Μετακίνηση του track προς τα αριστερά
+        translateX -= speed;
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Έλεγχος αν η πρώτη εικόνα έχει εξαφανιστεί εντελώς
+        const firstItem = track.firstElementChild;
+        const firstRect = firstItem.getBoundingClientRect();
+        const wrapperRect = track.parentElement.getBoundingClientRect();
+
+        // Αν το δεξί άκρο της πρώτης εικόνας είναι εκτός του wrapper
+        if (firstRect.right < wrapperRect.left) {
+          // Αφαίρεση της πρώτης εικόνας και επαναπροσθήκη στο τέλος
+          track.appendChild(firstItem);
+          // Ενημέρωση της μετατόπισης ώστε να μην υπάρχει απότομη αλλαγή
+          const itemStyle = window.getComputedStyle(firstItem);
+          const marginRight = parseFloat(itemStyle.marginRight) || 0;
+          translateX += firstRect.width + marginRight;
+          track.style.transform = `translateX(${translateX}px)`;
+        }
+        requestAnimationFrame(animateCarousel);
+      }
+      requestAnimationFrame(animateCarousel);
+    </script>
+
+    <!-- Σενάριο για αλλαγή και ενημέρωση γλώσσας -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const storedLang = localStorage.getItem("language") || "en";
+        updateLanguage(storedLang);
+      });
+
+      function toggleLanguage() {
+        const currentLang = localStorage.getItem("language") || "en";
+        const newLang = (currentLang === 'en') ? 'gr' : 'en';
+        localStorage.setItem('language', newLang);
+        updateLanguage(newLang);
       }
 
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        if (el.tagName.toLowerCase() === 'title') {
-          document.title = el.getAttribute(`data-${lang}`);
-        } else if (
-          (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
-          && el.hasAttribute('placeholder')
-        ) {
-          el.placeholder = el.getAttribute(`data-${lang}`);
-        } else if (el.tagName.toLowerCase() === 'option') {
-          el.textContent = el.getAttribute(`data-${lang}`);
+      function updateLanguage(lang) {
+        // 1. Αλλαγή εικόνας σημαίας
+        const flagImage = document.querySelector('#language-button img');
+        if (lang === 'en') {
+          flagImage.src = 'photo/greeceflag.png';
+          flagImage.alt = 'Greece Language';
         } else {
-          el.innerHTML = el.getAttribute(`data-${lang}`);
+          flagImage.src = 'photo/englandflag.jpg';
+          flagImage.alt = 'English Language';
         }
-      });
 
-      document.documentElement.lang = lang;
-    }
-  </script>
+        // 2. Ενημέρωση όλων των κειμένων βάσει των data-en / data-gr attributes
+        const elements = document.querySelectorAll('[data-en]');
+        elements.forEach(el => {
+          if (el.tagName.toLowerCase() === 'title') {
+            document.title = el.getAttribute(`data-${lang}`);
+          } else if (
+            (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+            && el.hasAttribute('placeholder')
+          ) {
+            el.placeholder = el.getAttribute(`data-${lang}`);
+          } else if (el.tagName.toLowerCase() === 'option') {
+            el.textContent = el.getAttribute(`data-${lang}`);
+          } else {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+          }
+        });
 
-  <!-- MailerLite Universal Script -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
-      (w[f].q=w[f].q||[]).push(arguments);},
-      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
-      n.parentNode.insertBefore(l,n);})(window,document,'script',
-      'https://assets.mailerlite.com/js/universal.js','ml');
+        // 3. Εμφάνιση ή απόκρυψη στοιχείων φόρμας ανά γλώσσα (αν υπάρχουν)
+        const enForms = document.querySelectorAll('[data-en-only]');
+        const grForms = document.querySelectorAll('[data-gr-only]');
+        if (lang === 'en') {
+          enForms.forEach(f => f.style.display = 'block');
+          grForms.forEach(f => f.style.display = 'none');
+        } else {
+          enForms.forEach(f => f.style.display = 'none');
+          grForms.forEach(f => f.style.display = 'block');
+        }
 
-    // Αντικαταστήστε το '1363757' με το δικό σας account ID
-    ml('account', '1363757');
-  </script>
-  <!-- End MailerLite Universal -->
-
-</body>
+        // 4. Ορισμός του attribute lang στο στοιχείο <html>
+        document.documentElement.lang = lang;
+      }
+    </script>
+  </body>
 </html>

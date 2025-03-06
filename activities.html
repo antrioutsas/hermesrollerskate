@@ -1,365 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-en="Activities" data-gr="Δραστηριότητες">Activities</title>
-  <link rel="stylesheet" href="navigation.css">
-  <link rel="stylesheet" href="activities.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="icon" href="photo/logo.png">
-</head>
-<body>
+  <head>
+    <!-- Μεταδεδομένα και συνδέσεις με τα CSS αρχεία -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-en="Activities" data-gr="Δραστηριότητες">Activities</title>
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="activities.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" href="photo/logo.png" />
+  </head>
+  <body>
+    <!-- Πλοήγηση (Navigation) -->
+    <nav>
+      <ul>
+        <li>
+          <a href="HomePage.html">
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
+          </a>
+        </li>
+        <li>
+          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
+            Who We Are
+          </a>
+        </li>
+        <li>
+          <a href="classes.html" class="nav-link" data-en="Classes" data-gr="Μαθήματα">
+            Classes
+          </a>
+        </li>
+        <li>
+          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
+            More Activities
+          </a>
+        </li>
+        <li>
+          <a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">
+            Prices & Discounts
+          </a>
+        </li>
+        <li>
+          <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">
+            Benefits
+          </a>
+        </li>
+        <li>
+          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">
+            Merchandise
+          </a>
+        </li>
+        <!-- Κουμπί αλλαγής γλώσσας -->
+        <li class="nav-lang">
+          <button id="language-button" onclick="toggleLanguage()">
+            <img src="photo/greeceflag.png" alt="Greece Language" />
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-  <!-- SCRIPT: Highlight the active nav link -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      let currentPage = window.location.pathname.split('/').pop();
-      let navLinks = document.querySelectorAll('.nav-link');
-
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <ul>
-      <li>
-        <a href="HomePage.html">
-          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-        </a>
-      </li>
-      <li><a href="whoweare.html"        class="nav-link" data-en="Who We Are"        data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"         class="nav-link" data-en="Classes"           data-gr="Μαθήματα">Classes</a></li>
-      <li><a href="activities.html"      class="nav-link" data-en="More Activities"   data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Discounts</a></li>
-      <li><a href="benefits.html"        class="nav-link" data-en="Benefits"          data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html"     class="nav-link" data-en="Merchandise"       data-gr="Προϊόντα">Merchandise</a></li>
-      <li class="nav-lang">
-        <button id="language-button" onclick="toggleLanguage()">
-          <img src="photo/greeceflag.png" alt="Greece Language">
-        </button>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- INTRODUCTION -->
-  <section id="intro">
-    <div class="container">
-      <h2 data-en="From Wheels to Ice & Snow" data-gr="Από Ρόδες σε Πάγο & Χιόνι">From Wheels to Ice & Snow</h2>
-      <p data-en="Did you know that **roller skating** is one of the best ways to prepare for **ice skating** and **snow skiing**?  
+    <!-- Εισαγωγή (Introduction) -->
+    <section id="intro">
+      <div class="container">
+        <h2 data-en="From Wheels to Ice & Snow" data-gr="Από Ρόδες σε Πάγο & Χιόνι">
+          From Wheels to Ice & Snow
+        </h2>
+        <p
+          data-en="Did you know that **roller skating** is one of the best ways to prepare for **ice skating** and **snow skiing**?  
                   The balance, movements, and techniques are similar, making the transition **smooth and easy**."
-         data-gr="Γνωρίζατε ότι το **rollerskating** είναι ένας από τους καλύτερους τρόπους προετοιμασίας για το **πατινάζ στον πάγο** και το **σκι στο χιόνι**;  
+          data-gr="Γνωρίζατε ότι το **rollerskating** είναι ένας από τους καλύτερους τρόπους προετοιμασίας για το **πατινάζ στον πάγο** και το **σκι στο χιόνι**;  
                   Η ισορροπία, οι κινήσεις και οι τεχνικές είναι παρόμοιες, καθιστώντας τη μετάβαση **ομαλή και εύκολη**.">
-         Did you know that **roller skating** is one of the best ways to prepare for **ice skating** and **snow skiing**?  
-         The balance, movements, and techniques are similar, making the transition **smooth and easy**.
-      </p>
-      <p data-en="We offer **beginner group lessons** for both **ice skating** and **snow skiing**  
+          Did you know that **roller skating** is one of the best ways to prepare for **ice skating** and **snow skiing**?  
+          The balance, movements, and techniques are similar, making the transition **smooth and easy**.
+        </p>
+        <p
+          data-en="We offer **beginner group lessons** for both **ice skating** and **snow skiing**  
                   to help you explore these exciting sports with confidence!"
-         data-gr="Προσφέρουμε **μαθήματα για αρχάριους** τόσο στο **πατινάζ στον πάγο** όσο και στο **σκι στο χιόνι**  
+          data-gr="Προσφέρουμε **μαθήματα για αρχάριους** τόσο στο **πατινάζ στον πάγο** όσο και στο **σκι στο χιόνι**  
                   για να σας βοηθήσουμε να εξερευνήσετε αυτά τα συναρπαστικά αθλήματα με αυτοπεποίθηση!">
-         We offer **beginner group lessons** for both **ice skating** and **snow skiing**  
-         to help you explore these exciting sports with confidence!
-      </p>
-    </div>
-  </section>
-
-  <!-- ICE SKATING LESSONS -->
-  <section class="activity-section">
-    <div class="container">
-      <h3 data-en="⛸ Ice Skating Beginner Lessons" data-gr="⛸ Μαθήματα Πατινάζ στον Πάγο για Αρχάριους">⛸ Ice Skating Beginner Lessons</h3>
-      <p data-en="<strong>Who is this for?</strong> Beginners with or without roller skating experience."
-         data-gr="<strong>Για ποιον είναι;</strong> Αρχάριοι με ή χωρίς εμπειρία στο rollerskating.">
-         <strong>Who is this for?</strong> Beginners with or without roller skating experience.
-      </p>
-      <p data-en="<strong>What You Will Learn:</strong>" data-gr="<strong>Τι θα μάθετε:</strong>">
-         <strong>What You Will Learn:</strong>
-      </p>
-      <ul>
-        <li data-en="✅ Basic balance and stance on ice" data-gr="✅ Βασική ισορροπία και στάση στον πάγο">✅ Basic balance and stance on ice</li>
-        <li data-en="✅ Gliding, stopping, and turning techniques" data-gr="✅ Τεχνικές ολίσθησης, σταματήματος και στροφής">✅ Gliding, stopping, and turning techniques</li>
-        <li data-en="✅ Understanding edge control and movement" data-gr="✅ Κατανόηση ελέγχου ακμών και κίνησης">✅ Understanding edge control and movement</li>
-        <li data-en="✅ Fun drills and confidence-building exercises" data-gr="✅ Διασκεδαστικές ασκήσεις και ενίσχυση αυτοπεποίθησης">✅ Fun drills and confidence-building exercises</li>
-      </ul>
-      <p data-en="<strong>Class Details:</strong>" data-gr="<strong>Λεπτομέρειες Μαθήματος:</strong>">
-         <strong>Class Details:</strong>
-      </p>
-      <p data-en="<strong>🕒 Duration:</strong> 1 hour" data-gr="<strong>🕒 Διάρκεια:</strong> 1 ώρα">
-         <strong>🕒 Duration:</strong> 1 hour
-      </p>
-      <p data-en="<strong>👥 Group Size:</strong> Up to 10 students" data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> Έως 10 μαθητές">
-         <strong>👥 Group Size:</strong> Up to 10 students
-      </p>
-      <p data-en="<strong>📍 Location:</strong> Local ice rink (to be announced)"
-         data-gr="<strong>📍 Τοποθεσία:</strong> Τοπικό παγοδρόμιο (θα ανακοινωθεί)">
-         <strong>📍 Location:</strong> Local ice rink (to be announced)
-      </p>
-    </div>
-  </section>
-
-  <!-- SNOW SKIING LESSONS -->
-  <section class="activity-section">
-    <div class="container">
-      <h3 data-en="🎿 Snow Skiing Beginner Lessons" data-gr="🎿 Μαθήματα Σκι στο Χιόνι για Αρχάριους">🎿 Snow Skiing Beginner Lessons</h3>
-      <p data-en="<strong>Who is this for?</strong> First-time skiers who want a fun introduction to the sport."
-         data-gr="<strong>Για ποιον είναι;</strong> Πρωτάρηδες σκιέρ που θέλουν μια διασκεδαστική εισαγωγή στο άθλημα.">
-         <strong>Who is this for?</strong> First-time skiers who want a fun introduction to the sport.
-      </p>
-      <p data-en="<strong>What You Will Learn:</strong>" data-gr="<strong>Τι θα μάθετε:</strong>">
-         <strong>What You Will Learn:</strong>
-      </p>
-      <ul>
-        <li data-en="✅ Proper stance and weight distribution on skis" data-gr="✅ Σωστή στάση και κατανομή βάρους στα σκι">
-          ✅ Proper stance and weight distribution on skis
-        </li>
-        <li data-en="✅ Basic movement, turns, and stopping techniques" data-gr="✅ Βασική κίνηση, στροφές και τεχνικές σταματήματος">
-          ✅ Basic movement, turns, and stopping techniques
-        </li>
-        <li data-en="✅ Introduction to small slopes and ski control" data-gr="✅ Εισαγωγή σε μικρές πλαγιές και έλεγχος σκι">
-          ✅ Introduction to small slopes and ski control
-        </li>
-      </ul>
-      <p data-en="<strong>Class Details:</strong>" data-gr="<strong>Λεπτομέρειες Μαθήματος:</strong>">
-         <strong>Class Details:</strong>
-      </p>
-      <p data-en="<strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)" data-gr="<strong>🕒 Διάρκεια:</strong> Μάθημα μισής ημέρας (3–4 ώρες)">
-         <strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)
-      </p>
-      <p data-en="<strong>👥 Group Size:</strong> 8–12 students" data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> 8–12 μαθητές">
-         <strong>👥 Group Size:</strong> 8–12 students
-      </p>
-      <p data-en="<strong>📍 Location:</strong> Ski resort (to be announced)" data-gr="<strong>📍 Τοποθεσία:</strong> Χιονοδρομικό κέντρο (θα ανακοινωθεί)">
-         <strong>📍 Location:</strong> Ski resort (to be announced)
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section id="contact">
-    <div class="container">
-      <h2 data-en="Interested in Joining?" data-gr="Ενδιαφέρεστε να Συμμετάσχετε;">Interested in Joining?</h2>
-      <p data-en="Leave your details and select your preferred activity. We will contact you for more information."
-         data-gr="Συμπληρώστε τα στοιχεία σας και επιλέξτε την επιθυμητή δραστηριότητα. Θα επικοινωνήσουμε μαζί σας για περισσότερες πληροφορίες.">
-         Leave your details and select your preferred activity. We will contact you for more information.
-      </p>
-        <form id="activitiesForm" action="https://formspree.io/f/xyzeggzo" method="POST">
-            <input type="hidden" name="_next" value="thankyou.html">
-            
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="first_name" required>
-
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="last_name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="activity">Select Activity:</label>
-            <select name="activity" id="activity" required>
-                <option value="ice-skating">⛸ Ice Skating</option>
-                <option value="snow-skiing">🎿 Snow Skiing</option>
-            </select>
-        
-            <button type="submit">Submit</button>
-        </form>
-    
-    </div>
-  </section>
-    <script>
-        document.getElementById("activitiesForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const form = this;
-
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = "thankyou.html"; // Redirect manually
-                } else {
-                    alert("There was an error submitting the form. Please try again.");
-                }
-            }).catch(error => {
-                alert("There was a problem with your request.");
-            });
-        });
-    </script>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-
-      <!-- Newsletter Signup (MailerLite Embedded) -->
-      <div class="footer-section">
-        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-
-        <!-- ENGLISH Newsletter Form -->
-        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
-
-        <!-- GREEK Newsletter Form (hidden by default) -->
-        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
+          We offer **beginner group lessons** for both **ice skating** and **snow skiing**  
+          to help you explore these exciting sports with confidence!
+        </p>
       </div>
+    </section>
 
-      <!-- Policies & Information in Footer -->
-      <div class="footer-section">
-        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
+    <!-- Μαθήματα Πατινάζ στον Πάγο -->
+    <section class="activity-section">
+      <div class="container">
+        <h3 data-en="⛸ Ice Skating Beginner Lessons" data-gr="⛸ Μαθήματα Πατινάζ στον Πάγο για Αρχάριους">
+          ⛸ Ice Skating Beginner Lessons
+        </h3>
+        <p
+          data-en="<strong>Who is this for?</strong> Beginners with or without roller skating experience."
+          data-gr="<strong>Για ποιον είναι;</strong> Αρχάριοι με ή χωρίς εμπειρία στο rollerskating.">
+          <strong>Who is this for?</strong> Beginners with or without roller skating experience.
+        </p>
+        <p data-en="<strong>What You Will Learn:</strong>" data-gr="<strong>Τι θα μάθετε:</strong>">
+          <strong>What You Will Learn:</strong>
+        </p>
         <ul>
-          <li>
-            <a href="policies.html#terms" data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">
-              Terms & Conditions
-            </a>
+          <li data-en="✅ Basic balance and stance on ice" data-gr="✅ Βασική ισορροπία και στάση στον πάγο">
+            ✅ Basic balance and stance on ice
           </li>
-          <li>
-            <a href="policies.html#privacy" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">
-              Privacy Policy
-            </a>
+          <li data-en="✅ Gliding, stopping, and turning techniques" data-gr="✅ Τεχνικές ολίσθησης, σταματήματος και στροφής">
+            ✅ Gliding, stopping, and turning techniques
           </li>
-          <li>
-            <a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">
-              Refund & Cancellation Policy
-            </a>
+          <li data-en="✅ Understanding edge control and movement" data-gr="✅ Κατανόηση ελέγχου ακμών και κίνησης">
+            ✅ Understanding edge control and movement
           </li>
-          <li>
-            <a href="policies.html#safety" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
-              Safety Guidelines
-            </a>
+          <li data-en="✅ Fun drills and confidence-building exercises" data-gr="✅ Διασκεδαστικές ασκήσεις και ενίσχυση αυτοπεποίθησης">
+            ✅ Fun drills and confidence-building exercises
           </li>
         </ul>
-      </div>
-
-      <!-- Find us -->
-      <div class="footer-section">
-        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-        <p data-en="Learn more about our mission, instructors, and training programs."
-           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-           Learn more about our mission, instructors, and training programs.
+        <p data-en="<strong>Class Details:</strong>" data-gr="<strong>Λεπτομέρειες Μαθήματος:</strong>">
+          <strong>Class Details:</strong>
         </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-          <a href="#" target="_blank">YouTube</a>
+        <p data-en="<strong>🕒 Duration:</strong> 1 hour" data-gr="<strong>🕒 Διάρκεια:</strong> 1 ώρα">
+          <strong>🕒 Duration:</strong> 1 hour
+        </p>
+        <p data-en="<strong>👥 Group Size:</strong> Up to 10 students" data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> Έως 10 μαθητές">
+          <strong>👥 Group Size:</strong> Up to 10 students
+        </p>
+        <p
+          data-en="<strong>📍 Location:</strong> Local ice rink (to be announced)"
+          data-gr="<strong>📍 Τοποθεσία:</strong> Τοπικό παγοδρόμιο (θα ανακοινωθεί)">
+          <strong>📍 Location:</strong> Local ice rink (to be announced)
+        </p>
+      </div>
+    </section>
+
+    <!-- Μαθήματα Σκι στο Χιόνι -->
+    <section class="activity-section">
+      <div class="container">
+        <h3 data-en="🎿 Snow Skiing Beginner Lessons" data-gr="🎿 Μαθήματα Σκι στο Χιόνι για Αρχάριους">
+          🎿 Snow Skiing Beginner Lessons
+        </h3>
+        <p
+          data-en="<strong>Who is this for?</strong> First-time skiers who want a fun introduction to the sport."
+          data-gr="<strong>Για ποιον είναι;</strong> Πρωτάρηδες σκιέρ που θέλουν μια διασκεδαστική εισαγωγή στο άθλημα.">
+          <strong>Who is this for?</strong> First-time skiers who want a fun introduction to the sport.
+        </p>
+        <p data-en="<strong>What You Will Learn:</strong>" data-gr="<strong>Τι θα μάθετε:</strong>">
+          <strong>What You Will Learn:</strong>
+        </p>
+        <ul>
+          <li
+            data-en="✅ Proper stance and weight distribution on skis"
+            data-gr="✅ Σωστή στάση και κατανομή βάρους στα σκι">
+            ✅ Proper stance and weight distribution on skis
+          </li>
+          <li
+            data-en="✅ Basic movement, turns, and stopping techniques"
+            data-gr="✅ Βασική κίνηση, στροφές και τεχνικές σταματήματος">
+            ✅ Basic movement, turns, and stopping techniques
+          </li>
+          <li
+            data-en="✅ Introduction to small slopes and ski control"
+            data-gr="✅ Εισαγωγή σε μικρές πλαγιές και έλεγχος σκι">
+            ✅ Introduction to small slopes and ski control
+          </li>
+        </ul>
+        <p data-en="<strong>Class Details:</strong>" data-gr="<strong>Λεπτομέρειες Μαθήματος:</strong>">
+          <strong>Class Details:</strong>
+        </p>
+        <p data-en="<strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)" data-gr="<strong>🕒 Διάρκεια:</strong> Μάθημα μισής ημέρας (3–4 ώρες)">
+          <strong>🕒 Duration:</strong> Half-day lesson (3–4 hours)
+        </p>
+        <p data-en="<strong>👥 Group Size:</strong> 8–12 students" data-gr="<strong>👥 Μέγεθος Ομάδας:</strong> 8–12 μαθητές">
+          <strong>👥 Group Size:</strong> 8–12 students
+        </p>
+        <p
+          data-en="<strong>📍 Location:</strong> Ski resort (to be announced)"
+          data-gr="<strong>📍 Τοποθεσία:</strong> Χιονοδρομικό κέντρο (θα ανακοινωθεί)">
+          <strong>📍 Location:</strong> Ski resort (to be announced)
+        </p>
+      </div>
+    </section>
+
+    <!-- Φόρμα Επικοινωνίας -->
+    <section id="activities-interest">
+      <div class="Interested">
+        <h2 data-en="Interested in Joining?" data-gr="Ενδιαφέρεστε να Συμμετάσχετε;">
+          Interested in Joining?
+        </h2>
+        <p
+          data-en="Leave your details and select your preferred activity. We will contact you for more information."
+          data-gr="Συμπληρώστε τα στοιχεία σας και επιλέξτε την επιθυμητή δραστηριότητα. Θα επικοινωνήσουμε μαζί σας για περισσότερες πληροφορίες.">
+          Leave your details and select your preferred activity. We will contact you for more information.
+        </p>
+        <form id="activities-form" action="HomePage.html" method="POST">
+          <input type="hidden" name="_next" value="thankyou.html" />
+          <input type="text" id="fname" name="first_name" required placeholder="First_name" data-en="First_name" data-gr="Όνομα" />
+          <input type="text" id="lname" name="last_name" required placeholder="Last_name" data-en="Last_name" data-gr="Επίθετο" />
+          <input type="email" id="email" name="email" required placeholder="Email" data-en="Email" data-gr="Ηλεκτρονικό ταχυδρομείο" />
+          <input type="tel" id="phone" name="phone" required placeholder="Phone" data-en="Phone_number" data-gr="Τηλέφωνο" />
+          
+          <label for="activity">Select Activity:</label>
+          <select name="activity" id="activity" required>
+            <option value="ice-skating">⛸ Ice Skating</option>
+            <option value="snow-skiing">🎿 Snow Skiing</option>
+          </select>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Υποσέλιδο (Footer) -->
+    <footer>
+      <div class="footer-row">
+        <!-- Ενημερωτικό Δελτίο (Newsletter) -->
+        <div class="footer-column newsletter">
+          <h3 data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</h3>
+          <form class="newsletter-form" action="#" method="post">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              data-en-placeholder="Enter your email"
+              data-gr-placeholder="Εισάγετε το email σας"
+              required
+            />
+            <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
+          </form>
+          <p
+            data-en="Subscribe to receive our latest news and offers."
+            data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα και προσφορές.">
+            Subscribe to receive our latest news and offers.
+          </p>
+          <div class="social-icons">
+            <ul>
+              <li><a href="#"><img src="photo/fb.webp" alt="Facebook" /></a></li>
+              <li><a href="#"><img src="photo/insta.png" alt="Instagram" /></a></li>
+              <li><a href="#"><img src="photo/tiktok.png" alt="TikTok" /></a></li>
+              <li><a href="#"><img src="photo/youtube.png" alt="Youtube" /></a></li>
+              <li><a href="#"><img src="photo/linkedin.png" alt="LinkedIn" /></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Πολιτικές & Πληροφορίες (Policies & Information) -->
+        <div class="footer-column policies">
+            <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">
+              Policies &amp; Information
+            </h3>
+            <ul>
+              <li>
+                  <a href="#" data-en="Refund &amp; Cancellation Policy" data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">
+                    Refund &amp; Cancellation Policy
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
+                    Safety Guidelines
+                  </a>
+                </li>
+              <li>
+                <a href="policies.html" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">
+                  Terms &amp; Conditions
+                </a>
+              </li>
+              <li>
+                <a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" data-en="FAQ" data-gr="Συχνές Ερωτήσεις">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+        </div>
+
+        <!-- Επικοινωνία (Contact Us) -->
+        <div class="footer-column contact">
+          <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+          <p>
+            <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
+            <a href="#" target="_blank" data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
+              Zografou, Attica
+            </a>
+          </p>
+          <p>
+            <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
+            <a href="tel:+306955655189" data-en="+306955655189" data-gr="+306955655189">
+              +306955655189
+            </a>
+          </p>
+          <p>
+            <strong data-en="📧 Email:" data-gr="📧 Email:">📧 Email:</strong>
+            <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&amp;body=Hello Hermes Team," data-en="hermesrollerskate@hotmail.com" data-gr="hermesrollerskate@hotmail.com">
+              hermesrollerskate@hotmail.com
+            </a>
+          </p>
+          <p>
+            <a href="#" data-en="💬 Send a Message" data-gr="💬 Στείλτε Μήνυμα">
+              💬 Send a Message
+            </a>
+          </p>
         </div>
       </div>
 
-      <!-- Contact Us -->
-      <div class="footer-section">
-        <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
-        <p>
-          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
-          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
-             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
-             Zografou, Attica
-          </a>
-        </p>
-        <p>
-          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
-          <a href="tel:+306955655189">+306955655189</a>
-        </p>
-        <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-           data-en="📧 Email: hermesrollerskate@hotmail.com"
-           data-gr="📧 Email: hermesrollerskate@hotmail.com">
-           📧 Email: hermesrollerskate@hotmail.com
-        </a>
-        <p>
-          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
-          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
-                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-                Saturday 13:55-14:55, Sunday 13:55-14:55 New
-          </span>
-        </p>
-        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
+      <!-- Carousel Εταιρικών Συνεργατών -->
+      <div class="footer-partners-carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-track">
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://archimedes.uoa.gr/" target="_blank">
+                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://powerskate.eu/" target="_blank">
+                <img src="photo/powerskate.png" alt="PowerSkate" />
+              </a>
+            </div>
+            <!-- Προσθέστε επιπλέον στοιχεία για ομαλή ροή -->
+          </div>
+        </div>
       </div>
 
+      <!-- Οριζόντια γραμμή διαχωρισμού -->
+      <hr class="footer-separator" />
+
+      <!-- Κάτω μέρος του υποσέλιδου -->
       <div class="footer-bottom">
-        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
-           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+        <p
+          data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+          data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+          &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
         </p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Language Toggle Logic -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const storedLang = localStorage.getItem("language") || "en";
-      updateLanguage(storedLang);
-    });
-
-    function toggleLanguage() {
-      const currentLang = localStorage.getItem("language") || "en";
-      const newLang = (currentLang === 'en') ? 'gr' : 'en';
-      localStorage.setItem("language", newLang);
-      updateLanguage(newLang);
-    }
-
-    function updateLanguage(lang) {
-      // Switch the flag image
-      const flagImage = document.querySelector('#language-button img');
-      if (lang === 'en') {
-        flagImage.src = 'photo/greeceflag.png';
-        flagImage.alt = 'Greece Language';
-      } else {
-        flagImage.src = 'photo/englandflag.jpg';
-        flagImage.alt = 'English Language';
-      }
-
-      // Update text content based on data-en / data-gr
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
-            && el.hasAttribute('placeholder')) {
-          // placeholder changes
-          el.placeholder = el.getAttribute(`data-${lang}`);
-        } else if (el.tagName.toLowerCase() === 'option') {
-          // for <option> text
-          el.textContent = el.getAttribute(`data-${lang}`);
-        } else if (el.tagName.toLowerCase() === 'title') {
-          // for <title>
-          document.title = el.getAttribute(`data-${lang}`);
-        } else {
-          // default case - update innerHTML
-          el.innerHTML = el.getAttribute(`data-${lang}`);
-        }
+    <!-- Σενάρια JavaScript -->
+    <!-- Επεξεργασία φόρμας δραστηριοτήτων με AJAX -->
+    <script>
+      document.getElementById("activitiesForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Αποτρέπουμε την προεπιλεγμένη υποβολή της φόρμας
+        const form = this;
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json"
+          }
+        })
+          .then((response) => {
+            if (response.ok) {
+              window.location.href = "thankyou.html"; // Ανακατεύθυνση μετά την επιτυχή υποβολή
+            } else {
+              alert("There was an error submitting the form. Please try again.");
+            }
+          })
+          .catch((error) => {
+            alert("There was a problem with your request.");
+          });
       });
+    </script>
 
-      // Show/hide the correct newsletter form
-      const enForms = document.querySelectorAll('[data-en-only]');
-      const grForms = document.querySelectorAll('[data-gr-only]');
-      if (lang === 'en') {
-        enForms.forEach(f => f.style.display = 'block');
-        grForms.forEach(f => f.style.display = 'none');
-      } else {
-        enForms.forEach(f => f.style.display = 'none');
-        grForms.forEach(f => f.style.display = 'block');
+    <!-- Κίνηση Carousel -->
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const speed = 0.5; // pixels ανά καρέ (ρυθμίστε την ταχύτητα εδώ)
+
+      function animateCarousel() {
+        // Λήψη της τρέχουσας τιμής μετατόπισης (transform)
+        const style = window.getComputedStyle(track);
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        let translateX = matrix.m41 || 0;
+
+        // Μετακίνηση του track προς τα αριστερά
+        translateX -= speed;
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Έλεγχος αν η πρώτη εικόνα έχει απομακρυνθεί εντελώς
+        const firstItem = track.firstElementChild;
+        const firstRect = firstItem.getBoundingClientRect();
+        const wrapperRect = track.parentElement.getBoundingClientRect();
+
+        // Αν το δεξί άκρο της πρώτης εικόνας είναι εκτός του wrapper
+        if (firstRect.right < wrapperRect.left) {
+          // Αφαιρούμε την πρώτη εικόνα και την επαναπροσθέτουμε στο τέλος
+          track.appendChild(firstItem);
+          // Ενημέρωση της μετατόπισης ώστε να μην υπάρχει απότομη αλλαγή
+          const itemStyle = window.getComputedStyle(firstItem);
+          const marginRight = parseFloat(itemStyle.marginRight) || 0;
+          translateX += firstRect.width + marginRight;
+          track.style.transform = `translateX(${translateX}px)`;
+        }
+        requestAnimationFrame(animateCarousel);
       }
 
-      // Set <html> lang attribute
-      document.documentElement.lang = lang;
-    }
-  </script>
+      requestAnimationFrame(animateCarousel);
+    </script>
 
-  <!-- MailerLite Universal Script (for the embedded <div>) -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
-    l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
-    n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    <!-- Λειτουργία αλλαγής γλώσσας -->
+    <script>
+      // Συνάρτηση για εναλλαγή γλώσσας
+      function toggleLanguage() {
+        const currentLang = localStorage.getItem("language") || "en";
+        const newLang = currentLang === "en" ? "gr" : "en";
+        localStorage.setItem("language", newLang);
+        updateLanguage(newLang);
+      }
 
-    // Replace 1363757 with your real MailerLite account ID
-    ml('account', '1363757');
-  </script>
+      // Συνάρτηση ενημέρωσης περιεχομένου βάσει γλώσσας
+      function updateLanguage(lang) {
+        // Αλλαγή εικόνας σημαίας
+        const flagImage = document.querySelector("#language-button img");
+        if (lang === "en") {
+          flagImage.src = "photo/greeceflag.png";
+          flagImage.alt = "Greece Language";
+        } else {
+          flagImage.src = "photo/englandflag.jpg";
+          flagImage.alt = "English Language";
+        }
 
-</body>
+        // Ενημέρωση κειμένων βάσει των data-attributes (data-en / data-gr)
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          if (el.tagName.toLowerCase() === "title") {
+            document.title = el.getAttribute(`data-${lang}`);
+          } else if (
+            (el.tagName.toLowerCase() === "input" || el.tagName.toLowerCase() === "textarea") &&
+            el.hasAttribute("placeholder")
+          ) {
+            el.placeholder = el.getAttribute(`data-${lang}`);
+          } else if (el.tagName.toLowerCase() === "option") {
+            el.textContent = el.getAttribute(`data-${lang}`);
+          } else {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+          }
+        });
+      }
+
+      // Εκτέλεση της ενημέρωσης γλώσσας μόλις φορτωθεί το DOM
+      document.addEventListener("DOMContentLoaded", function () {
+        const storedLang = localStorage.getItem("language") || "en";
+        updateLanguage(storedLang);
+      });
+    </script>
+  </body>
 </html>

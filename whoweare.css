@@ -1,125 +1,183 @@
+/* Import Manrope from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for consistent page width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* ============================= */
 /* WHO WE ARE SECTION */
 /* ============================= */
-
 #who-we-are {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #f9f9f9;
+  padding: 40px 20px;
+  background: #fff;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
+#who-we-are h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Flexbox Layout for Content */
+#who-we-are p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ============================= */
+/* ABOUT CONTENT (Mission & What Makes Us Different) */
+/* ============================= */
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Text Content */
 .about-text {
-    flex: 1;
-    max-width: 500px;
-    text-align: left;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Our Mission Section - Left aligned */
+.about-mission {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about-mission h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #222;
+  text-align: left;
+}
+
+.about-mission p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .about-text h3 {
-    color: #0073e6;
-    font-size: 2rem;
-    margin-bottom: 15px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #222;
 }
 
 .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 .about-text ul {
-    list-style: none;
-    padding: 0;
+  list-style: disc inside;
+  margin-left: 20px;
 }
 
-.about-text li {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: transform 0.3s ease-in-out, color 0.3s;
+.about-text ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
-.about-text li:hover {
-    transform: translateX(8px);
-    color: #0073e6;
-}
-
-/* Image Styling */
+/* About Image */
 .about-image {
-    flex: 1;
-    max-width: 500px;
-    text-align: center;
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
 }
 
 .about-image img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
-}
-
-.about-image img:hover {
-    transform: scale(1.08);
-    opacity: 0.9;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ============================= */
 /* MEET THE TEAM SECTION */
 /* ============================= */
 #meet-the-team {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #ffffff;
+  padding: 40px 20px;
+  background: #f0f0f0;
 }
 
+#meet-the-team h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#meet-the-team p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Staff List */
 .staff-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
 .staff-member {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 300px;
 }
 
-.staff-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+.staff-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .staff-member h4 {
-    color: #0073e6;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #222;
 }
 
 .staff-member p {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .staff-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }

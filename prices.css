@@ -1,68 +1,273 @@
+/* Import Manrope from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
 /* ============================= */
-/* GENERAL STYLES */
+/* GLOBAL STYLES & CONTAINER     */
 /* ============================= */
 body {
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
-/* Sections */
 .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* ============================= */
+/* PRICING SECTION               */
+/* ============================= */
+#pricing {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+#pricing h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-th {
-    background-color: #0073e6;
-    color: white;
+#pricing p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
+/* Table Styling for Prices */
+#pricing table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
 
-/* Responsive Table */
+#pricing th,
+#pricing td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+#pricing th {
+  background: #222;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+#pricing td {
+  font-size: 1em;
+  color: #333;
+}
+
+/* ============================= */
+/* WORKSHOP PRICING SECTION      */
+/* ============================= */
+#workshops {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#workshops h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#workshops table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+#workshops th,
+#workshops td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+#workshops th {
+  background: #222;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+#workshops td {
+  font-size: 1em;
+  color: #333;
+}
+
+/* ============================= */
+/* SCHOOLS PRICING SECTION       */
+/* ============================= */
+#schools {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#schools h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#schools table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+#schools th,
+#schools td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+#schools th {
+  background: #222;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+#schools td {
+  font-size: 1em;
+  color: #333;
+}
+
+/* ============================= */
+/* ATTENDANCE & PAYMENT RULES    */
+/* ============================= */
+#attendance {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: left;
+}
+
+#attendance h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#attendance p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* ============================= */
+/* WEATHER & CANCELLATIONS       */
+/* ============================= */
+#weather {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#weather h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#weather p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Center the list block but keep bullet points left-aligned */
+.cancel-reasons {
+  text-align: center;  /* Center the entire block horizontally */
+}
+
+.cancel-reasons ul {
+  display: inline-block;     /* Make the UL an inline-block so it can be centered */
+  text-align: left;          /* Bullets & text remain left-aligned within the block */
+  list-style: disc outside;  /* Standard bullet style outside the text */
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1em;
+}
+
+/* ============================= */
+/* EQUIPMENT REQUEST SECTION     */
+/* ============================= */
+#equipment {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#equipment h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#equipment p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Equipment Request Form */
+#equipment form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#equipment form input,
+#equipment form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+#equipment form input:focus,
+#equipment form textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+#equipment form button {
+  padding: 12px;
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#equipment form button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.02);
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN             */
+/* ============================= */
 @media (max-width: 768px) {
-    table {
-        font-size: 14px;
-    }
+  #pricing,
+  #workshops,
+  #schools,
+  #attendance,
+  #weather,
+  #equipment {
+    padding: 20px 10px;
+  }
 
-    th, td {
-        padding: 8px;
-    }
-}
-
-/* Lists */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea {
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
+  table, th, td {
+    font-size: 0.9em;
+    padding: 10px;
+  }
 }

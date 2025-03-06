@@ -1,161 +1,242 @@
-/* =============================
-   FOOTER BASE STYLES
-============================= */
-
-footer {
-    background-color: #444;
-    color: #fff;
-    padding: 50px 20px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    position: relative;
+:root {
+    /* Footer Colors */
+    --footer-bg: #222;               /* Dark background for footer */
+    --footer-text: #fff;             /* White text for footer */
+    --footer-accent: #ffcc00;         /* Accent color for links or highlights */
+    --footer-accent-hover: #ffaa00;   /* Accent color on hover */
+  
+    /* Input & Text Colors */
+    --input-bg: #2a2a2a;             /* Input field background */
+    --text-muted: #ccc;              /* Muted text color for secondary information */
+    --text-secondary: #aaa;          /* Secondary text color for less prominent text */
+  
+    /* Transitions */
+    --transition-duration: 0.3s;     /* General transition duration */
+    --transition-transform: 0.2s;    /* Transition duration for transform properties */
   }
   
-  .footer-container {
+  
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Footer */
+  footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 50px 0;
+    font-family: var(--font-base);
+    width: 100%;
+  }
+  
+  /* Top Row: Newsletter, Policies, Contact */
+  .footer-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Ισοκατανομή χώρου μεταξύ των στηλών */
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 30px;
+    padding: 0 20px;   /* Οριζόντιο padding για να μην κολλάει το περιεχόμενο στις άκρες */
+    gap: 20px;
   }
   
-  .footer-section {
+  .footer-column {
     flex: 1;
-    min-width: 200px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #ffcc00;
-    font-weight: 600;
-    position: relative;
-    display: inline-block;
-  }
-  .footer-section h3::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #ffcc00;
-    margin-top: 5px;
-  }
-  
-  .footer-section p,
-  .footer-section a {
-    font-size: 14px;
-    color: #ccc;
-    text-decoration: none;
-    line-height: 1.8;
-    transition: color 0.3s ease-in-out;
-  }
-  .footer-section a:hover {
-    color: #ffcc00;
-  }
-  
-  /* FORM STYLES (manually-coded forms) */
-  .footer-section form {
-    margin-top: 15px;
-  }
-  .footer-section input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    background-color: #2a2a2a;
-    color: #fff;
-    transition: border-color 0.3s ease-in-out;
-  }
-  .footer-section input:focus {
-    border-color: #ffcc00;
-    outline: none;
-  }
-  .footer-section button {
-    background-color: #ffcc00;
-    color: #1a1a1a;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-  }
-  .footer-section button:hover {
-    background-color: #ffaa00;
-    transform: scale(1.05);
-  }
-  
-  /* FOOTER BOTTOM */
-  .footer-bottom {
-    margin-top: 40px;
-    font-size: 12px;
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    color: #aaa;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* =============================
-     NEWSLETTER (MAILERLITE EMBED)
-  ============================= */
-  
-  /* Αφορά το αυτόματο form της MailerLite (ml-embedded) */
-  .footer-section .ml-embedded form {
-    /* Παραδείγματα στυλ, διαλέγετε ελεύθερα */
+    min-width: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 15px; /* για κενό πάνω-κάτω */
-    gap: 10px;        /* απόσταση μεταξύ πεδίων */
+    justify-content: flex-start;
   }
   
-  /* Πεδίο email του MailerLite */
-  .footer-section .ml-embedded input[type="email"] {
-    width: 100%;
-    max-width: 300px; /* Προαιρετικά, για να μη γίνει τεράστιο σε μεγάλα screens */
-    padding: 12px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    background-color: #2a2a2a;
-    color: #fff;
-    transition: border-color 0.3s ease-in-out;
+  /* Column Titles */
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: left;
   }
-  .footer-section .ml-embedded input[type="email"]:focus {
-    border-color: #ffcc00;
+  
+  /* Newsletter Column */
+  .footer-column.newsletter {
+    text-align: left;
+  }
+  
+  /* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column; /* Στοιχίζει κάθετα το input και το κουμπί */
+  align-items: flex-start; /* Αριστερή στοίχιση */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+  
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    max-width: 250px;
+    padding: 10px;
+    border: 1px solid var(--footer-accent);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--footer-text);
+    transition: border-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+  }
+  
+  .newsletter-form input[type="email"]:focus {
+    border-color: var(--footer-accent-hover);
     outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
   }
   
-  /* Κουμπί υποβολής MailerLite */
-  .footer-section .ml-embedded button[type="submit"] {
-    background-color: #ffcc00;
+  .newsletter-form button {
+    padding: 10px 20px;
+    background-color: var(--footer-accent);
     color: #1a1a1a;
     border: none;
-    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: background-color var(--transition-duration) ease,
+    transform var(--transition-transform) ease,
+    box-shadow var(--transition-duration) ease;
   }
-  .footer-section .ml-embedded button[type="submit"]:hover {
-    background-color: #ffaa00;
+  
+  .newsletter-form button:hover,
+  .newsletter-form button:focus {
+    background-color: var(--footer-accent-hover);
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+  }
+  
+  /* Newsletter Info Text */
+  .newsletter-form + p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Social Icons under Newsletter (Left-Aligned) */
+  .social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Αριστερή στοίχιση εικονιδίων */
+  }
+  
+  .social-icons img {
+    width: var(--social-icon-size, 40px);
+    height: var(--social-icon-size, 40px);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform var(--transition-duration) ease;
+  }
+  
+  .social-icons a:hover img,
+  .social-icons a:focus img {
+    transform: scale(1.1);
+  }
+  
+  /* Policies & Information + Contact Us */
+  .footer-column.policies ul,
+  .footer-column.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column.policies li,
+  .footer-column.contact li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column.policies a,
+  .footer-column.contact a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-duration) ease;
+  }
+  
+  .footer-column.policies a:hover,
+  .footer-column.policies a:focus,
+  .footer-column.contact a:hover,
+  .footer-column.contact a:focus {
+    color: var(--footer-accent);
+  }
+  
+  /* Equal Vertical Spacing in Contact Us */
+  .footer-column.contact p {
+    margin: 0 0 8px;
+    line-height: 1.5;
+  }
+  .footer-column.contact p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  /* Partners Carousel */
+  .footer-partners-carousel {
+    width: 100%;
+    margin: 70px 0 20px; /* 70px από πάνω, 20px από κάτω */
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    will-change: transform;
+  }
+  
+  .carousel-item {
+    flex: none;
+    margin-right: 30px;
+  }
+  
+  .carousel-item img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .carousel-item img:hover,
+  .carousel-item img:focus {
     transform: scale(1.05);
   }
   
-  /* Προαιρετικά, κρύψτε τυχόν default MailerLite branding, αν το πλάνο σας το επιτρέπει:
-  .footer-section .ml-embedded .powered-by {
-    display: none !important;
+  /* Separator */
+  .footer-separator {
+    border: none;
+    border-top: 1px solid var(--footer-text);
+    margin: 20px auto;
+    width: 90%;
   }
-  */
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 10px 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 10px;
+    }
+  }
   

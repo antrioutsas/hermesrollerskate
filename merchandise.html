@@ -1,361 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-en="Merchandise Reservation" data-gr="Κράτηση Προϊόντων">Merchandise Reservation</title>
-  <link rel="stylesheet" href="merchandise.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="navigation.css">
-  <link rel="icon" href="photo/logo.png">
-  
-  <script>
-    function updateSizeOptions() {
-        let product = document.getElementById("product").value;
-        let tshirtSizes = document.getElementById("tshirt-sizes");
-        let skateSizes = document.getElementById("skate-sizes");
-        let tshirtSizeSelect = document.getElementById("tshirt-size");
-        let skateSizeSelect = document.getElementById("skate-size");
-
-        // Reset selection values when changing product
-        tshirtSizeSelect.value = "";
-        skateSizeSelect.value = "";
-
-        if (product === "tshirt") {
-            tshirtSizes.style.display = "block";
-            skateSizes.style.display = "none";
-        } else if (product === "rollerskates") {
-            tshirtSizes.style.display = "none";
-            skateSizes.style.display = "block";
-        } else {
-            tshirtSizes.style.display = "none";
-            skateSizes.style.display = "none";
-        }
-    }
-
-  </script>
-</head>
-
-<body>
-  <!-- (Optional) SCRIPT HIGHLIGHT CURRENT NAV LINK -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const currentPage = window.location.pathname.split('/').pop();
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <ul>
-      <li>
-        <a href="HomePage.html">
-          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-        </a>
-      </li>
-      <li><a href="whoweare.html"         data-en="Who We Are"        data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"          data-en="Classes"           data-gr="Μαθήματα">Classes</a></li>
-      <li><a href="activities.html"       data-en="More Activities"   data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html"  data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">Prices & Policies</a></li>
-      <li><a href="benefits.html"         data-en="Benefits"          data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html"      data-en="Merchandise"       data-gr="Προϊόντα">Merchandise</a></li>
-      <li class="nav-lang">
-        <button id="language-button" onclick="toggleLanguage()">
-          <img src="photo/greeceflag.png" alt="Greece Language">
-        </button>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- INTRODUCTION -->
-  <section id="intro">
-    <div class="container">
-      <h2 data-en="Reserve Your Merchandise" data-gr="Κρατήστε τα Προϊόντα Σας">Reserve Your Merchandise</h2>
-      <p data-en="Fill out the form below to reserve your T-shirt or roller skates. We will contact you to confirm availability and arrange pickup at the academy."
-         data-gr="Συμπληρώστε τη φόρμα παρακάτω για να κρατήσετε το μπλουζάκι ή τα πατίνια σας. Θα επικοινωνήσουμε μαζί σας για να επιβεβαιώσουμε τη διαθεσιμότητα και να κανονίσουμε την παραλαβή στην ακαδημία.">
-         Fill out the form below to reserve your T-shirt or roller skates. We will contact you to confirm availability and arrange pickup at the academy.
-      </p>
-    </div>
-  </section>
-
-  <!-- MERCHANDISE ITEMS -->
-  <section class="merchandise-section">
-    <div class="container">
-      <h3 data-en="🎽 Official Academy T-Shirt" data-gr="🎽 Επίσημο Μπλουζάκι της Ακαδημίας">🎽 Official Academy T-Shirt</h3>
-      <p data-en="✔ Comfortable, breathable, and stylish for everyday wear."
-         data-gr="✔ Άνετο, διαπνέον και μοντέρνο για καθημερινή χρήση.">
-         ✔ Comfortable, breathable, and stylish for everyday wear.
-      </p>
-      <p data-en="💰 Price: €20 per T-shirt" data-gr="💰 Τιμή: 20€ ανά μπλουζάκι">
-         💰 <strong>Price:</strong> €20 per T-shirt
-      </p>
-      <p data-en="Available Sizes: S, M, L, XL, XXL" data-gr="Διαθέσιμα Μεγέθη: S, M, L, XL, XXL">
-         <strong>Available Sizes:</strong> S, M, L, XL, XXL
-      </p>
-      <p data-en="Colors: ⚫ Black, ⚪ White, 🔵 Navy Blue, 🔴 Red" data-gr="Χρώματα: ⚫ Μαύρο, ⚪ Λευκό, 🔵 Μπλε Σκούρο, 🔴 Κόκκινο">
-         <strong>Colors:</strong> ⚫ Black, ⚪ White, 🔵 Navy Blue, 🔴 Red
-      </p>
-    </div>
-  </section>
-
-  <section class="merchandise-section">
-    <div class="container">
-      <h3 data-en="🛼 Roller Skates" data-gr="🛼 Πατίνια">🛼 Roller Skates</h3>
-      <p data-en="✔ High-quality skates designed for beginners and freestyle skaters."
-         data-gr="✔ Πατίνια υψηλής ποιότητας, σχεδιασμένα για αρχάριους και freestyle skaters.">
-         ✔ High-quality skates designed for beginners and freestyle skaters.
-      </p>
-      <p data-en="💰 Starting from: €90" data-gr="💰 Ξεκινώντας από: 90€">
-         💰 <strong>Starting from:</strong> €90
-      </p>
-      <p data-en="Available Sizes: EU 30 – 47" data-gr="Διαθέσιμα Μεγέθη: EU 30 – 47">
-         <strong>Available Sizes:</strong> EU 30 – 47
-      </p>
-      <p data-en="Colors: 🖤 Black, ⚪ White, 🔵 Blue, 🔴 Red" data-gr="Χρώματα: 🖤 Μαύρο, ⚪ Λευκό, 🔵 Μπλε, 🔴 Κόκκινο">
-         <strong>Colors:</strong> 🖤 Black, ⚪ White, 🔵 Blue, 🔴 Red
-      </p>
-    </div>
-  </section>
-
-  <!-- RESERVATION FORM -->
-  <section id="reservation">
-    <div class="container">
-      <h2 data-en="Reserve Your Merchandise" data-gr="Κρατήστε τα Προϊόντα Σας">Reserve Your Merchandise</h2>
-      <form id="merchandiseForm" action="https://formspree.io/f/xqapzzag" method="POST">
-        <input type="hidden" name="_next" value="thankyou.html">
-        
-        <input type="text" name="first-name" placeholder="First Name" required data-en="First Name" data-gr="Όνομα">
-        <input type="text" name="last-name" placeholder="Last Name" required data-en="Last Name" data-gr="Επώνυμο">
-        <input type="tel" name="phone" placeholder="Phone Number" required data-en="Phone Number" data-gr="Τηλέφωνο">
-    
-        <label for="product" data-en="Select Product:" data-gr="Επιλέξτε Προϊόν:">Select Product:</label>
-        <select name="product" id="product" required onchange="updateSizeOptions()">
-            <option value="" disabled selected data-en="-- Choose an item --" data-gr="-- Επιλέξτε προϊόν --">-- Choose an item --</option>
-            <option value="tshirt" data-en="🎽 Academy T-Shirt" data-gr="🎽 Μπλουζάκι Ακαδημίας">🎽 Academy T-Shirt</option>
-            <option value="rollerskates" data-en="🛼 Roller Skates" data-gr="🛼 Πατίνια">🛼 Roller Skates</option>
-        </select>
-    
-        <!-- T-Shirt Sizes -->
-        <div id="tshirt-sizes" style="display: none;">
-            <label for="tshirt-size" data-en="Select T-Shirt Size:" data-gr="Επιλέξτε Μέγεθος Μπλουζακιού:">Select T-Shirt Size:</label>
-            <select name="tshirt-size" id="tshirt-size">
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">XX-Large (XXL)</option>
-            </select>
-        </div>
-    
-        <!-- Roller Skate Sizes -->
-        <div id="skate-sizes" style="display: none;">
-            <label for="skate-size" data-en="Select Skate Size:" data-gr="Επιλέξτε Μέγεθος Πατινιών:">Select Skate Size:</label>
-            <select name="skate-size" id="skate-size">
-                <option value="30">EU 30</option>
-                <option value="31">EU 31</option>
-                <option value="32">EU 32</option>
-                <option value="33">EU 33</option>
-                <option value="34">EU 34</option>
-                <option value="35">EU 35</option>
-                <option value="36">EU 36</option>
-                <option value="37">EU 37</option>
-                <option value="38">EU 38</option>
-                <option value="39">EU 39</option>
-                <option value="40">EU 40</option>
-                <option value="41">EU 41</option>
-                <option value="42">EU 42</option>
-                <option value="43">EU 43</option>
-                <option value="44">EU 44</option>
-                <option value="45">EU 45</option>
-                <option value="46">EU 46</option>
-                <option value="47">EU 47</option>
-            </select>
-        </div>
-    
-        <input type="number" name="quantity" placeholder="Quantity" min="1" required data-en="Quantity" data-gr="Ποσότητα">
-        
-        <button type="submit" data-en="Reserve Now" data-gr="Κάντε Κράτηση">Reserve Now</button>
-    </form>
-    <script>
-        document.getElementById("merchandiseForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const form = this;
-    
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = "thankyou.html"; // Redirect manually
-                } else {
-                    alert("There was an error submitting the form. Please try again.");
-                }
-            }).catch(error => {
-                alert("There was a problem with your request.");
-            });
-        });
-    </script>
-    
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-
-      <!-- Newsletter Signup (MailerLite) -->
-      <div class="footer-section">
-        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-
-        <!-- ENGLISH Newsletter Form (data-en-only) -->
-        <div class="ml-embedded" data-form="Dx8yTp" data-en-only></div>
-        
-        <!-- GREEK Newsletter Form (data-gr-only, hidden by default) -->
-        <div class="ml-embedded" data-form="ebE82x" data-gr-only style="display: none;"></div>
-
-      </div>
-
-      <!-- Policies & Information in Footer -->
-      <div class="footer-section">
-        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
-        <ul>
-          <li><a href="policies.html#terms"  data-en="Terms & Conditions"         data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-          <li><a href="policies.html#privacy"data-en="Privacy Policy"            data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-          <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-          <li><a href="policies.html#safety" data-en="Safety Guidelines"          data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
-        </ul>
-      </div>
-
-      <!-- Find us -->
-      <div class="footer-section">
-        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-        <p data-en="Learn more about our mission, instructors, and training programs."
-           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-           Learn more about our mission, instructors, and training programs.
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-          <a href="#" target="_blank">YouTube</a>
-        </div>
-      </div>
-
-      <!-- Contact Us -->
-      <div class="footer-section">
-        <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
-        <p>
-          <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong> 
-          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
-             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
-             Zografou, Attica
+  <head>
+    <!-- Μεταδεδομένα και σύνδεση με τα CSS αρχεία -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-en="Merchandise Reservation" data-gr="Κράτηση Προϊόντων">
+      Merchandise Reservation
+    </title>
+    <link rel="stylesheet" href="merchandise.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="icon" href="photo/logo.png" />
+  </head>
+  <body>
+    <!-- Πλοήγηση (Navigation) -->
+    <nav>
+      <ul>
+        <li>
+          <a href="HomePage.html">
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
           </a>
+        </li>
+        <li>
+          <a href="whoweare.html" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
+            Who We Are
+          </a>
+        </li>
+        <li>
+          <a href="classes.html" data-en="Classes" data-gr="Μαθήματα">
+            Classes
+          </a>
+        </li>
+        <li>
+          <a href="activities.html" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
+            More Activities
+          </a>
+        </li>
+        <li>
+          <a href="prices-policies.html" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">
+            Prices & Policies
+          </a>
+        </li>
+        <li>
+          <a href="benefits.html" data-en="Benefits" data-gr="Οφέλη">
+            Benefits
+          </a>
+        </li>
+        <li>
+          <a href="merchandise.html" data-en="Merchandise" data-gr="Προϊόντα">
+            Merchandise
+          </a>
+        </li>
+        <!-- Κουμπί αλλαγής γλώσσας -->
+        <li class="nav-lang">
+          <button id="language-button" onclick="toggleLanguage()">
+            <img src="photo/greeceflag.png" alt="Greece Language" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Εισαγωγή -->
+    <section id="intro">
+      <div class="container">
+        <h2 data-en="Reserve Your Merchandise" data-gr="Κρατήστε τα Προϊόντα Σας">
+          Reserve Your Merchandise
+        </h2>
+        <p
+          data-en="Fill out the form below to reserve your T-shirt or roller skates. We will contact you to confirm availability and arrange pickup at the academy."
+          data-gr="Συμπληρώστε τη φόρμα παρακάτω για να κρατήσετε το μπλουζάκι ή τα πατίνια σας. Θα επικοινωνήσουμε μαζί σας για να επιβεβαιώσουμε τη διαθεσιμότητα και να κανονίσουμε την παραλαβή στην ακαδημία."
+        >
+          Fill out the form below to reserve your T-shirt or roller skates. We will contact you to confirm availability and arrange pickup at the academy.
         </p>
-        <p>
-          <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong> 
-          <a href="tel:+306955655189">+306955655189</a>
-        </p>
-        <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-           data-en="📧 Email: hermesrollerskate@hotmail.com"
-           data-gr="📧 Email: hermesrollerskate@hotmail.com">
-           📧 Email: hermesrollerskate@hotmail.com
-        </a>
-        <p>
-          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
-          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
-                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-            Saturday 13:55-14:55, Sunday 13:55-14:55 New
-          </span>
-        </p>
-        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
-           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+    <!-- Ενότητα Προϊόντων -->  
+    <section class="merchandise-section">
+      <div class="container">
+        <h3 data-en="🎽 Official Academy T-Shirt" data-gr="🎽 Επίσημο Μπλουζάκι της Ακαδημίας">
+          🎽 Official Academy T-Shirt
+        </h3>
+        <p
+          data-en="✔ Comfortable, breathable, and stylish for everyday wear."
+          data-gr="✔ Άνετο, διαπνέον και μοντέρνο για καθημερινή χρήση."
+        >
+          ✔ Comfortable, breathable, and stylish for everyday wear.
+        </p>
+        <p data-en="💰 Price: €20 per T-shirt" data-gr="💰 Τιμή: 20€ ανά μπλουζάκι">
+          💰 <strong>Price:</strong> €20 per T-shirt
+        </p>
+        <p data-en="Available Sizes: S, M, L, XL, XXL" data-gr="Διαθέσιμα Μεγέθη: S, M, L, XL, XXL">
+          <strong>Available Sizes:</strong> S, M, L, XL, XXL
+        </p>
+        <p
+          data-en="Colors: ⚫ Black, ⚪ White, 🔵 Navy Blue, 🔴 Red"
+          data-gr="Χρώματα: ⚫ Μαύρο, ⚪ Λευκό, 🔵 Μπλε Σκούρο, 🔴 Κόκκινο"
+        >
+          <strong>Colors:</strong> ⚫ Black, ⚪ White, 🔵 Navy Blue, 🔴 Red
         </p>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Language Toggle Logic -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const storedLang = localStorage.getItem("language") || "en";
-      updateLanguage(storedLang);
-    });
+    <!-- Ενότητα Πατίνιων -->
+    <section class="merchandise-section">
+      <div class="container">
+        <h3 data-en="🛼 Roller Skates" data-gr="🛼 Πατίνια">
+          🛼 Roller Skates
+        </h3>
+        <p
+          data-en="✔ High-quality skates designed for beginners and freestyle skaters."
+          data-gr="✔ Πατίνια υψηλής ποιότητας, σχεδιασμένα για αρχάριους και freestyle skaters."
+        >
+          ✔ High-quality skates designed for beginners and freestyle skaters.
+        </p>
+        <p data-en="💰 Starting from: €90" data-gr="💰 Ξεκινώντας από: 90€">
+          💰 <strong>Starting from:</strong> €90
+        </p>
+        <p data-en="Available Sizes: EU 30 – 47" data-gr="Διαθέσιμα Μεγέθη: EU 30 – 47">
+          <strong>Available Sizes:</strong> EU 30 – 47
+        </p>
+        <p
+          data-en="Colors: 🖤 Black, ⚪ White, 🔵 Blue, 🔴 Red"
+          data-gr="Χρώματα: 🖤 Μαύρο, ⚪ White, 🔵 Blue, 🔴 Red"
+        >
+          <strong>Colors:</strong> 🖤 Black, ⚪ White, 🔵 Blue, 🔴 Red
+        </p>
+      </div>
+    </section>
 
-    function toggleLanguage() {
-      const currentLang = localStorage.getItem("language") || "en";
-      const newLang = (currentLang === 'en') ? 'gr' : 'en';
-      localStorage.setItem('language', newLang);
-      updateLanguage(newLang);
-    }
+    <!-- Φόρμα Κράτησης -->
+    <section id="reservation">
+      <div class="reservation-container">
+        <h2 data-en="Reserve Your Merchandise" data-gr="Κρατήστε τα Προϊόντα Σας">
+          Reserve Your Merchandise
+        </h2>
+        <form id="merchandiseForm" action="HomePage.html" method="POST">
+          <input type="hidden" name="_next" value="thankyou.html" />
+          <input type="text" name="first-name" placeholder="First Name" required data-en="First Name" data-gr="Όνομα" />
+          <input type="text" name="last-name" placeholder="Last Name" required data-en="Last Name" data-gr="Επώνυμο" />
+          <input type="tel" name="phone" placeholder="Phone Number" required data-en="Phone Number" data-gr="Τηλέφωνο" />
+          <label for="product" data-en="Select Product:" data-gr="Επιλέξτε Προϊόν:">
+            Select Product:
+          </label>
+          <select name="product" id="product" required onchange="updateSizeOptions()">
+            <option value="" disabled selected data-en="-- Choose an item --" data-gr="-- Επιλέξτε προϊόν --">
+              -- Choose an item --
+            </option>
+            <option value="tshirt" data-en="🎽 Academy T-Shirt" data-gr="🎽 Μπλουζάκι Ακαδημίας">
+              🎽 Academy T-Shirt
+            </option>
+            <option value="rollerskates" data-en="🛼 Roller Skates" data-gr="🛼 Πατίνια">
+              🛼 Roller Skates
+            </option>
+          </select>
+          <!-- Ενότητα Επιλογής Μεγεθών για Μπλουζάκι -->
+          <div id="tshirt-sizes" style="display: none;">
+            <label for="tshirt-size" data-en="Select T-Shirt Size:" data-gr="Επιλέξτε Μέγεθος Μπλουζακιού:">
+              Select T-Shirt Size:
+            </label>
+            <select name="tshirt-size" id="tshirt-size">
+              <option value="S">Small (S)</option>
+              <option value="M">Medium (M)</option>
+              <option value="L">Large (L)</option>
+              <option value="XL">Extra Large (XL)</option>
+              <option value="XXL">XX-Large (XXL)</option>
+            </select>
+          </div>
+          <!-- Ενότητα Επιλογής Μεγεθών για Πατίνια -->
+          <div id="skate-sizes" style="display: none;">
+            <label for="skate-size" data-en="Select Skate Size:" data-gr="Επιλέξτε Μέγεθος Πατίνια:">
+              Select Skate Size:
+            </label>
+            <select name="skate-size" id="skate-size">
+              <option value="30">EU 30</option>
+              <option value="31">EU 31</option>
+              <option value="32">EU 32</option>
+              <option value="33">EU 33</option>
+              <option value="34">EU 34</option>
+              <option value="35">EU 35</option>
+              <option value="36">EU 36</option>
+              <option value="37">EU 37</option>
+              <option value="38">EU 38</option>
+              <option value="39">EU 39</option>
+              <option value="40">EU 40</option>
+              <option value="41">EU 41</option>
+              <option value="42">EU 42</option>
+              <option value="43">EU 43</option>
+              <option value="44">EU 44</option>
+              <option value="45">EU 45</option>
+              <option value="46">EU 46</option>
+              <option value="47">EU 47</option>
+            </select>
+          </div>
+          <input type="number-orders" name="quantity" placeholder="Quantity" min="1" required data-en="Quantity" data-gr="Ποσότητα" />
+          <button type="submit2" data-en="Reserve Now" data-gr="Κάντε Κράτηση">
+            Reserve Now
+          </button>
+        </form>
+      </div>
+    </section>
 
-    function updateLanguage(lang) {
-      // 1. Switch the flag image
-      const flagImage = document.querySelector('#language-button img');
-      if (lang === 'en') {
-        flagImage.src = 'photo/greeceflag.png';
-        flagImage.alt = 'Greece Language';
-      } else {
-        flagImage.src = 'photo/englandflag.jpg';
-        flagImage.alt = 'English Language';
-      }
+    <!-- Υποσέλιδο (Footer) -->
+    <footer>
+        <div class="footer-row">
+          <!-- Ενημερωτικό Δελτίο (Newsletter) -->
+          <div class="footer-column newsletter">
+            <h3 data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</h3>
+            <form class="newsletter-form" action="#" method="post">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                data-en-placeholder="Enter your email"
+                data-gr-placeholder="Εισάγετε το email σας"
+                required
+              />
+              <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
+            </form>
+            <p
+              data-en="Subscribe to receive our latest news."
+              data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα.">
+              Subscribe to receive our latest news and offers.
+            </p>
+            <div class="social-icons">
+              <ul>
+                <li><a href="#"><img src="photo/fb.webp" alt="Facebook" /></a></li>
+                <li><a href="#"><img src="photo/insta.png" alt="Instagram" /></a></li>
+                <li><a href="#"><img src="photo/tiktok.png" alt="TikTok" /></a></li>
+                <li><a href="#"><img src="photo/youtube.png" alt="Youtube" /></a></li>
+                <li><a href="#"><img src="photo/linkedin.png" alt="LinkedIn" /></a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Πολιτικές & Πληροφορίες (Policies & Information) -->
+          <div class="footer-column policies">
+              <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">
+                Policies &amp; Information
+              </h3>
+              <ul>
+                <li>
+                    <a href="#" data-en="Refund &amp; Cancellation Policy" data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">
+                      Refund &amp; Cancellation Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
+                      Safety Guidelines
+                    </a>
+                  </li>
+                <li>
+                  <a href="policies.html" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">
+                    Terms &amp; Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-en="FAQ" data-gr="Συχνές Ερωτήσεις">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+          </div>
+          
+          <!-- Επικοινωνία (Contact Us) -->
+          <div class="footer-column contact">
+            <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
+            <p>
+                <strong data-en="📧 Email:" data-gr="📧 Email:">📧 Email:</strong>
+                <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&amp;body=Hello Hermes Team," data-en="hermesrollerskate@hotmail.com" data-gr="hermesrollerskate@hotmail.com">
+                  hermesrollerskate@hotmail.com
+                </a>
+              </p>
+            <p>
+              <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
+              <a href="#" target="_blank" data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
+                Zografou, Attica
+              </a>
+            </p>
+            <p>
+              <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
+              <a href="tel:+306955655189" data-en="+306955655189" data-gr="+306955655189">
+                +306955655189
+              </a>
+            </p>
+            <p>
+                <a href="contact.html" data-en="💬 Send a Message" data-gr="💬 Στείλτε Μήνυμα">
+                💬 Send a Message
+              </a>
+            </p>
+          </div>
+        </div>
+  
+        <!-- Carousel Εταιρικών Συνεργατών -->
+        <div class="footer-partners-carousel">
+          <div class="carousel-wrapper">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://archimedes.uoa.gr/" target="_blank">
+                  <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://powerskate.eu/" target="_blank">
+                  <img src="photo/powerskate.png" alt="PowerSkate" />
+                </a>
+              </div>
+              <!-- Προσθέστε επιπλέον στοιχεία για ομαλή ροή -->
+            </div>
+          </div>
+        </div>
+  
+        <!-- Οριζόντια γραμμή διαχωρισμού -->
+        <hr class="footer-separator" />
+  
+        <!-- Κάτω μέρος του υποσέλιδου -->
+        <div class="footer-bottom">
+          <p
+            data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+            data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+            &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+          </p>
+        </div>
+    </footer>
+   
 
-      // 2. Update all text from data-en/data-gr
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        if (el.tagName.toLowerCase() === 'title') {
-          document.title = el.getAttribute(`data-${lang}`);
-        } else if (
-          (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
-          && el.hasAttribute('placeholder')
-        ) {
-          el.placeholder = el.getAttribute(`data-${lang}`);
-        } else if (el.tagName.toLowerCase() === 'option') {
-          el.textContent = el.getAttribute(`data-${lang}`);
-        } else {
-          el.innerHTML = el.getAttribute(`data-${lang}`);
+    <!-- Σενάριο κίνησης του Carousel -->
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const speed = 0.5; // pixels ανά καρέ – ρυθμίστε την ταχύτητα εδώ
+
+      function animateCarousel() {
+        // Λήψη της τρέχουσας τιμής του transform
+        const style = window.getComputedStyle(track);
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        let translateX = matrix.m41 || 0;
+
+        // Μετακίνηση του track προς τα αριστερά
+        translateX -= speed;
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Έλεγχος αν η πρώτη εικόνα έχει εξαφανιστεί εντελώς
+        const firstItem = track.firstElementChild;
+        const firstRect = firstItem.getBoundingClientRect();
+        const wrapperRect = track.parentElement.getBoundingClientRect();
+
+        // Αν το δεξί άκρο της πρώτης εικόνας είναι εκτός του wrapper
+        if (firstRect.right < wrapperRect.left) {
+          // Αφαίρεση της πρώτης εικόνας και επαναπροσθήκη στο τέλος
+          track.appendChild(firstItem);
+          // Ενημέρωση της μετατόπισης ώστε να μην υπάρχει απότομη αλλαγή
+          const itemStyle = window.getComputedStyle(firstItem);
+          const marginRight = parseFloat(itemStyle.marginRight) || 0;
+          translateX += firstRect.width + marginRight;
+          track.style.transform = `translateX(${translateX}px)`;
         }
+        requestAnimationFrame(animateCarousel);
+      }
+      requestAnimationFrame(animateCarousel);
+    </script>
+
+    <!-- Σενάριο για αλλαγή και ενημέρωση γλώσσας -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const storedLang = localStorage.getItem("language") || "en";
+        updateLanguage(storedLang);
       });
 
-      // 3. Show/hide the correct newsletter form
-      const enForms = document.querySelectorAll('[data-en-only]');
-      const grForms = document.querySelectorAll('[data-gr-only]');
-      if (lang === 'en') {
-        enForms.forEach(f => f.style.display = 'block');
-        grForms.forEach(f => f.style.display = 'none');
-      } else {
-        enForms.forEach(f => f.style.display = 'none');
-        grForms.forEach(f => f.style.display = 'block');
+      function toggleLanguage() {
+        const currentLang = localStorage.getItem("language") || "en";
+        const newLang = (currentLang === 'en') ? 'gr' : 'en';
+        localStorage.setItem('language', newLang);
+        updateLanguage(newLang);
       }
 
-      // 4. Set <html> lang attribute
-      document.documentElement.lang = lang;
-    }
-  </script>
+      function updateLanguage(lang) {
+        // 1. Αλλαγή εικόνας σημαίας
+        const flagImage = document.querySelector('#language-button img');
+        if (lang === 'en') {
+          flagImage.src = 'photo/greeceflag.png';
+          flagImage.alt = 'Greece Language';
+        } else {
+          flagImage.src = 'photo/englandflag.jpg';
+          flagImage.alt = 'English Language';
+        }
 
-  <!-- MailerLite Universal Script -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
-      (w[f].q=w[f].q||[]).push(arguments);},
-      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
-      n.parentNode.insertBefore(l,n);})(window,document,'script',
-      'https://assets.mailerlite.com/js/universal.js','ml');
-    // Replace '1363757' with your own account ID
-    ml('account', '1363757');
-  </script>
-  <!-- End MailerLite Universal -->
+        // 2. Ενημέρωση κειμένων βάσει των data-en/data-gr attributes
+        const elements = document.querySelectorAll('[data-en]');
+        elements.forEach(el => {
+          if (el.tagName.toLowerCase() === 'title') {
+            document.title = el.getAttribute(`data-${lang}`);
+          } else if (
+            (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+            && el.hasAttribute('placeholder')
+          ) {
+            el.placeholder = el.getAttribute(`data-${lang}`);
+          } else if (el.tagName.toLowerCase() === 'option') {
+            el.textContent = el.getAttribute(`data-${lang}`);
+          } else {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+          }
+        });
 
-</body>
+        // 3. Εμφάνιση/απόκρυψη φόρμας για συγκεκριμένη γλώσσα (αν υπάρχουν)
+        const enForms = document.querySelectorAll('[data-en-only]');
+        const grForms = document.querySelectorAll('[data-gr-only]');
+        if (lang === 'en') {
+          enForms.forEach(f => f.style.display = 'block');
+          grForms.forEach(f => f.style.display = 'none');
+        } else {
+          enForms.forEach(f => f.style.display = 'none');
+          grForms.forEach(f => f.style.display = 'block');
+        }
+
+        // 4. Ορισμός της γλώσσας στο στοιχείο <html>
+        document.documentElement.lang = lang;
+      }
+    </script>
+  </body>
 </html>

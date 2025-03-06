@@ -1,182 +1,177 @@
+/* Import Manrope from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for consistent page width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* ============================= */
 /* CLASSES SECTION */
 /* ============================= */
-
 #classes {
-    text-align: center;
-    padding: 80px 20px;
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
+#classes h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-/* Class Cards */
+#classes p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* CLASS CARDS */
+/* ============================= */
 .class-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    margin: 20px 0;
-    text-align: left;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Effect */
 .class-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Class Card Titles */
 .class-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #0073e6;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #222;
 }
 
 .class-card p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    color: #555;
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #555;
 }
 
-/* List Styling */
-.class-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.class-card li {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Section Headers */
 .class-card h4 {
-    font-size: 1.5rem;
-    margin-top: 15px;
-    color: #0073e6;
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 5px;
-    display: inline-block;
+  font-size: 1.4em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-/* Status Labels */
-.full {
-    border-left: 10px solid red;
+.class-card ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #555;
 }
 
-.almost-full {
-    border-left: 10px solid orange;
+.class-card ul li {
+  margin-bottom: 8px;
+  font-size: 1em;
 }
 
-.available {
-    border-left: 10px solid green;
+/* Status Indicators (add corresponding class to the card) */
+.class-card.full {
+  border-left: 5px solid #ff0000; /* Red for full */
 }
-
-/* Add Ribbon for Status */
-.class-card::before {
-    content: attr(data-status);
-    position: absolute;
-    top: 10px;
-    right: -30px;
-    background: #0073e6;
-    color: white;
-    font-size: 0.9rem;
-    padding: 5px 15px;
-    transform: rotate(45deg);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+.class-card.available {
+  border-left: 5px solid #00aa00; /* Green for available */
 }
-
+.class-card.almost-full {
+  border-left: 5px solid #ffaa00; /* Yellow for almost full */
+}
 /* ============================= */
-/* CLASS ENROLLMENT FORM */
+/* CLASS ENROLLMENT FORM       */
 /* ============================= */
 #enrollment {
-    background: #ffffff;
-    padding: 50px 20px;
-    margin-top: 50px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
 }
 
-#enrollment h2 {
-    font-size: 2rem;
-    color: #0073e6;
-    margin-bottom: 15px;
+.enrollment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;  /* Makes form labels and inputs left-aligned */
 }
 
-#enrollment p {
-    font-size: 1.2rem;
+.enrollment-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.enrollment-container p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Styling for the enrollment form */
+#classForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#classForm input,
+#classForm select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus state for inputs and select */
+#classForm input:focus,
+#classForm select:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* Submit Button */
+#classForm button {
+  padding: 12px;
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for submit button */
+#classForm button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.02);
+}
+
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+@media (max-width: 768px) {
+  .class-card {
     margin-bottom: 20px;
-    color: #555;
-}
-
-/* Form Container */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 450px;
-    margin: auto;
-    border-radius: 12px;
-
-}
-
-/* Input Fields */
-input, select {
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-    transition: border 0.3s ease-in-out;
-    font-family: inherit;
-}
-
-input:focus, select:focus {
-    border-color: #0073e6;
-    outline: none;
-}
-
-/* Style dropdown */
-select {
-    background: white;
-    cursor: pointer;
-}
-
-
-/* ============================= */
-/* RESPONSIVENESS */
-/* ============================= */
-@media (max-width: 900px) {
-    .class-card {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .class-card::before {
-        font-size: 0.8rem;
-        padding: 4px 12px;
-        right: -20px;
-    }
-
-    form {
-        width: 100%;
-    }
-
-    #enrollment {
-        padding: 40px 10px;
-    }
+  }
 }

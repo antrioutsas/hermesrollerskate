@@ -1,71 +1,176 @@
-/* ============================= */
-/* GENERAL STYLES */
-/* ============================= */
+/* Import Manrope from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+/* Global Styles */
 body {
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Manrope', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/* Section Styling */
-.container {
-    max-width: 900px;
-    margin: auto;
+/* Intro Section Styles */
+#intro {
+    background: #fff;
     padding: 40px 20px;
     text-align: center;
-}
+  }
+  
+  .intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  #intro p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
 
-/* Policy Sections */
+/* ============================= */
+/* PRICING & POLICIES SECTION    */
+/* ============================= */
+#pricing,
+#workshops,
+#schools,
+#attendance,
+#weather,
 .policy-section {
-    background: white;
-    padding: 30px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    text-align: left;
+  padding: 40px 20px;
+  background: #fff;
+  margin-bottom: 20px;
 }
 
+/* Section Headings */
+#pricing h2,
+#workshops h2,
+#schools h2,
+#attendance h2,
+#weather h2,
 .policy-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #0073e6;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
 }
 
+/* Section Paragraphs */
+#pricing p,
+#attendance p,
+#weather p,
+.policy-section p {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* ============================= */
+/* TABLE STYLES                 */
+/* ============================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1em;
+}
+
+table th {
+  background: #f2f2f2;
+  font-weight: 600;
+  color: #222;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* ============================= */
+/* CANCEL REASONS (Weather Section) */
+/* ============================= */
+.cancel-reasons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cancel-reasons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.cancel-reasons li {
+  font-size: 1em;
+  padding: 5px 0;
+}
+
+/* ============================= */
+/* POLICY LISTS (in Policy Sections) */
+/* ============================= */
 .policy-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style: disc inside;
+  margin: 0 auto;
+  padding: 10px 0;
+  max-width: 800px;
+  text-align: left;
 }
 
-.policy-section ul li {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* ============================= */
+/* FAQ Section (if present)     */
+/* ============================= */
+.FAQ {
+  padding: 40px 20px;
+  background: #fff;
+  margin-bottom: 20px;
 }
 
-/* Contact Info */
-#contact-info {
-    background: #ffffff;
-    padding: 40px 20px;
-    margin-top: 40px;
+.FAQ h3 {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-#contact-info a {
-    color: #0073e6;
-    text-decoration: none;
+.FAQ ul {
+  list-style: disc inside;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: left;
+  max-width: 800px;
 }
 
-#contact-info a:hover {
-    text-decoration: underline;
-}
 
-/* Responsive Design */
-@media (max-width: 900px) {
-    .policy-section {
-        text-align: center;
-    }
-
-    #contact-info {
-        text-align: center;
-    }
+/* ============================= */
+/* RESPONSIVE DESIGN            */
+/* ============================= */
+@media (max-width: 768px) {
+  #pricing h2,
+  #workshops h2,
+  #schools h2,
+  #attendance h2,
+  #weather h2,
+  .policy-section h3 {
+    font-size: 2em;
+  }
+  table th, table td {
+    padding: 10px;
+  }
 }

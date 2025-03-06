@@ -11,19 +11,6 @@
 </head>
 <body>
 
-  <!-- Optional script for highlighting current nav link -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const currentPage = window.location.pathname.split('/').pop();
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-
   <!-- NAVIGATION -->
   <nav>
     <ul>
@@ -57,11 +44,14 @@
 
       <div class="about-content">
         <div class="about-text">
-          <h3 data-en="Our Mission" data-gr="Η Αποστολή Μας">Our Mission</h3>
-          <p data-en="Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs." 
-             data-gr="Η αποστολή μας είναι να προωθούμε τη χαρά του πατινάζ, παρέχοντας ένα διασκεδαστικό και ασφαλές περιβάλλον για όλες τις ηλικίες. Πιστεύουμε στην ανάπτυξη δεξιοτήτων, αυτοπεποίθησης και μιας αίσθησης κοινότητας μέσω των δομημένων προγραμμάτων εκπαίδευσης.">
-             Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs.
-          </p>
+            <di class="about-mission"></di>
+                <h3 data-en="Our Mission" data-gr="Η Αποστολή Μας">Our Mission</h3>
+                    <p1 data-en="Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs." 
+                    data-gr="Η αποστολή μας είναι να προωθούμε τη χαρά του πατινάζ, παρέχοντας ένα διασκεδαστικό και ασφαλές περιβάλλον για όλες τις ηλικίες. Πιστεύουμε στην ανάπτυξη δεξιοτήτων, αυτοπεποίθησης και μιας αίσθησης κοινότητας μέσω των δομημένων προγραμμάτων εκπαίδευσης.">
+                    Our mission is to promote the joy of roller skating, providing a fun and safe environment for all ages. We believe in fostering skills, confidence, and a sense of community through our structured training programs.
+                    </p1>
+                </h3>
+            </di>
 
           <h3 data-en="What Makes Us Different?" data-gr="Τι Μας Κάνει Διαφορετικούς;">What Makes Us Different?</h3>
           <ul>
@@ -102,7 +92,7 @@
 
       <div class="staff-list">
         <div class="staff-member">
-          <img src="photo/instructor-andreas.png" alt="Instructor Andreas Kountouras">
+          <img src="photo/andreas.jpg" alt="Instructor Andreas Kountouras">
           <h4 data-en="🏅 Instructor: Andreas Kountouras" data-gr="🏅 Εκπαιδευτής: Ανδρέας Κουντούρας">
             🏅 Instructor: Andreas Kountouras
           </h4>
@@ -113,7 +103,7 @@
         </div>
 
         <div class="staff-member">
-          <img src="photo/assistant-georgia.png" alt="Assistant Georgia Papazoglou">
+          <img src="photo/georgia.jpg" alt="Assistant Georgia Papazoglou">
           <h4 data-en="🛼 Assistant: Georgia Papazoglou" data-gr="🛼 Βοηθός: Γεωργία Παπαζόγλου">
             🛼 Assistant: Georgia Papazoglou
           </h4>
@@ -125,84 +115,182 @@
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
+  <!--FOOTER-->
   <footer>
-    <div class="footer-container">
-
-      <!-- Newsletter Signup (MailerLite) -->
-      <div class="footer-section">
-        <h3 data-en="Stay Updated!" data-gr="Μείνετε Ενημερωμένοι!">Stay Updated!</h3>
-
-        <!-- MailerLite Embedded Form -->
-        <div class="ml-embedded" data-form="Dx8yTp"></div>
-        <!-- Αλλάξτε το Dx8yTp με το ID της δικής σας φόρμας MailerLite -->
-      </div>
-
-      <!-- Policies & Information in Footer -->
-      <div class="footer-section">
-        <h3 data-en="Policies & Information" data-gr="Πολιτικές & Πληροφορίες">Policies & Information</h3>
-        <ul>
-          <li><a href="policies.html#terms"  data-en="Terms & Conditions" data-gr="Όροι & Προϋποθέσεις">Terms & Conditions</a></li>
-          <li><a href="policies.html#privacy"data-en="Privacy Policy"     data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
-          <li><a href="policies.html#refund" data-en="Refund & Cancellation Policy" data-gr="Πολιτική Επιστροφών & Ακυρώσεων">Refund & Cancellation Policy</a></li>
-          <li><a href="policies.html#safety" data-en="Safety Guidelines"  data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
-        </ul>
-      </div>
-
-      <!-- Find us -->
-      <div class="footer-section">
-        <h3 data-en="Social Media" data-gr="Κοινωνικά Δίκτυα">Social Media</h3>
-        <p data-en="Learn more about our mission, instructors, and training programs."
-           data-gr="Μάθετε περισσότερα για την αποστολή μας, τους εκπαιδευτές και τα προγράμματα εκπαίδευσης.">
-           Learn more about our mission, instructors, and training programs.
+    <div class="footer-row">
+      <!-- Newsletter (Left) -->
+      <div class="footer-column newsletter">
+        <h3 data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Enter your email" data-en-placeholder="Enter your email" data-gr-placeholder="Εισάγετε το email σας" required>
+            <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
+          </form>          
+        <p data-en="Subscribe to receive our latest news and offers." data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα και προσφορές.">
+          Subscribe to receive our latest news and offers.
         </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/people/Hermes-Rollerskate/61568127231101/" target="_blank">Facebook</a> | 
-          <a href="https://www.instagram.com/hermes_rollerskate/" target="_blank">Instagram</a> | 
-          <a href="https://www.tiktok.com/@hermesrollerskate?lang=el-GR" target="_blank">TikTok</a> | 
-          <a href="#" target="_blank">YouTube</a>
+        <div class="social-icons">
+          <ul>
+            <li><a href="#"><img src="photo/fb.webp" alt="Facebook"></a></li>
+            <li><a href="#"><img src="photo/insta.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="photo/tiktok.png" alt="TikTok"></a></li>
+            <li><a href="#"><img src="photo/youtube.png" alt="Youtube"></a></li>
+            <li><a href="#"><img src="photo/linkedin.png" alt="LinkedIn"></a></li>
+          </ul>
         </div>
       </div>
-
-      <!-- Contact Us -->
-      <div class="footer-section">
+  
+      <!-- Policies & Information (Center) -->
+      <div class="footer-column policies">
+        <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">Policies &amp; Information</h3>
+        <ul>
+          <li><a href="#" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">Terms &amp; Conditions</a></li>
+          <li><a href="#" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a></li>
+          <li><a href="#" data-en="Refund &amp; Cancellation Policy" data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">Refund &amp; Cancellation Policy</a></li>
+          <li><a href="#" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">Safety Guidelines</a></li>
+          <li><a href="#" data-en="FAQ" data-gr="Συχνές Ερωτήσεις">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Us (Right) -->
+      <div class="footer-column contact">
         <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
         <p>
           <strong data-en="📍 Location:" data-gr="📍 Τοποθεσία:">📍 Location:</strong>
-          <a href="https://maps.app.goo.gl/PthX5dm2MhVek1ij9" target="_blank"
-             data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">
-             Zografou, Attica
-          </a>
+          <a href="#" target="_blank" data-en="Zografou, Attica" data-gr="Ζωγράφου, Αττική">Zografou, Attica</a>
         </p>
         <p>
           <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
-          <a href="tel:+306955655189">+306955655189</a>
+          <a href="tel:+306955655189" data-en="+306955655189" data-gr="+306955655189">+306955655189</a>
         </p>
-        <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
-           data-en="📧 Email: hermesrollerskate@hotmail.com"
-           data-gr="📧 Email: hermesrollerskate@hotmail.com">
-           📧 Email: hermesrollerskate@hotmail.com
-        </a>
         <p>
-          <strong data-en="📅 Class Hours:" data-gr="📅 Ώρες Μαθημάτων:">📅 Class Hours:</strong>
-          <span data-en="Saturday 13:55-14:55, Sunday 13:55-14:55 New"
-                data-gr="Σάββατο 13:55-14:55, Κυριακή 13:55-14:55 Νέο">
-            Saturday 13:55-14:55, Sunday 13:55-14:55 New
-          </span>
+          <strong data-en="📧 Email:" data-gr="📧 Email:">📧 Email:</strong>
+          <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&amp;body=Hello Hermes Team," data-en="hermesrollerskate@hotmail.com" data-gr="hermesrollerskate@hotmail.com">
+            hermesrollerskate@hotmail.com
+          </a>
         </p>
-        <a href="contact.html" data-en="Send a Message" data-gr="Στείλτε Μήνυμα">Send a Message</a>
-      </div>
-
-      <div class="footer-bottom">
-        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
-           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
-           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+        <p>
+          <a href="#" data-en="💬 Send a Message" data-gr="💬 Στείλτε Μήνυμα">💬 Send a Message</a>
         </p>
       </div>
     </div>
+  
+    <!-- Network Partners & Carousel -->
+    <div class="footer-partners-carousel">
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://archimedes.uoa.gr/" target="_blank">
+              <img src="photo/archimedes.png" alt="Archimedes UOA">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://powerskate.eu/" target="_blank">
+              <img src="photo/powerskate.png" alt="PowerSkate">
+            </a>
+          </div>
+          <!-- Διπλασιάστε ή προσθέστε περισσότερα στοιχεία για ομαλή ροή -->
+        </div>
+      </div>
+    </div>
+  
+    <!-- Separator -->
+    <hr class="footer-separator">
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved." 
+         data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+        &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
+      </p>
+    </div>
   </footer>
+      <script>
+        const track = document.querySelector('.carousel-track');
+        const speed = 0.5; // pixels per frame; προσαρμόστε την ταχύτητα εδώ
 
+        function animateCarousel() {
+        // Διαβάζουμε την τρέχουσα τιμή του transform
+        const style = window.getComputedStyle(track);
+        const matrix = new DOMMatrixReadOnly(style.transform);
+        let translateX = matrix.m41 || 0;
+
+        // Μετακινούμε το track προς τα αριστερά
+        translateX -= speed;
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Ελέγχουμε αν η πρώτη εικόνα έχει εξαφανιστεί εντελώς
+        const firstItem = track.firstElementChild;
+        const firstRect = firstItem.getBoundingClientRect();
+        const wrapperRect = track.parentElement.getBoundingClientRect();
+
+        // Αν το δεξί άκρο της πρώτης εικόνας είναι αριστερότερο του αριστερού άκρου του wrapper
+        if (firstRect.right < wrapperRect.left) {
+            // Απομακρύνουμε την πρώτη εικόνα και την επαναπροσθέτουμε στο τέλος
+            track.appendChild(firstItem);
+            
+            // Αλλάζουμε την μετατόπιση ώστε να μην υπάρχει απότομη αλλαγή
+            // Προσθέτουμε στο translateX το πλάτος της εικόνας + το margin-right (30px)
+            const itemStyle = window.getComputedStyle(firstItem);
+            const marginRight = parseFloat(itemStyle.marginRight) || 0;
+            translateX += firstRect.width + marginRight;
+            track.style.transform = `translateX(${translateX}px)`;
+        }
+
+        requestAnimationFrame(animateCarousel);
+        }
+
+        requestAnimationFrame(animateCarousel);
+  </script>
   <!-- Language Toggle Logic -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -213,12 +301,12 @@
     function toggleLanguage() {
       const currentLang = localStorage.getItem("language") || "en";
       const newLang = (currentLang === 'en') ? 'gr' : 'en';
-      localStorage.setItem("language", newLang);
+      localStorage.setItem('language', newLang);
       updateLanguage(newLang);
     }
 
     function updateLanguage(lang) {
-      // Switch the flag image
+      // 1. Switch the flag image
       const flagImage = document.querySelector('#language-button img');
       if (lang === 'en') {
         flagImage.src = 'photo/greeceflag.png';
@@ -228,13 +316,15 @@
         flagImage.alt = 'English Language';
       }
 
-      // For all [data-en] elements
+      // 2. Update all text from data-en/data-gr
       const elements = document.querySelectorAll('[data-en]');
       elements.forEach(el => {
         if (el.tagName.toLowerCase() === 'title') {
           document.title = el.getAttribute(`data-${lang}`);
-        } else if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
-                   && el.hasAttribute('placeholder')) {
+        } else if (
+          (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+          && el.hasAttribute('placeholder')
+        ) {
           el.placeholder = el.getAttribute(`data-${lang}`);
         } else if (el.tagName.toLowerCase() === 'option') {
           el.textContent = el.getAttribute(`data-${lang}`);
@@ -242,24 +332,7 @@
           el.innerHTML = el.getAttribute(`data-${lang}`);
         }
       });
-
-      // Set HTML lang attribute
-      document.documentElement.lang = lang;
     }
   </script>
-
-  <!-- MailerLite Universal Script -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
-      (w[f].q=w[f].q||[]).push(arguments);},
-      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
-      n.parentNode.insertBefore(l,n);})(window,document,'script',
-      'https://assets.mailerlite.com/js/universal.js','ml');
-
-    // Αλλάξτε το account ID (π.χ. 1363757) στο δικό σας
-    ml('account', '1363757');
-  </script>
-  <!-- End MailerLite Universal -->
-
 </body>
 </html>
