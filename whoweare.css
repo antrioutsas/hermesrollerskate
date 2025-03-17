@@ -1,17 +1,7 @@
 /* Import Manrope from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
-/* Global Styles */
-body {
-  font-family: 'Manrope', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-/* Container for consistent page width */
+/* Global Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,7 +13,7 @@ body {
 /* ============================= */
 #who-we-are {
   padding: 40px 20px;
-  background: #fff;
+  background-color: #fff;
 }
 
 #who-we-are h2 {
@@ -39,57 +29,41 @@ body {
 }
 
 /* ============================= */
-/* ABOUT CONTENT (Mission & What Makes Us Different) */
+/* ABOUT CONTENT (Mission & Differentiators) */
 /* ============================= */
 .about-content {
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
   align-items: center;
-  justify-content: center;
+}
+.about-text p1{
+  line-height: 1.0rem;
 }
 
-.about-text {
+.about-text,
+.about-image {
   flex: 1;
   min-width: 300px;
 }
 
-/* Our Mission Section - Left aligned */
-.about-mission {
-  margin-bottom: 30px;
-  text-align: left;
-}
+/* Left-aligned mission details */
 
-.about-mission h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  color: #222;
-  text-align: left;
-}
 
-.about-mission p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
+.about-mission h3,
 .about-text h3 {
   font-size: 1.8em;
+  margin-top: 15px;
   margin-bottom: 15px;
   color: #222;
+  text-align: left;
+  line-height: 1.8;
 }
 
-.about-text p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: justify;
-}
+
+
 
 .about-text ul {
   list-style: disc inside;
-  margin-left: 20px;
 }
 
 .about-text ul li {
@@ -97,10 +71,8 @@ body {
   font-size: 1em;
 }
 
-/* About Image */
+/* Image Styling */
 .about-image {
-  flex: 1;
-  min-width: 300px;
   text-align: center;
 }
 
@@ -115,7 +87,7 @@ body {
 /* ============================= */
 #meet-the-team {
   padding: 40px 20px;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 #meet-the-team h2 {
@@ -139,7 +111,7 @@ body {
 }
 
 .staff-member {
-  background: #fff;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -162,20 +134,25 @@ body {
   color: #222;
 }
 
-.staff-member p {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #555;
+/* Staff Details List */
+.staff-member ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.staff-member ul li {
+  list-style-type: disc;
+  font-size: 1em;
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
 /* ============================= */
 /* RESPONSIVE DESIGN */
 /* ============================= */
 @media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
+  .about-content,
   .staff-list {
     flex-direction: column;
     align-items: center;

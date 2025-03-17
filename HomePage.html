@@ -1,250 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Μεταδεδομένα και σύνδεση με τα CSS αρχεία -->
-    <meta charset="UTF-8" />
-    <meta name="description" content="Hermes Rollerskate Academy - Learn, practice, and enjoy roller skating with expert guidance." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-en="Hermes Rollerskate Academy" data-gr="Ακαδημία Hermes Rollerskate">
-      Hermes Rollerskate Academy
-    </title>
-    <link rel="stylesheet" href="homepage.css" />
-    <link rel="icon" href="photo/logo.png" />
-    <link rel="stylesheet" href="navigation.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <!-- Metadata and CSS link -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Hermes Rollerskate Academy - Learn, practice, and enjoy roller skating with expert guidance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-en="Hermes Rollerskate Academy" data-gr="Ακαδημία Hermes Rollerskate">Hermes Rollerskate Academy</title>
+    
+    <link rel="icon" href="photo/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-
-
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
   </head>
   <body>
-    <!-- Header με το μήνυμα υποδοχής -->
+    <!-- Header with welcome text -->
     <header>
-      <h1 id="welcomeText"
-          data-en="Welcome to Hermes Rollerskate Academy!"
-          data-gr="Καλώς ήρθατε στην Ακαδημία Hermes Rollerskate!">
+      <h1 
+        id="welcomeText" 
+        data-en="Welcome to Hermes Rollerskate Academy!"
+        data-gr="Καλώς ήρθατε στην Ακαδημία Hermes Rollerskate!">
       </h1>
     </header>
 
-    <!-- Πλοήγηση (Navigation) -->
+    <!-- Navigation -->
     <nav>
       <ul>
         <li>
           <a href="HomePage.html" class="nav-link">
-            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
           </a>
         </li>
         <li>
-          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
-            Who We Are
-          </a>
+          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">Who We Are</a>
         </li>
         <li>
-          <a href="classes.html" class="nav-link" data-en="Classes" data-gr="Μαθήματα">
-            Classes
-          </a>
+          <a href="classes.html" class="nav-link" data-en="Classes" data-gr="Τμήματα">Classes</a>
         </li>
         <li>
-          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
-            More Activities
-          </a>
+          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</a>
         </li>
         <li>
-          <a href="prices-policies.html" class="nav-link" data-en="Prices & Policies" data-gr="Τιμές & Πολιτική">
-            Prices & Discounts
-          </a>
+          <a href="prices-policies.html" class="nav-link" data-en="Prices" data-gr="Τιμές">Prices & Discounts</a>
         </li>
         <li>
-          <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">
-            Benefits
-          </a>
+          <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">Benefits</a>
         </li>
         <li>
-          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">
-            Merchandise
-          </a>
+          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a>
         </li>
-        <!-- Κουμπί αλλαγής γλώσσας -->
+        <!-- Language toggle button -->
         <li class="nav-lang">
           <button id="language-button" onclick="toggleLanguage()">
-            <img src="photo/greeceflag.png" alt="Greece Language" />
+            <img src="photo/greeceflag.png" alt="Greece Language">
           </button>
         </li>
       </ul>
     </nav>
 
-    <!-- Main περιεχόμενο -->
+    <!-- Main content -->
     <main>
-      <!-- Ενότητα "Latest News" -->
-      <section class="news">
-        <h2 data-en="Latest News" data-gr="Τελευταία Νέα">Latest News</h2>
-        <p1 data-en="Stay updated with our latest events and announcements!"
-           data-gr="Μείνετε ενημερωμένοι με τα τελευταία μας νέα και ανακοινώσεις!">
-          Stay updated with our latest events and announcements!
-        </p1>
+      <!-- Announcement Section -->
+      <section class="announcement">
+        <h2 
+          data-en="First time rollerskate? We got you!" 
+          data-gr="Πρώτη φορά πατίνια; Είμαστε εδώ για σένα!">
+          First time rollerskate? We got you!
+        </h2>
+        
+        <div class="announcement-images">
+          <img src="photo/spot.jpg" alt="Spot 1">
+          <img src="photo/spot2.jpg" alt="Spot 2">
+          <img src="photo/spot3.jpg" alt="Spot 3">
+        </div>
+        
+        <div class="homepageinfo">
+          <p6 data-en="Complete the <a href='https://docs.google.com/forms/d/e/1FAIpQLScIWPgULw7AtR9Gsvh3Mm8ma5AXzohL4UAUQsKdyZHTTnmqHg/viewform?usp=sf_link' target='_blank'>form</a> to express your interest"
+             data-gr="Συμπληρώστε την <a href='https://docs.google.com/forms/d/e/1FAIpQLScIWPgULw7AtR9Gsvh3Mm8ma5AXzohL4UAUQsKdyZHTTnmqHg/viewform?usp=sf_link' target='_blank'>φόρμα</a> για το ενδιαφέρον σας">
+            Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLScIWPgULw7AtR9Gsvh3Mm8ma5AXzohL4UAUQsKdyZHTTnmqHg/viewform?usp=sf_link" target="_blank">form</a> to express your interest:
+          </p6>
+          <p6 data-en="Don't have your own equipment? No worries—let us know your sizes and we'll help you find the perfect fit."
+             data-gr="Δεν έχετε δικό σας εξοπλισμό; Κανένα πρόβλημα—πείτε μας τα μεγέθη σας και θα σας βοηθήσουμε να βρείτε την ιδανική επιλογή.">
+            Don't have your own equipment? No worries—let us know your sizes and we'll help you find the perfect fit.
+          </p6>
+          <p6 data-en="Are you a beginner? Book your first free lesson and start your journey with confidence."
+             data-gr="Είστε αρχάριος; Κλείστε το πρώτο δωρεάν μάθημά σας και ξεκινήστε το ταξίδι σας με αυτοπεποίθηση.">
+            Are you a beginner? Book your first free lesson and start your journey with confidence.
+          </p6>
+          <p6 data-en="If you already know the basics, we're waiting for you in our available classes—come join the fun!"
+             data-gr="Αν γνωρίζετε τα βασικά, σας περιμένουμε στα διαθέσιμα τμήματά μας—ελάτε να διασκεδάσουμε!">
+            If you already know the basics, we're waiting for you in our available classes—come join the fun!
+          </p6>
+          <p7 class="bold-highlight" 
+             data-en="Come and Roll with us!" 
+             data-gr="Ελάτε και Ρολλάρετε με εμάς!">
+          </p7>
+        </div>
       </section>
 
-      <!-- Grid με πληροφορίες για Μαθήματα, Επίπεδα και Δραστηριότητες -->
+      <!-- Grid: Classes, Levels, Activities -->
       <section class="grid-container">
         <div class="grid-item">
-          <h3 data-en="Classes" data-gr="Μαθήματα">Classes</h3>
-          <p data-en="📍 Saturday 13:55-14:55, Sunday 13:55-14:55"
-             data-gr="📍 Σάββατο 13:55-14:55, Κυριακή 13:55-14:55">
-            📍 Saturday 13:55-14:55, Sunday 13:55-14:55
+          <h3 data-en="Classes" data-gr="Τμήματα">Classes</h3>
+          <p data-en="🛼 Saturday 13:55-14:55" data-gr="🛼 Σάββατο 13:55-14:55">
+            🛼 Saturday 13:55-14:55
+          </p>
+          <p data-en="🛼 Sunday 13:55-14:55" data-gr="🛼 Κυριακή 13:55-14:55">
+            🛼 Sunday 13:55-14:55
           </p>
           <p data-en="📍 Location: <a href='https://maps.app.goo.gl/4ifyZcivRadWFjKd6' target='_blank'>Zografou</a>"
              data-gr="📍 Τοποθεσία: <a href='https://maps.app.goo.gl/4ifyZcivRadWFjKd6' target='_blank'>Ζωγράφου</a>">
             📍 Location: <a href="https://maps.app.goo.gl/4ifyZcivRadWFjKd6" target="_blank">Zografou</a>
           </p>
         </div>
+        
         <div class="grid-item">
           <h3 data-en="Levels" data-gr="Επίπεδα">Levels</h3>
           <p data-en="1️⃣ Beginner" data-gr="1️⃣ Αρχάριο">1️⃣ Beginner</p>
           <p data-en="2️⃣ Basic" data-gr="2️⃣ Βασικό">2️⃣ Intermediate</p>
           <p data-en="3️⃣ Advanced" data-gr="3️⃣ Προχωρημένο">3️⃣ Advanced</p>
         </div>
+        
         <div class="grid-item">
           <h3 data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</h3>
-          <p data-en="🎿Snow Ski & ⛸️Ice Lessons" data-gr="🎿Σκι & ⛸️Πατινάζ"> Snow Ski Lessons</p>
-          <p data-en="⌛Coming More!" data-gr="⌛Έρχονται Πολλά!">
-            Coming Soon!
+          <p data-en="🎿Snow Ski & ⛸️Ice Skate" data-gr="🎿Σκι & ⛸️Πατινάζ">🎿 Snow Ski & ⛸ Ice Skate</p>
+          <p data-en="⌛Coming More Soon!" data-gr="⌛Έρχονται Πολλά Σύντομα!">
+            ⌛ Coming Soon!
           </p>
         </div>
-        
       </section>
 
-      <!-- Ενότητα Videos -->
+      <!-- Videos Section -->
       <section class="videos-section">
-        <h2 data-en="🎥 Watch Our Academy in Action!" data-gr="🎥 Δείτε την Ακαδημία μας σε Δράση!">
+        <h2 data-en="🎥 See related videos with rollerskates!" data-gr="🎥 Δείτε σχετικά βιντεάκια με πατίνια">
           🎥 Watch Our Academy in Action!
         </h2>
         <div class="videos-container">
-          <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/mRJdvPp6eyY" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-        <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/MfZc7lmSf0s" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/mRJdvPp6eyY"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/MfZc7lmSf0s"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
       </section>
-      
 
-      <!-- Ενότητα Προτεινόμενων Προϊόντων -->
-<section class="suggesteditems-section">
-  <div class="container">
-    <h3 data-en="Suggested Products" data-gr="Προτεινόμενα Προϊόντα">Suggested Products</h3>
-    
-    <a href="merchandise.html" class="item-link">
-      <div class="items">
-        <img src="photo/roller.jpg" alt="Roller" />
-        <h4 data-en="Roller" data-gr="Πατίνια">Roller</h4>
-        <p2 data-en="Price: €90" data-gr="Τιμή: €90">Price: €90</p2>
-      </div>
-    </a>
-    
-    <a href="merchandise.html" class="item-link">
-      <div class="items">
-        <img src="photo/tshirt.jpg" alt="T-shirt" />
-        <h4 data-en="T-shirt" data-gr="Μπλουζάκι">T-shirt</h4>
-        <p2 data-en="Price: €20" data-gr="Τιμή: €20">Price: €20</p2>
-      </div>
-    </a>
-    
-  </div>
-</section>
+      <!-- Latest News -->
+      <section class="news">
+        <h2 data-en="Latest News" data-gr="Τελευταία Νέα">Latest News</h2>
+        <p7 data-en="Stay updated with our latest events and announcements!"
+           data-gr="Μείνετε ενημερωμένοι με τα τελευταία μας νέα και ανακοινώσεις!">
+          Stay updated with our latest events and announcements!
+        </p7>
+      </section>
 
-      <p3>
-        <a href="merchandise.html" data-en="View all merchandise" data-gr="Δείτε όλα τα προϊόντα">
-          View all merchandise
-        </a>
-      </p3>
+      <!-- Suggested Products Section -->
+      <section class="suggesteditems-section">
+        <div class="container">
+          <h3 data-en="Suggested Products" data-gr="Προτεινόμενα Προϊόντα">Suggested Products</h3>
+
+          <!-- Item 1 -->
+          <a href="https://powerskate.eu/skates/genika/athlopaidia-afxomeioumena-patinia-roz-002.10305/p-p" class="item-link">
+            <div class="items">
+              <img src="photo/roller.jpg" alt="Roller">
+              <h4 data-en="Athlopaidia Auto-reduction Skates - Pink" data-gr="ΑΘΛΟΠΑΙΔΙΑ Αυξομειούμενα Πατίνια - Ροζ">Skates (Pink)</h4>
+              <p2 data-en="Price: €50" data-gr="Τιμή: €50">Price: €50</p2>
+            </div>
+          </a>
+
+          <!-- Item 2 -->
+          <a href="error.html" class="item-link">
+            <div class="items">
+              <img src="photo/tshirt1.png" alt="T-shirt">
+              <h4 data-en="Academy's T-shirt" data-gr="Μπλουζάκι Ακαδημίας">T-shirt</h4>
+              <p2 data-en="Price: €15" data-gr="Τιμή: €15">Price: €15</p2>
+            </div>
+          </a>
+
+          <!-- Item 3 -->
+          <a href="https://powerskate.eu/prostateutika/prostateftika/athlopaidia-paidika-prostateftika-003.11359-p" class="item-link">
+            <div class="items">
+              <img src="photo/protection.jpg" alt="Protection">
+              <h4 data-en="Athlopaidia Children's Protectors" data-gr="Αθλοπαιδιά Παιδικά Προστατευτικά">Children's Protectors</h4>
+              <p2 data-en="Price: €20" data-gr="Τιμή: €20">Price: €20</p2>
+            </div>
+          </a>
+
+          <!-- Item 4 -->
+          <a href="https://powerskate.eu/prostateutika/krani/athlopaidia-kranos-agnistiko-afxomeioumeno-mavro-003.10015/m-p" class="item-link">
+            <div class="items">
+              <img src="photo/helmet.jpg" alt="Helmet">
+              <h4 data-en="Helmet Auto-reduction - Black" data-gr="Αθλοπαιδιά Κράνος Αυξομειούμενο - Μαύρο">Helmet (Black)</h4>
+              <p2 data-en="Price: €20" data-gr="Τιμή: €20">Price: €20</p2>
+            </div>
+          </a>
+
+          <!-- Item 5 -->
+          <a href="https://powerskate.eu/skates/paidika-skates/fitness-paidika/blade-runner-phoenix-g-patinia-lefko-fouxia-43.0t1011-p" class="item-link">
+            <div class="items">
+              <img src="photo/roller2.jpg" alt="Roller">
+              <h4 data-en="BLADE RUNNER Phoenix G Skates - Fuchsia" data-gr="BLADE RUNNER Phoenix G Πατίνι - Φούξια">Skates (Fuchsia)</h4>
+              <p2 data-en="Price: €100" data-gr="Τιμή: €100">Price: €100</p2>
+            </div>
+          </a>
+
+          <!-- Item 6 -->
+          <a href="https://powerskate.eu/skates/tsanta-patinion-athlopaidia-mavri-002.10090-p" class="item-link">
+            <div class="items">
+              <img src="photo/bag.jpg" alt="Bag">
+              <h4 data-en="RollerSkate Bag Athlopaidia - Black" data-gr="Τσάντα Πατινιών Αθλοπαιδιά, Μαύρη">Skate Bag</h4>
+              <p2 data-en="Price: €13" data-gr="Τιμή: €13">Price: €13</p2>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <p7 class="more-products">
+        <a href="https://powerskate.eu/skates" data-en="View all merchandise" data-gr="Δείτε όλα τα προϊόντα">View all merchandise</a>
+      </p7>
     </main>
 
-    <!-- Υποσέλιδο (Footer) -->
+    <!-- Footer -->
     <footer>
       <div class="footer-row">
-        <!-- Ενημερωτικό Δελτίο (Newsletter) -->
+        <!-- Newsletter -->
         <div class="footer-column newsletter">
           <h3 data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</h3>
           <form class="newsletter-form" action="error.html" method="post">
-            <input type="email" placeholder="Enter your email" data-en-placeholder="Enter your email" data-gr-placeholder="Εισάγετε το email σας" required />
-            <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">
-              Subscribe
-            </button>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              data-en-placeholder="Enter your email"
+              data-gr-placeholder="Εισάγετε το email σας"
+              required>
+            <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
           </form>
-          <p data-en="Subscribe to receive our latest news." data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα.">
+          <p
+            data-en="Subscribe to receive our latest news."
+            data-gr="Εγγραφείτε για να λαμβάνετε τα τελευταία μας νέα.">
             Subscribe to receive our latest news and offers.
           </p>
           <div class="social-icons">
             <ul>
-              <li>
-                <a href="#"><img src="photo/fb.webp" alt="Facebook" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="photo/insta.png" alt="Instagram" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="photo/tiktok.png" alt="TikTok" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="photo/youtube.png" alt="Youtube" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="photo/linkedin.png" alt="LinkedIn" /></a>
-              </li>
+              <li><a href="#"><img src="photo/fb.webp" alt="Facebook"></a></li>
+              <li><a href="#"><img src="photo/insta.png" alt="Instagram"></a></li>
+              <li><a href="#"><img src="photo/tiktok.png" alt="TikTok"></a></li>
+              <li><a href="#"><img src="photo/youtube.png" alt="YouTube"></a></li>
+              <li><a href="#"><img src="photo/linkedin.png" alt="LinkedIn"></a></li>
             </ul>
           </div>
         </div>
 
-        <!-- Πολιτικές & Πληροφορίες (Policies & Information) -->
+        <!-- Policies & Info -->
         <div class="footer-column policies">
-          <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">
-            Policies &amp; Information
-          </h3>
+          <h3 data-en="Policies &amp; Information" data-gr="Πολιτικές &amp; Πληροφορίες">Policies &amp; Information</h3>
           <ul>
             <li>
-              <a href="policies.html" data-en="Refund &amp; Cancellation Policy" data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">
+              <a href="policies.html"
+                 data-en="Refund &amp; Cancellation Policy"
+                 data-gr="Πολιτική Επιστροφών &amp; Ακυρώσεων">
                 Refund &amp; Cancellation Policy
               </a>
-          </li>
-          <li>
-              <a href="policies.html" data-en="Safety Guidelines" data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
+            </li>
+            <li>
+              <a href="policies.html"
+                 data-en="Safety Guidelines"
+                 data-gr="Κατευθυντήριες Γραμμές Ασφαλείας">
                 Safety Guidelines
               </a>
             </li>
-          <li>
-            <a href="policies.html" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">
-              Terms &amp; Conditions
-            </a>
-          </li>
-          <li>
-            <a href="policies.html" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a href="policies.html" data-en="FAQ" data-gr="Συχνές Ερωτήσεις">
-              FAQ
-            </a>
+            <li>
+              <a href="policies.html"
+                 data-en="Terms &amp; Conditions"
+                 data-gr="Όροι &amp; Προϋποθέσεις">
+                Terms &amp; Conditions
+              </a>
+            </li>
+            <li>
+              <a href="policies.html"
+                 data-en="Privacy Policy"
+                 data-gr="Πολιτική Απορρήτου">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="policies.html"
+                 data-en="FAQ"
+                 data-gr="Συχνές Ερωτήσεις">
+                FAQ
+              </a>
             </li>
           </ul>
         </div>
 
-        <!-- Επικοινωνία (Contact Us) -->
+        <!-- Contact -->
         <div class="footer-column contact">
           <h3 data-en="Contact Us" data-gr="Επικοινωνία">Contact Us</h3>
           <p>
             <strong data-en="📧 Email:" data-gr="📧 Email:">📧 Email:</strong>
-            <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&amp;body=Hello Hermes Team," data-en="hermesrollerskate@hotmail.com" data-gr="hermesrollerskate@hotmail.com">
+            <a href="mailto:hermesrollerskate@hotmail.com?subject=Inquiry&body=Hello Hermes Team,"
+               data-en="hermesrollerskate@hotmail.com"
+               data-gr="hermesrollerskate@hotmail.com">
               hermesrollerskate@hotmail.com
             </a>
           </p>
@@ -256,7 +323,9 @@
           </p>
           <p>
             <strong data-en="📞 Phone:" data-gr="📞 Τηλέφωνο:">📞 Phone:</strong>
-            <a href="tel:+306955655189" data-en="+306955655189" data-gr="+306955655189">
+            <a href="tel:+306955655189"
+               data-en="+306955655189"
+               data-gr="+306955655189">
               +306955655189
             </a>
           </p>
@@ -268,97 +337,100 @@
         </div>
       </div>
 
-      <!-- Carousel Εταιρικών Συνεργατών -->
+      <!-- Partners Carousel -->
       <div class="footer-partners-carousel">
         <div class="carousel-wrapper">
           <div class="carousel-track">
+            <!-- Example carousel items -->
             <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
-            </div>
-            <div class="carousel-item">
+            </div>            <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
-            </div>
-            <div class="carousel-item">
+            </div>            <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
-            </div>
-            <div class="carousel-item">
+            </div>            <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
-            </div>
-            <div class="carousel-item">
+            </div>            <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://archimedes.uoa.gr/" target="_blank">
-                <img src="photo/archimedes.png" alt="Archimedes UOA" />
+                <img src="photo/archimedes.png" alt="Archimedes UOA">
               </a>
             </div>
             <div class="carousel-item">
               <a href="https://powerskate.eu/" target="_blank">
-                <img src="photo/powerskate.png" alt="PowerSkate" />
+                <img src="photo/powerskate.png" alt="PowerSkate">
               </a>
             </div>
-            <!-- Προσθέστε επιπλέον στοιχεία για ομαλή ροή -->
+            <!-- ...additional carousel items... -->
           </div>
         </div>
       </div>
 
-      <!-- Οριζόντια γραμμή διαχωρισμού -->
-      <hr class="footer-separator" />
+      <hr class="footer-separator">
 
-      <!-- Κάτω μέρος του υποσέλιδου -->
       <div class="footer-bottom">
-        <p data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved." data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
+        <p7 data-en="&copy; 2025 Hermes Rollerskate Academy. All Rights Reserved."
+           data-gr="&copy; 2025 Hermes Rollerskate Academy. Όλα τα δικαιώματα διατηρούνται.">
           &copy; 2025 Hermes Rollerskate Academy. All Rights Reserved.
-        </p>
+        </p7>
       </div>
     </footer>
 
-    <!-- Σενάριο για εναλλαγή και ενημέρωση γλώσσας -->
+    <!-- Language Toggle Script -->
     <script>
       let typedTimer = null, typedIndex = 0;
+
       function toggleLanguage() {
         const currentLang = localStorage.getItem('language') || 'en';
         const newLang = (currentLang === 'en') ? 'gr' : 'en';
         localStorage.setItem('language', newLang);
         updateLanguage(newLang);
       }
+
       function updateLanguage(lang) {
-        if (typedTimer) { clearTimeout(typedTimer); typedTimer = null; }
+        if (typedTimer) {
+          clearTimeout(typedTimer);
+          typedTimer = null;
+        }
+
+        // Toggle Flag
         const flagImage = document.querySelector('#language-button img');
         if (lang === 'en') {
           flagImage.src = 'photo/greeceflag.png';
@@ -367,10 +439,15 @@
           flagImage.src = 'photo/englandflag.jpg';
           flagImage.alt = 'English Language';
         }
+
+        // Update All Data Attributes
         document.querySelectorAll('[data-en]').forEach(el => {
           if (el.tagName.toLowerCase() === 'title') {
             document.title = el.getAttribute(`data-${lang}`);
-          } else if ((el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') && el.hasAttribute('placeholder')) {
+          } else if (
+            (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea')
+            && el.hasAttribute('placeholder')
+          ) {
             el.placeholder = el.getAttribute(`data-${lang}`);
           } else if (el.tagName.toLowerCase() === 'option') {
             el.textContent = el.getAttribute(`data-${lang}`);
@@ -378,12 +455,14 @@
             el.innerHTML = el.getAttribute(`data-${lang}`);
           }
         });
-        // Ειδική περίπτωση για το στοιχείο welcomeText (αν υπάρχει)
+
+        // If there's a typed effect on the welcome text
         const welcomeElement = document.getElementById('welcomeText');
         if (welcomeElement) {
           welcomeElement.innerHTML = '';
           typedIndex = 0;
           const typedString = welcomeElement.getAttribute(`data-${lang}`) || '';
+          
           function typeEffect() {
             if (typedIndex < typedString.length) {
               welcomeElement.innerHTML += typedString.charAt(typedIndex++);
@@ -392,9 +471,11 @@
           }
           typeEffect();
         }
-        // Εμφάνιση/απόκρυψη στοιχείων φόρμας ανά γλώσσα (αν υπάρχουν)
+
+        // Show/hide any form elements if you have them set up for EN / GR
         const enForms = document.querySelectorAll('[data-en-only]');
         const grForms = document.querySelectorAll('[data-gr-only]');
+
         if (lang === 'en') {
           enForms.forEach(f => f.style.display = 'block');
           grForms.forEach(f => f.style.display = 'none');
@@ -402,44 +483,44 @@
           enForms.forEach(f => f.style.display = 'none');
           grForms.forEach(f => f.style.display = 'block');
         }
+
         document.documentElement.lang = lang;
       }
+
       document.addEventListener('DOMContentLoaded', function() {
         const storedLang = localStorage.getItem('language') || 'en';
         updateLanguage(storedLang);
       });
     </script>
 
-    <!-- Σενάριο για κίνηση του Carousel -->
+    <!-- Partners Carousel Animation -->
     <script>
       const track = document.querySelector('.carousel-track');
-      const speed = 0.5; // pixels ανά καρέ – ρυθμίστε την ταχύτητα εδώ
+      const speed = 0.5; // pixels per frame
 
       function animateCarousel() {
-        // Λήψη της τρέχουσας τιμής του transform
+        if (!track) return; // Guard in case carousel-track doesn't exist
+
         const style = window.getComputedStyle(track);
         const matrix = new DOMMatrixReadOnly(style.transform);
         let translateX = matrix.m41 || 0;
 
-        // Μετακίνηση του track προς τα αριστερά
         translateX -= speed;
         track.style.transform = `translateX(${translateX}px)`;
 
-        // Έλεγχος αν η πρώτη εικόνα έχει εξαφανιστεί εντελώς
         const firstItem = track.firstElementChild;
         const firstRect = firstItem.getBoundingClientRect();
         const wrapperRect = track.parentElement.getBoundingClientRect();
 
-        // Αν το δεξί άκρο της πρώτης εικόνας είναι εκτός του wrapper
+        // If the first item has fully scrolled off
         if (firstRect.right < wrapperRect.left) {
-          // Αφαίρεση της πρώτης εικόνας και επαναπροσθήκη στο τέλος
           track.appendChild(firstItem);
-          // Ενημέρωση της μετατόπισης ώστε να μην υπάρχει απότομη αλλαγή
           const itemStyle = window.getComputedStyle(firstItem);
           const marginRight = parseFloat(itemStyle.marginRight) || 0;
           translateX += firstRect.width + marginRight;
           track.style.transform = `translateX(${translateX}px)`;
         }
+
         requestAnimationFrame(animateCarousel);
       }
       requestAnimationFrame(animateCarousel);

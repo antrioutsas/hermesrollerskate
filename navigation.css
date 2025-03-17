@@ -1,7 +1,23 @@
-/* Import Manrope from Google Fonts (if not imported elsewhere) */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+:root {
+  /* Colors */
+  --nav-bg: #222;
+  --nav-text: #fff;
+  --nav-hover: #ffcc00;
+  
+  /* Spacing & Sizing */
+  --nav-padding-vertical: 0.625rem;   /* 10px */
+  --nav-padding-horizontal: 1.25rem;  /* 20px */
+  --nav-link-margin: 0 0.9375rem;       /* 0 15px */
+  --nav-link-padding: 0.625rem;         /* 10px */
+  --nav-logo-size: 50px;
+  --lang-button-padding: 0.3125rem;     /* 5px */
+  
+  /* Transitions */
+  --transition-duration: 0.3s;
+  --transition-ease: ease-in-out;
+}
 
-/* Set Manrope as the base font */
+/* Set base font (if not defined elsewhere) */
 body {
   font-family: 'Manrope', sans-serif;
 }
@@ -10,15 +26,14 @@ body {
 /* NAVIGATION */
 /* ============================= */
 nav {
-  background: #222;
+  background: var(--nav-bg);
   text-align: center;
   width: 100%;
-  top: 0;
-  left: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: var(--nav-padding-vertical) var(--nav-padding-horizontal);
 }
 
 nav ul {
@@ -31,29 +46,30 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: var(--nav-link-margin);
 }
 
 nav ul li a {
-  color: white;
+  color: var(--nav-text);
   text-decoration: none;
   font-size: 16px;
-  padding: 10px;
-  transition: color 0.3s ease-in-out;
+  padding: var(--nav-link-padding);
+  transition: color var(--transition-duration) var(--transition-ease);
 }
 
 nav ul li a:hover {
-  color: #ffcc00;
+  color: var(--nav-hover);
 }
 
 /* ============================= */
-/* NAVIGATION BUTTON */
+/* NAVIGATION BUTTON (Logo) */
 /* ============================= */
 .nav-button {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s, opacity 0.3s;
-  margin: 0 5px;
+  width: var(--nav-logo-size);
+  height: var(--nav-logo-size);
+  transition: transform var(--transition-duration) var(--transition-ease),
+              opacity var(--transition-duration) var(--transition-ease);
+  margin: 0 0.3125rem; /* 5px margin */
   cursor: pointer;
 }
 
@@ -63,7 +79,7 @@ nav ul li a:hover {
 }
 
 /* ============================= */
-/* LANGUAGE BUTTON - SMOOTH EFFECT */
+/* LANGUAGE BUTTON */
 /* ============================= */
 .nav-lang {
   margin-left: auto; /* Push language button to the right */
@@ -73,10 +89,11 @@ nav ul li a:hover {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: var(--lang-button-padding);
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform var(--transition-duration) var(--transition-ease),
+              opacity var(--transition-duration) var(--transition-ease);
 }
 
 #language-button:hover {
@@ -87,7 +104,7 @@ nav ul li a:hover {
 #language-button img {
   width: 30px;
   height: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--transition-duration) var(--transition-ease);
 }
 
 /* Slight rotation effect on hover */
@@ -107,11 +124,11 @@ nav ul li a:hover {
     flex-direction: column;
   }
   nav ul li {
-    margin: 10px 0;
+    margin: 0.625rem 0; /* 10px top & bottom */
   }
   .nav-lang {
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 0.625rem; /* 10px */
     justify-content: center;
   }
 }
