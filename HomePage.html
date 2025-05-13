@@ -47,9 +47,7 @@
         <li>
           <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">Benefits</a>
         </li>
-        <li>
-          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">Merchandise</a>
-        </li>
+
         <!-- Language toggle button -->
         <li class="nav-lang">
           <button id="language-button" onclick="toggleLanguage()">
@@ -72,7 +70,7 @@
         <div class="announcement-images">
           <img src="photo/spot.jpg" alt="Spot 1">
           <img src="photo/spot2.jpg" alt="Spot 2">
-          <img src="photo/spot3.jpg" alt="Spot 3">
+          <img src="photo/whoweare.png" alt="Spot 3">
         </div>
         
         <div class="homepageinfo">
@@ -84,9 +82,9 @@
              data-gr="Δεν έχετε δικό σας εξοπλισμό; Κανένα πρόβλημα—πείτε μας τα μεγέθη σας και θα σας βοηθήσουμε να βρείτε την ιδανική επιλογή.">
             Don't have your own equipment? No worries—let us know your sizes and we'll help you find the perfect fit.
           </p6>
-          <p6 data-en="Are you a beginner? Book your first free lesson and start your journey with confidence."
-             data-gr="Είστε αρχάριος; Κλείστε το πρώτο δωρεάν μάθημά σας και ξεκινήστε το ταξίδι σας με αυτοπεποίθηση.">
-            Are you a beginner? Book your first free lesson and start your journey with confidence.
+          <p6 data-en="Are you a beginner? Book your first private lesson and start your journey with confidence."
+             data-gr="Είστε αρχάριος; Κλείστε το πρώτο ιδιαίτερο μάθημά σας και ξεκινήστε το ταξίδι σας με αυτοπεποίθηση.">
+            Are you a beginner? Book your first private lesson and start your journey with confidence.
           </p6>
           <p6 data-en="If you already know the basics, we're waiting for you in our available classes—come join the fun!"
              data-gr="Αν γνωρίζετε τα βασικά, σας περιμένουμε στα διαθέσιμα τμήματά μας—ελάτε να διασκεδάσουμε!">
@@ -99,37 +97,91 @@
         </div>
       </section>
 
-      <!-- Grid: Classes, Levels, Activities -->
-      <section class="grid-container">
-        <div class="grid-item">
-          <h3 data-en="Classes" data-gr="Τμήματα">Classes</h3>
-          <p data-en="🛼 Saturday 13:55-14:55" data-gr="🛼 Σάββατο 13:55-14:55">
-            🛼 Saturday 13:55-14:55
-          </p>
-          <p data-en="🛼 Sunday 13:55-14:55" data-gr="🛼 Κυριακή 13:55-14:55">
-            🛼 Sunday 13:55-14:55
-          </p>
-          <p data-en="📍 Location: <a href='https://maps.app.goo.gl/4ifyZcivRadWFjKd6' target='_blank'>Zografou</a>"
-             data-gr="📍 Τοποθεσία: <a href='https://maps.app.goo.gl/4ifyZcivRadWFjKd6' target='_blank'>Ζωγράφου</a>">
-            📍 Location: <a href="https://maps.app.goo.gl/4ifyZcivRadWFjKd6" target="_blank">Zografou</a>
-          </p>
-        </div>
-        
-        <div class="grid-item">
-          <h3 data-en="Levels" data-gr="Επίπεδα">Levels</h3>
-          <p data-en="1️⃣ Beginner" data-gr="1️⃣ Αρχάριο">1️⃣ Beginner</p>
-          <p data-en="2️⃣ Basic" data-gr="2️⃣ Βασικό">2️⃣ Intermediate</p>
-          <p data-en="3️⃣ Advanced" data-gr="3️⃣ Προχωρημένο">3️⃣ Advanced</p>
-        </div>
-        
-        <div class="grid-item">
-          <h3 data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">More Activities</h3>
-          <p data-en="🎿Snow Ski & ⛸️Ice Skate" data-gr="🎿Σκι & ⛸️Πατινάζ">🎿 Snow Ski & ⛸ Ice Skate</p>
-          <p data-en="⌛Coming More Soon!" data-gr="⌛Έρχονται Πολλά Σύντομα!">
-            ⌛ Coming Soon!
-          </p>
-        </div>
-      </section>
+
+<section class="grid-container">
+  <!-- Friday -->
+  <div class="grid-item">
+    <h3 data-en="Friday" data-gr="Παρασκευή">Friday</h3>
+    <p data-en="🛼 Group 17:00–18:00" data-gr="🛼 Ομαδικό 17:00–18:00">
+      🛼 17:00–18:00
+    </p>
+    <!-- Ιδιαίτερα -->
+    <p class="private"
+       data-en="🛼 Private 18:00–19:00"
+       data-gr="🛼 Ιδιαίτερα 18:00–19:00">
+      🛼 Ιδιαίτερα Παρασκευή 18:00–19:00
+    </p>
+    <p class="location"
+       data-en="📍 Location: Zografou"
+       data-gr="📍 Τοποθεσία: Ζωγράφου">
+      📍 Τοποθεσία:
+      <a href="https://maps.app.goo.gl/4ifyZcivRadWFjKd6"
+         target="_blank"
+         rel="noopener">
+        Ζωγράφου
+      </a>
+    </p>
+  </div>
+
+  <!-- Saturday -->
+  <div class="grid-item">
+    <h3 data-en="Saturday" data-gr="Σάββατο">Saturday</h3>
+    <p data-en="🛼 Group 11:45–12:45" data-gr="🛼 Ομαδικό 11:45–12:45">
+      🛼 11:45–12:45
+    </p>
+    <p data-en="🛼 Group 18:00-19:00" data-gr="🛼 Ομαδικό 18:00-19:00">
+      🛼 13:55–14:55
+    </p>
+    <!-- Ιδιαίτερα -->
+    <p class="private"
+       data-en="🛼 Private 13:00–14:00"
+       data-gr="🛼 Ιδιαίτερα 13:00–14:00">
+      🛼 Ιδιαίτερα Σάββατο 13:00–14:00
+    </p>
+    <p class="location"
+       data-en="📍 Location: Zografou"
+       data-gr="📍 Τοποθεσία: Ζωγράφου">
+      📍 Τοποθεσία:
+      <a href="https://maps.app.goo.gl/4ifyZcivRadWFjKd6"
+         target="_blank"
+         rel="noopener">
+        Ζωγράφου
+      </a>
+    </p>
+  </div>
+
+  <!-- Sunday -->
+  <div class="grid-item">
+    <h3 data-en="Sunday" data-gr="Κυριακή">Sunday</h3>
+    <p data-en="🛼 Group 9:30–10:30" data-gr="🛼 Ομαδικό 9:30–10:30">
+      🛼 9:30–10:30
+    </p>
+    <p data-en="🛼 Group 10:30–11:30" data-gr="🛼 Ομαδικό 10:30–11:30">
+      🛼 10:30–11:30
+    </p>
+    <p data-en="🛼 Group 18:00–19:00" data-gr="🛼 Ομαδικό 18:00–19:00">
+      🛼 18:00–19:00
+    </p>
+    <!-- Ιδιαίτερα -->
+    <p class="private"
+       data-en="🛼 Private 11:30–12:30"
+       data-gr="🛼 Ιδιαίτερα 11:30–12:30">
+      🛼 Ιδιαίτερα Κυριακή 11:30–12:30
+    </p>
+    <p class="location"
+       data-en="📍 Location: Zografou"
+       data-gr="📍 Τοποθεσία: Ζωγράφου">
+      📍 Τοποθεσία:
+      <a href="https://maps.app.goo.gl/4ifyZcivRadWFjKd6"
+         target="_blank"
+         rel="noopener">
+        Ζωγράφου
+      </a>
+    </p>
+  </div>
+</section>
+
+
 
       <!-- Videos Section -->
       <section class="videos-section">
@@ -171,25 +223,25 @@
           <h3 data-en="Suggested Products" data-gr="Προτεινόμενα Προϊόντα">Suggested Products</h3>
 
           <!-- Item 1 -->
-          <a href="https://powerskate.eu/skates/genika/athlopaidia-afxomeioumena-patinia-roz-002.10305/p-p" class="item-link">
+          <a href="https://www.instagram.com/direct/t/17843521326338523/" class="item-link">
             <div class="items">
-              <img src="photo/roller.jpg" alt="Roller">
-              <h4 data-en="Athlopaidia Auto-reduction Skates - Pink" data-gr="ΑΘΛΟΠΑΙΔΙΑ Αυξομειούμενα Πατίνια - Ροζ">Skates (Pink)</h4>
-              <p2 data-en="Price: €50" data-gr="Τιμή: €50">Price: €50</p2>
+              <img src="photo/TshirtHermes.png" alt="T-shirt">
+              <h4 data-en="Academy's T-shirt Hermes" data-gr="Μπλουζάκι Ακαδημίας Ερμής">Skates (Pink)</h4>
+              <p2 data-en="Price: €15" data-gr="Τιμή: €15">Price: €15</p2>
             </div>
           </a>
 
           <!-- Item 2 -->
-          <a href="error.html" class="item-link">
+          <a href="https://www.instagram.com/direct/t/17843521326338523" class="item-link">
             <div class="items">
-              <img src="photo/tshirt1.png" alt="T-shirt">
-              <h4 data-en="Academy's T-shirt" data-gr="Μπλουζάκι Ακαδημίας">T-shirt</h4>
+              <img src="photo/TshirtHermida.png" alt="T-shirt">
+              <h4 data-en="Academy's T-shirt Hermida" data-gr="Μπλουζάκι Ακαδημίας Ερμίδα">T-shirt</h4>
               <p2 data-en="Price: €15" data-gr="Τιμή: €15">Price: €15</p2>
             </div>
           </a>
 
           <!-- Item 3 -->
-          <a href="https://powerskate.eu/prostateutika/prostateftika/athlopaidia-paidika-prostateftika-003.11359-p" class="item-link">
+          <a href="https://powerskate.eu/prostateutika/prostateftika  " class="item-link">
             <div class="items">
               <img src="photo/protection.jpg" alt="Protection">
               <h4 data-en="Athlopaidia Children's Protectors" data-gr="Αθλοπαιδιά Παιδικά Προστατευτικά">Children's Protectors</h4>
@@ -200,7 +252,7 @@
           <!-- Item 4 -->
           <a href="https://powerskate.eu/prostateutika/krani/athlopaidia-kranos-agnistiko-afxomeioumeno-mavro-003.10015/m-p" class="item-link">
             <div class="items">
-              <img src="photo/helmet.jpg" alt="Helmet">
+              <img src="photo/helmet.jpg" alt="protection">
               <h4 data-en="Helmet Auto-reduction - Black" data-gr="Αθλοπαιδιά Κράνος Αυξομειούμενο - Μαύρο">Helmet (Black)</h4>
               <p2 data-en="Price: €20" data-gr="Τιμή: €20">Price: €20</p2>
             </div>
@@ -216,7 +268,7 @@
           </a>
 
           <!-- Item 6 -->
-          <a href="https://powerskate.eu/skates/tsanta-patinion-athlopaidia-mavri-002.10090-p" class="item-link">
+          <a href="https://powerskate.eu/skates/exoplismos/tsantes-skates" class="item-link">
             <div class="items">
               <img src="photo/bag.jpg" alt="Bag">
               <h4 data-en="RollerSkate Bag Athlopaidia - Black" data-gr="Τσάντα Πατινιών Αθλοπαιδιά, Μαύρη">Skate Bag</h4>

@@ -11,118 +11,142 @@
 </head>
 <body>
     
-  <!-- NAVIGATION -->
-  <nav>
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li>
+          <a href="HomePage.html">
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
+          </a>
+        </li>
+        <li>
+          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
+            Who We Are
+          </a>
+        </li>
+        <li>
+          <a href="classes.html" class="nav-link current" data-en="Classes" data-gr="Τμήματα">
+            Classes
+          </a>
+        </li>
+        <li>
+          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
+            More Activities
+          </a>
+        </li>
+        <li>
+          <a href="prices-policies.html" class="nav-link" data-en="Prices" data-gr="Τιμές">
+            Prices &amp; Discounts
+          </a>
+        </li>
+        <li>
+          <a href="benefits.html" class="nav-link" data-en="Benefits" data-gr="Οφέλη">
+            Benefits
+          </a>
+        </li>
+        <!-- Language toggle -->
+        <li class="nav-lang">
+          <button id="language-button" onclick="toggleLanguage()">
+            <img src="photo/greeceflag.png" alt="Greece Language">
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+
+<section id="classes" class="container">
+  <h1 data-en="Our Roller Skating Classes" data-gr="Τα Μαθήματά μας με Πατίνια/Rollerskate">
+    Τα Μαθήματά μας με Πατίνια &amp; Rollerskate
+  </h1>
+  <p data-en="Explore our roller skate courses and choose the one that matches your skills and goals."
+     data-gr="Εξερευνήστε τα διαθέσιμα μαθήματα πατινιών (rollerskate) και επιλέξτε αυτό που ταιριάζει στις ικανότητές σας και στους στόχους σας.">
+    Εξερευνήστε τα διαθέσιμα μαθήματα πατινιών (roller skate) και επιλέξτε αυτό που ταιριάζει στις ικανότητές σας και στους στόχους σας.
+  </p>
+
+<section id="classes" class="container">
+  <!-- Ομαδικά Μαθήματα / Group Classes -->
+  <article id="group-classes">
+    <!-- Placeholder για Φωτογραφία Ομαδικών -->
+    <figure class="class-photo">
+      <img src="photo/spot3.jpg" alt="Group Roller Skating Class Photo" />
+    </figure>
+
+    <h2 data-en="Group Roller Skating Classes" data-gr="Ομαδικά Μαθήματα Rollerskate">
+      Ομαδικά Μαθήματα Rollerskate
+    </h2>
+
+    <h3 data-en="Schedule" data-gr="Πρόγραμμα"></h3>
     <ul>
       <li>
-        <a href="HomePage.html">
-          <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
-        </a>
+        <strong data-en="Friday:" data-gr="Παρασκευή:">Παρασκευή:</strong>
+        17:00–18:00
       </li>
-      <li><a href="whoweare.html"         class="nav-link" data-en="Who We Are"       data-gr="Ποιοι Είμαστε">Who We Are</a></li>
-      <li><a href="classes.html"          class="nav-link" data-en="Classes"          data-gr="Τμήματα">Classes</a></li>
-      <li><a href="activities.html"       class="nav-link" data-en="More Activities"  data-gr="Περισσότερες Δραστηριότητες">More Activities</a></li>
-      <li><a href="prices-policies.html"  class="nav-link" data-en="Prices"data-gr="Τιμές">Prices</a></li>
-      <li><a href="benefits.html"         class="nav-link" data-en="Benefits"         data-gr="Οφέλη">Benefits</a></li>
-      <li><a href="merchandise.html"      class="nav-link" data-en="Merchandise"      data-gr="Προϊόντα">Merchandise</a></li>
-      <li class="nav-lang">
-        <button id="language-button" onclick="toggleLanguage()">
-          <img src="photo/greeceflag.png" alt="Greece Language">
-        </button>
+      <li>
+        <strong data-en="Saturday:" data-gr="Σάββατο:">Σάββατο:</strong>
+        11:45–12:45 &amp; 18:00–19:00
+      </li>
+      <li>
+        <strong data-en="Sunday:" data-gr="Κυριακή:">Κυριακή:</strong>
+        09:30–10:30, 10:30–11:30 &amp; 18:00–19:00
       </li>
     </ul>
-  </nav>
 
-  <!-- CLASSES SECTION -->
-  <section id="classes">
-    <div class="container">
-      <h2 data-en="Our Classes" data-gr="Τα Μαθήματά Μας">Our Classes</h2>
-      <p data-en="Explore our available classes and choose the one that fits your skills and goals."
-         data-gr="Εξερευνήστε τα διαθέσιμα μαθήματα και επιλέξτε αυτό που ταιριάζει στις ικανότητές σας και στους στόχους σας.">
-         Explore our available classes and choose the one that fits your skills and goals.
-      </p>
+    <h3 data-en="What You Will Learn" data-gr="Τι θα Μάθετε">
+      Τι θα Μάθετε
+    </h3>
+    <ul>
+      <li data-en="Beginner Level: basic balance, rolling, safe fall, braking."
+          data-gr="Αρχάριο Επίπεδο: βασική ισορροπία, ρολλάρισμα, ασφαλής πτώση, φρένο.">
+        Αρχάριο Επίπεδο: βασική ισορροπία, ρολλάρισμα, ασφαλής πτώση, φρένο.
+      </li>
+      <li data-en="Advanced Level: jumps, cross-step, T-stop, fish, snake, speed drills."
+          data-gr="Προχωρημένο Επίπεδο: άλματα, σταυρωτό βήμα, T-stop, fish, snake, ταχύτητες.">
+        Προχωρημένο Επίπεδο: άλματα, σταυρωτό βήμα, T-stop, fish, snake, ταχύτητες.
+      </li>
+      <li data-en="Creative games, dance elements & teamwork."
+          data-gr="Δημιουργικά παιχνίδια, χορευτικά στοιχεία & ομαδικό πνεύμα.">
+        Δημιουργικά παιχνίδια, χορευτικά στοιχεία & ομαδικό πνεύμα.
+      </li>
+    </ul>
 
-      <!-- Beginner Class -->
-      <div class="class-card full">
-        <h3 data-en="🛼 Beginners Class" data-gr="🛼 Μάθημα Αρχαρίων">🛼 Beginners Class</h3>
-        <p data-en="<strong>Status:</strong> Full" data-gr="<strong>Κατάσταση:</strong> Πλήρες">
-          <strong>Status:</strong> Full
-        </p>
-        <p data-en="<strong>Schedule:</strong> Mondays & Wednesdays | 5:00 PM - 6:00 PM"
-           data-gr="<strong>Πρόγραμμα:</strong> Δευτέρα & Τετάρτη | 17:00 - 18:00">
-          <strong>Schedule:</strong> Mondays & Wednesdays | 5:00 PM - 6:00 PM
-        </p>
-        <h4 data-en="What You Will Achieve" data-gr="Τι Θα Καταφέρετε">What You Will Achieve</h4>
-        <ul>
-          <li data-en="✅ Basic balance & posture" data-gr="✅ Βασική ισορροπία & στάση σώματος">✅ Basic balance & posture</li>
-          <li data-en="✅ Stopping techniques"      data-gr="✅ Τεχνικές φρεναρίσματος">✅ Stopping techniques</li>
-          <li data-en="✅ First turns and movements"data-gr="✅ Πρώτες στροφές και κινήσεις">✅ First turns and movements</li>
-        </ul>
-        <h4 data-en="Requirements" data-gr="Απαιτήσεις">Requirements</h4>
-        <p data-en="Private lessons are required if you have no prior experience. The schedule will be arranged with the instructor."
-           data-gr="Απαιτούνται ιδιαίτερα μαθήματα εάν δεν έχετε προηγούμενη εμπειρία. Το πρόγραμμα θα κανονιστεί με τον εκπαιδευτή.">
-           Private lessons are required if you have no prior experience. The schedule will be arranged with the instructor.
-        </p>
-      </div>
+    <h3 data-en="Teaching Approach" data-gr="Προσέγγιση Διδασκαλίας">
+      Προσέγγιση Διδασκαλίας
+    </h3>
+    <p data-en="Until September, all levels train together on roller skate fundamentals, then split into Beginners and Advanced based on skill."
+       data-gr="Μέχρι τον Σεπτέμβριο τα τμήματα είναι μεικτά: πρώτα εξασκούμε όλοι μαζί τις βασικές δεξιότητες (roller skate fundamentals), και στη συνέχεια χωρίζουμε σε «Αρχάριους» και «Προχωρημένους» ανάλογα με την εμπειρία.">
+      Μέχρι τον Σεπτέμβριο τα τμήματα είναι μεικτά: πρώτα εξασκούμε όλοι μαζί τις βασικές δεξιότητες (roller skate fundamentals), και στη συνέχεια χωρίζουμε σε «Αρχάριους» και «Προχωρημένους» ανάλογα με την εμπειρία.
+    </p>
+  </article>
 
-      <!-- Advanced Classes -->
-      <div class="class-card available">
-        <h3 data-en="🔥 Advanced Class - Group 1" data-gr="🔥 Προχωρημένο Μάθημα - Ομάδα 1">🔥 Advanced Class - Group 1</h3>
-        <p data-en="<strong>Status:</strong> Available" data-gr="<strong>Κατάσταση:</strong> Διαθέσιμο">
-          <strong>Status:</strong> Available
-        </p>
-        <p data-en="<strong>Schedule:</strong> Tuesdays & Thursdays | 6:30 PM - 7:30 PM"
-           data-gr="<strong>Πρόγραμμα:</strong> Τρίτη & Πέμπτη | 18:30 - 19:30">
-          <strong>Schedule:</strong> Tuesdays & Thursdays | 6:30 PM - 7:30 PM
-        </p>
-      </div>
+  <!-- Ιδιαίτερα Μαθήματα / Private Lessons -->
+  <article id="private-lessons">
+    <!-- Placeholder για Φωτογραφία Ιδιαίτερων -->
+    <figure class="class-photo">
+      <img src="photo/private lesson.webp" alt="Private Roller Skating Lesson Photo" />
+    </figure>
 
-      <!-- Speed Skating Classes -->
-      <div class="class-card full">
-        <h3 data-en="⚡ Speed Skating Class - Group 2" data-gr="⚡ Μάθημα Γρήγορου Πατινάζ - Ομάδα 2">⚡ Speed Skating Class - Group 2</h3>
-        <p data-en="<strong>Status:</strong> Full" data-gr="<strong>Κατάσταση:</strong> Πλήρες">
-          <strong>Status:</strong> Full
-        </p>
-        <p data-en="<strong>Schedule:</strong> Wednesdays | 7:00 PM - 8:30 PM"
-           data-gr="<strong>Πρόγραμμα:</strong> Τετάρτη | 19:00 - 20:30">
-          <strong>Schedule:</strong> Wednesdays | 7:00 PM - 8:30 PM
-        </p>
-      </div>
-    </div>
-  </section>
+    <h2 data-en="Private Roller Skating Lessons" data-gr="Ιδιαίτερα Μαθήματα Πατινιών">
+      Ιδιαίτερα Μαθήματα Πατινιών
+    </h2>
 
-  <!-- CLASS ENROLLMENT FORM -->
-<section id="enrollment">
-    <div class="enrollment-container">
-      <h2 data-en="Enroll in a Class" data-gr="Εγγραφείτε σε ένα Μάθημα">Enroll in a Class</h2>
-      <p data-en="Fill in your details to register for a class." data-gr="Συμπληρώστε τα στοιχεία σας για να εγγραφείτε σε ένα μάθημα.">
-         Fill in your details to register for a class.
-      </p>
-  
-      <form id="classForm" action="error.html" method="POST">
-        <input type="hidden" name="_next" value="thankyou.html">
-    
-        <input type="text" id="fname" name="first_name" required placeholder="First_name" data-en="First_name" data-gr="Όνομα">
-        <input type="text" id="lname" name="last_name" required placeholder="Last_name" data-en="Last_name" data-gr="Επίθετο">
-        <input type="email" id="email" name="email" required placeholder="Email" data-en="Email" data-gr="Ηλεκτρονικό ταχυδρομείο">
-        <input type="tel" id="phone" name="phone" required placeholder="Phone" data-en="Phone_number" data-gr="Τηλέφωνο">
-        <input type="date" id="birth_date" name="birth_date" required data-en="YYYY-MM-DD" data-gr="ΕΕΕΕ-ΜΜ-ΗΗ">
-        <select name="class" id="class" required>
-            <option value="" disabled selected data-en="-- Choose a class --" data-gr="-- Επιλέξτε μάθημα --">
-                -- Choose a class --
-            </option>
-            <option value="beginners" data-en="🛼 Beginners Class" data-gr="🛼 Μάθημα Αρχαρίων">🛼 Beginners Class</option>
-            <option value="advanced1" data-en="🔥 Advanced Class - Group 1" data-gr="🔥 Προχωρημένο Μάθημα - Ομάδα 1">🔥 Advanced Class - Group 1</option>
-            <option value="speed2" data-en="⚡ Speed Skating Class - Group 2" data-gr="⚡ Μάθημα Γρήγορου Πατινάζ - Ομάδα 2">⚡ Speed Skating Class - Group 2</option>
-        </select>
-    
-        <button type="submit" data-en="Submit" data-gr="Υποβολή">Submit</button>
-    </form>
-    
-    
-    </div>
-  </section>
-  
+    <h3 data-en="Schedule & Availability" data-gr="Πρόγραμμα &amp; Διαθεσιμότητα">
+      Πρόγραμμα &amp; Διαθεσιμότητα
+    </h3>
+    <p data-en="Offered at the following suggested times: Friday 18:00–19:00, Saturday 13:00–14:00, Sunday 11:30–12:30."
+       data-gr="Κατόπιν τις προτεινόμενες ώρες: Παρασκευή 18:00–19:00, Σάββατο 13:00–14:00, Κυριακή 11:30–12:30.">
+      Κατόπιν τις προτεινόμενες ώρες: Παρασκευή 18:00–19:00, Σάββατο 13:00–14:00, Κυριακή 11:30–12:30.
+    </p>
+
+    <h3 data-en="Goal & Content" data-gr="Στόχος &amp; Περιεχόμενο">
+      Στόχος &amp; Περιεχόμενο
+    </h3>
+    <p data-en="Intensive one-on-one sessions to master safe falling, standing up, rolling and braking. Depending on skill and consistency, 1–3 lessons are enough to join a group class."
+       data-gr="Εξειδικευμένες ατομικές προπονήσεις για ταχύρυθμη εκμάθηση: πτώση, σήκωμα, ρολλάρισμα και φρένο. Ανάλογα με την ικανότητα και τη συνέπεια, συνήθως 1–3 μαθήματα αρκούν για πλήρη ένταξη σε ομαδικό τμήμα.">
+      Εξειδικευμένες ατομικές προπονήσεις για ταχύρυθμη εκμάθηση: πτώση, σήκωμα, ρολλάρισμα και φρένο. Ανάλογα με την ικανότητα και τη συνέπεια, συνήθως 1–3 μαθήματα αρκούν για πλήρη ένταξη σε ομαδικό τμήμα.
+    </p>
+  </article>
+</section>
+
   
     <!-- Υποσέλιδο (Footer) -->
     <footer>

@@ -13,148 +13,307 @@
     <link rel="icon" href="photo/logo.png" />
   </head>
   <body>
-    <!-- Πλοήγηση (Navigation) -->
+    <!-- NAVIGATION -->
     <nav>
       <ul>
         <li>
           <a href="HomePage.html">
-            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
           </a>
         </li>
         <li>
-          <a href="whoweare.html" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
+          <a href="whoweare.html" class="nav-link" data-en="Who We Are" data-gr="Ποιοι Είμαστε">
             Who We Are
           </a>
         </li>
         <li>
-          <a href="classes.html" data-en="Classes" data-gr="Τμήματα">
+          <a href="classes.html" class="nav-link" data-en="Classes" data-gr="Τμήματα">
             Classes
           </a>
         </li>
         <li>
-          <a href="activities.html" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
+          <a href="activities.html" class="nav-link" data-en="More Activities" data-gr="Περισσότερες Δραστηριότητες">
             More Activities
           </a>
         </li>
         <li>
-          <a href="prices-policies.html" data-en="Prices" data-gr="Τιμές">
-            Prices & Policies
+          <a href="prices-policies.html" class="nav-link" data-en="Prices" data-gr="Τιμές">
+            Prices &amp; Discounts
           </a>
         </li>
         <li>
-          <a href="benefits.html" data-en="Benefits" data-gr="Οφέλη">
+          <a href="benefits.html" class="nav-link current" data-en="Benefits" data-gr="Οφέλη">
             Benefits
           </a>
         </li>
-        <li>
-          <a href="merchandise.html" data-en="Merchandise" data-gr="Προϊόντα">
-            Merchandise
-          </a>
-        </li>
-        <!-- Κουμπί αλλαγής γλώσσας -->
+        <!-- Language toggle -->
         <li class="nav-lang">
           <button id="language-button" onclick="toggleLanguage()">
-            <img src="photo/greeceflag.png" alt="Greece Language" />
+            <img src="photo/greeceflag.png" alt="Greece Language">
           </button>
         </li>
       </ul>
     </nav>
 
-    <!-- Εισαγωγή (Introduction) -->
-    <section id="intro">
-      <div class="container">
-        <h2 
-          data-en="The Skating Lifestyle: Fun, Travel & Community" 
-          data-gr="Το Lifestyle του Πατινάζ: Διασκέδαση, Ταξίδια & Κοινότητα">
-          The Skating Lifestyle: Fun, Travel & Community
-        </h2>
-        <p 
-          data-en="Roller skating is more than just a sport—it’s a lifestyle! Whether you skate for fun, fitness, or adventure, you’re part of a growing community that connects, explores, and enjoys life on wheels." 
-          data-gr="Το πατινάζ με ρόδες είναι κάτι περισσότερο από ένα απλό σπορ—είναι ένας τρόπος ζωής! Είτε κάνετε πατίνια για διασκέδαση, γυμναστική ή περιπέτεια, ανήκετε σε μια συνεχώς αναπτυσσόμενη κοινότητα που συνδέεται, εξερευνά και απολαμβάνει τη ζωή σε ρόδες.">
-          Roller skating is more than just a sport—it’s a lifestyle! Whether you skate for fun, fitness, or adventure, you’re part of a growing community that connects, explores, and enjoys life on wheels.
-        </p>
-      </div>
-    </section>
+<!-- European RollerSkate Culture & Sports Tourism -->
+<section id="european-culture" class="lifestyle-section">
+  <div class="container">
+    <h3 data-en="🌍 European RollerSkate Culture & Sports Tourism"
+        data-gr="🌍 Ευρωπαϊκή Κουλτούρα Rollerskate & Αθλοτουρισμός">
+      🌍 European RollerSkate Culture & Sports Tourism
+    </h3>
 
-    <!-- Οικογενειακή Δραστηριότητα -->
-    <section class="lifestyle-section">
-      <div class="container">
-        <h3 
-          data-en="👨‍👩‍👧‍👦 A Fun & Engaging Family Activity" 
-          data-gr="👨‍👩‍👧‍👦 Μια Διασκεδαστική & Ενεργή Οικογενειακή Δραστηριότητα">
-          👨‍👩‍👧‍👦 A Fun & Engaging Family Activity
-        </h3>
-        <p 
-          data-en="Skating brings families together, offering a **fun, active, and bonding experience** for all ages. It’s the perfect way to spend quality time while staying fit."
-          data-gr="Το πατινάζ φέρνει κοντά τις οικογένειες, προσφέροντας μια **διασκεδαστική, δραστήρια και δεμένη εμπειρία** για όλες τις ηλικίες. Είναι ο ιδανικός τρόπος να περάσετε ποιοτικό χρόνο ενώ διατηρείστε σε φόρμα.">
-          Skating brings families together, offering a **fun, active, and bonding experience** for all ages. It’s the perfect way to spend quality time while staying fit.
-        </p>
-      </div>
-    </section>
+    <p data-en="Roller skating along the French Riviera—from Nice’s iconic Promenade des Anglais to Barcelona’s vibrant beachfront—redefines sports tourism with scenic coastal rides, urban exploration, and fitness adventure."
+       data-gr="Το rollerskating κατά μήκος της Γαλλικής Ριβιέρας—από την εμβληματική Promenade des Anglais στη Νίκαια μέχρι την πολύχρωμη παραλία της Βαρκελώνης—επαναπροσδιορίζει τον αθλοτουρισμό με γραφικές διαδρομές δίπλα στη θάλασσα, αστική εξερεύνηση και αθλητική περιπέτεια.">
+      Roller skating along the French Riviera—from Nice’s iconic Promenade des Anglais to Barcelona’s vibrant beachfront—redefines sports tourism with scenic coastal rides, urban exploration, and fitness adventure.
+    </p>
 
-    <!-- Μάθε Ένα, Κατέκτησε Τρία! -->
-    <section class="lifestyle-section">
-      <div class="container">
-        <h3 
-          data-en="🛼 Learn One, Master Three!" 
-          data-gr="🛼 Μάθε Ένα, Κατέκτησε Τρία!">
-          🛼 Learn One, Master Three!
-        </h3>
-        <p 
-          data-en="By learning to roller skate, you’re also building skills for **ice skating** and **snow skiing**. The balance, movements, and techniques are highly transferable!"
-          data-gr="Μαθαίνοντας rollerskating, αναπτύσσετε επίσης δεξιότητες για **πατινάζ στον πάγο** και **σκι στο χιόνι**. Η ισορροπία, οι κινήσεις και οι τεχνικές μεταφέρονται εύκολα!">
-          By learning to roller skate, you’re also building skills for **ice skating** and **snow skiing**. The balance, movements, and techniques are highly transferable!
-        </p>
-      </div>
-    </section>
+    <p data-en="Europe’s famous promenades and seaside boulevards attract roller travelers seeking a blend of culture, gastronomy and outdoor wellness—making skating tourism an unmissable part of any European itinerary."
+       data-gr="Οι διάσημες παραθαλάσσιες λεωφόροι και προκυμαίες της Ευρώπης προσελκύουν rollerskate ταξιδιώτες που αναζητούν συνδυασμό πολιτισμού, γαστρονομίας και υπαίθριας ευεξίας—καθιστώντας τον αθλοτουρισμό με ρόδες αναπόσπαστο κομμάτι κάθε ευρωπαϊκού ταξιδιού.">
+      Europe’s famous promenades and seaside boulevards attract roller travelers seeking a blend of culture, gastronomy and outdoor wellness—making skating tourism an unmissable part of any European itinerary.
+    </p>
 
-    <!-- Εξερεύνηση Πόλεων -->
-    <section class="lifestyle-section">
-      <div class="container">
-        <h3 
-          data-en="🌍 Explore Cities on Wheels" 
-          data-gr="🌍 Εξερευνήστε Πόλεις σε Ρόδες">
-          🌍 Explore Cities on Wheels
-        </h3>
-        <p 
-          data-en="Traveling? Skating is one of the best ways to **discover new cities**, roll through parks, and experience urban landscapes like never before."
-          data-gr="Ταξιδεύετε; Το πατινάζ είναι ένας από τους καλύτερους τρόπους να **ανακαλύψετε νέες πόλεις**, να κυλήσετε μέσα από πάρκα και να ζήσετε αστικά τοπία όπως ποτέ άλλοτε.">
-          Traveling? Skating is one of the best ways to **discover new cities**, roll through parks, and experience urban landscapes like never before.
-        </p>
-      </div>
-    </section>
+    <p data-en="Join guided roller tours in Nice or Barcelona to connect with an international skating community, discover hidden urban gems and experience the best of roller travel in Europe."
+       data-gr="Συμμετάσχετε σε οργανωμένες περιηγήσεις rollerskate στη Νίκαια ή τη Βαρκελώνη για να συνδεθείτε με μια διεθνή κοινότητα skaters, να ανακαλύψετε κρυμμένα αστικά μυστικά και να ζήσετε το απόλυτο roller ταξίδι στην Ευρώπη.">
+      Join guided roller tours in Nice or Barcelona to connect with an international skating community, discover hidden urban gems and experience the best of roller travel in Europe.
+    </p>
 
-    <!-- Κοινότητα -->
-    <section class="lifestyle-section">
-      <div class="container">
-        <h3 
-          data-en="🤝 Join an Open-Minded & Friendly Community" 
-          data-gr="🤝 Γίνετε Μέρος μιας Ανοιχτόμυαλης & Φιλικής Κοινότητας">
-          🤝 Join an Open-Minded & Friendly Community
-        </h3>
-        <p 
-          data-en="When you skate, you become part of a **trusted and welcoming community** where people share knowledge, support each other, and grow together."
-          data-gr="Όταν κάνετε πατίνια, γίνεστε μέρος μιας **αξιόπιστης και φιλόξενης κοινότητας**, όπου οι άνθρωποι μοιράζονται γνώσεις, υποστηρίζουν ο ένας τον άλλον και εξελίσσονται μαζί.">
-          When you skate, you become part of a **trusted and welcoming community** where people share knowledge, support each other, and grow together.
-        </p>
-      </div>
-    </section>
+    <!-- Image Gallery BELOW the text -->
+    <div class="lifestyle-images">
+      <figure>
+        <img src="path/to/nice-ride.jpg" alt="Roller ride in Nice, France">
+        <figcaption data-en="Promenade des Anglais, Nice" data-gr="Promenade des Anglais, Νίκαια">
+          Promenade des Anglais, Nice
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="path/to/barcelona-beach.jpg" alt="Skating along Barcelona beach">
+        <figcaption data-en="Barceloneta Beach, Barcelona" data-gr="Παραλία Μπαρσελονέτα, Βαρκελώνη">
+          Barceloneta Beach, Barcelona
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-    <!-- Τοπικοί Αγώνες -->
-    <section class="lifestyle-section">
-      <div class="container">
-        <h3 
-          data-en="🏆 Participate in Local Races" 
-          data-gr="🏆 Συμμετέχετε σε Τοπικούς Αγώνες">
-          🏆 Participate in Local Races
-        </h3>
-        <p 
-          data-en="Push your limits and **join local races** to test your speed, endurance, and technique while having fun with fellow skaters."
-          data-gr="Δοκιμάστε τα όριά σας και **συμμετέχετε σε τοπικούς αγώνες** για να τεστάρετε την ταχύτητα, την αντοχή και την τεχνική σας, διασκεδάζοντας με άλλους skaters.">
-          Push your limits and **join local races** to test your speed, endurance, and technique while having fun with fellow skaters.
+
+<!-- 2. Family Activity -->
+<section id="family-activity" class="lifestyle-section">
+  <div class="container">
+    <h3 data-en="👨‍👩‍👧‍👦 A Fun & Engaging Family RollerSkate Experience"
+        data-gr="👨‍👩‍👧‍👦 Μια Διασκεδαστική & Δεμένη Οικογενειακή Εμπειρία Rollerskate">
+      👨‍👩‍👧‍👦 A Fun & Engaging Family RollerSkate Experience
+    </h3>
+
+    <p data-en="Discover why families across Europe choose roller skating for quality bonding time—our roller skate classes blend fitness, fun and teamwork in every session."
+       data-gr="Ανακαλύψτε γιατί οικογένειες σε όλη την Ευρώπη επιλέγουν το rollerskating για ποιοτικό χρόνο μαζί—τα μαθήματά μας συνδυάζουν άσκηση, διασκέδαση και ομαδικότητα.">
+      Discover why families across Europe choose roller skating for quality bonding time—our roller skate classes blend fitness, fun and teamwork in every session.
+    </p>
+
+    <p data-en="From toddlers learning balance to grandparents rediscovering their groove, our family-friendly rink fosters confidence and healthy activity for all ages."
+       data-gr="Από νήπια που μαθαίνουν ισορροπία μέχρι παππούδες που ξαναβρίσκουν το ρυθμό τους, το φιλικό μας παγοδρόμιο προάγει την αυτοπεποίθηση και την υγιή δραστηριότητα για όλες τις ηλικίες.">
+      From toddlers learning balance to grandparents rediscovering their groove, our family-friendly rink fosters confidence and healthy activity for all ages.
+    </p>
+
+    <p data-en="Book a family rollerskate session today and create unforgettable memories—perfect for birthdays, weekend adventures and summer getaways."
+       data-gr="Κλείστε σήμερα οικογενειακό μάθημα rollerskate και δημιουργήστε αξέχαστες στιγμές—ιδανικό για γενέθλια, weekend περιπέτειες και καλοκαιρινές εξορμήσεις.">
+      Book a family rollerskate session today and create unforgettable memories—perfect for birthdays, weekend adventures and summer getaways.
+    </p>
+
+    <!-- Image placeholders -->
+    <div class="lifestyle-images">
+      <figure>
+        <img src="path/to/family-skate-1.jpg" alt="Family roller skating fun">
+        <figcaption data-en="Family Skate Fun" data-gr="Οικογενειακή Διασκέδαση">
+          Family Skate Fun
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="path/to/family-skate-2.jpg" alt="Parents and kids skating together">
+        <figcaption data-en="Parents & Kids Skating" data-gr="Γονείς & Παιδιά σε Ρόδες">
+          Parents & Kids Skating
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Learn One, Master Two More -->
+<section id="learn-more" class="lifestyle-section">
+  <div class="container">
+    <h3 data-en="🛼 Learn One, Master Two More!" data-gr="🛼 Μάθε Ένα, Κατέκτησε Άλλα Δύο!">
+      🛼 Learn One, Master Two More!
+    </h3>
+
+    <p data-en="Kick off with roller skate fundamentals—balance, turning & braking—and transition effortlessly to ice skating & snow skiing, thanks to highly transferable skills." 
+       data-gr="Ξεκινήστε με τα βασικά του rollerskating—ισορροπία, στροφές & φρένο—και προσαρμοστείτε χωρίς κόπο στο πατινάζ στον πάγο & σκι στο χιόνι, αξιοποιώντας άμεσα μεταφερόμενες δεξιότητες.">
+      Ξεκινήστε με τα βασικά του rollerskating—ισορροπία, στροφές & φρένο—και προσαρμοστείτε χωρίς κόπο στο πατινάζ στον πάγο & σκι στο χιόνι, αξιοποιώντας άμεσα μεταφερόμενες δεξιότητες.
+    </p>
+
+    <p data-en="Dive into specialized roller disciplines—dance, racing, aggressive & freestyle—to build a versatile skillset ready for any terrain or competition." 
+       data-gr="Ανακαλύψτε εξειδικευμένα είδη rollerskate—dance, racing, aggressive & freestyle—για να αποκτήσετε ευέλικτες δεξιότητες κατάλληλες για κάθε πίστα ή αγώνα.">
+      Ανακαλύψτε εξειδικευμένα είδη rollerskate—dance, racing, aggressive & freestyle—για να αποκτήσετε ευέλικτες δεξιότητες κατάλληλες για κάθε πίστα ή αγώνα.
+    </p>
+
+    <p data-en="Accelerate your learning curve with our cross-training approach: master roller skating, ice skating & snow skiing while joining a global skate community." 
+       data-gr="Επιταχύνετε την καμπύλη μάθησης με την cross-training προσέγγισή μας: μάθε rollerskate, πατινάζ στον πάγο & σκι, ενώ γίνεστε μέλος μιας παγκόσμιας κοινότητας skaters.">
+      Επιταχύνετε την καμπύλη μάθησης με την cross-training προσέγγισή μας: μάθε rollerskate, πατινάζ στον πάγο & σκι, ενώ γίνεστε μέλος μιας παγκόσμιας κοινότητας skaters.
+    </p>
+
+    <!-- Image placeholders -->
+    <div class="lifestyle-images">
+      <figure>
+        <img src="PATH/TO/roller-image.jpg" alt="Roller Skating Basics">
+        <figcaption data-en="Roller Foundations" data-gr="Βασικά Rollerskate">
+          Roller Foundations
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="PATH/TO/ice-snow-image.jpg" alt="Ice & Snow Transition">
+        <figcaption data-en="Ice & Snow Transition" data-gr="Μετάβαση σε Πάγο & Χιόνι">
+          Ice & Snow Transition
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. Healthy Competition & Local Races -->
+<section id="competition" class="lifestyle-section">
+  <div class="container">
+    <h3 data-en="🏆 Healthy Competition & Local Races" data-gr="🏆 Υγιής Ανταγωνισμός & Τοπικοί Αγώνες">
+      🏆 Healthy Competition &amp; Local Races
+    </h3>
+
+    <p data-en="Push your limits in supportive roller skate, ice skating & snow skiing races—our local events focus on **fair play**, personal bests and **community spirit**." 
+       data-gr="Δοκιμάστε τα όριά σας σε φιλικούς αγώνες rollerskate, πατινάζ στον πάγο & σκι—οι τοπικές μας διοργανώσεις προάγουν το **ευ αγωνίζεσθαι**, τα ατομικά ρεκόρ και το **ομαδικό πνεύμα**.">
+      Δοκιμάστε τα όριά σας σε φιλικούς αγώνες rollerskate, πατινάζ στον πάγο &amp; σκι—οι τοπικές μας διοργανώσεις προάγουν το <strong>ευ αγωνίζεσθαι</strong>, τα ατομικά ρεκόρ και το <strong>ομαδικό πνεύμα</strong>.
+    </p>
+
+    <p data-en="Participate in community-organized race days and time trials—ideal for **beginner to advanced skaters**, with categories for all skill levels and age groups." 
+       data-gr="Συμμετάσχετε σε ημερίδες αγώνων και δοκιμές χρόνου—ιδανικά για **αρχάριους έως προχωρημένους**, με κατηγορίες για όλα τα επίπεδα και τις ηλικίες.">
+      Συμμετάσχετε σε ημερίδες αγώνων και δοκιμές χρόνου—ιδανικά για <strong>αρχάριους έως προχωρημένους</strong>, με κατηγορίες για όλα τα επίπεδα και τις ηλικίες.
+    </p>
+
+    <p data-en="Train with certified coaches in preparation for local and regional competitions—build endurance, technique and the confidence to race in any **roller**, **ice** or **snow** event." 
+       data-gr="Εξασκηθείτε με πιστοποιημένους προπονητές για τοπικούς και περιφερειακούς αγώνες—ενισχύστε αντοχή, τεχνική και αυτοπεποίθηση για κάθε διοργάνωση **rollerskate**, **πατινάζ στον πάγο** ή **σκι**.">
+      Εξασκηθείτε με πιστοποιημένους προπονητές για τοπικούς και περιφερειακούς αγώνες—ενισχύστε αντοχή, τεχνική και αυτοπεποίθηση για κάθε διοργάνωση <strong>rollerskate</strong>, <strong>πατινάζ στον πάγο</strong> ή <strong>σκι</strong>.
+    </p>
+
+    <!-- Image placeholders -->
+    <div class="lifestyle-images">
+      <figure>
+        <img src="PATH/TO/local-race.jpg" alt="Local Roller Skate Race">
+        <figcaption data-en="Community Race Day" data-gr="Ημέρα Αγώνα Κοινότητας">
+          Community Race Day
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="PATH/TO/training-session.jpg" alt="Group Time Trial Training">
+        <figcaption data-en="Time Trial Training" data-gr="Προπόνηση Δοκιμής Χρόνου">
+          Time Trial Training
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. Professional Pathways & Coaching -->
+<section id="pathways" class="lifestyle-section">
+  <div class="container">
+    <h3 data-en="🎓 Professional Pathways & Coaching" data-gr="🎓 Επαγγελματικές Προοπτικές & Προπόνηση">
+      🎓 Professional Pathways &amp; Coaching
+    </h3>
+
+    <p data-en="Unlock your potential with tailored coaching in roller skating, ice skating & snow skiing—our certified trainers use proven methods to elevate your **technique**, **speed**, and **confidence**." 
+       data-gr="Ανακαλύψτε τις δυνατότητές σας με εξατομικευμένη προπόνηση στο rollerskate, πατινάζ στον πάγο & σκι—οι πιστοποιημένοι μας προπονητές χρησιμοποιούν αποδεδειγμένες μεθόδους για να βελτιώσουν την **τεχνική**, **ταχύτητα** και **αυτοπεποίθηση**.">
+      Ανακαλύψτε τις δυνατότητές σας με εξατομικευμένη προπόνηση στο rollerskate, πατινάζ στον πάγο &amp; σκι—οι πιστοποιημένοι μας προπονητές χρησιμοποιούν αποδεδειγμένες μεθόδους για να βελτιώσουν την <strong>τεχνική</strong>, <strong>ταχύτητα</strong> και <strong>αυτοπεποίθηση</strong>.
+    </p>
+
+    <p data-en="Whether you aim to compete, perform in shows, or coach others, our career development program covers **skill certification**, **teaching techniques**, and **event management** in the skating world." 
+       data-gr="Είτε επιδιώκεστε να διαγωνιστείτε, να συμμετέχετε σε shows ή να προπονήσετε άλλους, το πρόγραμμα ανάπτυξης καριέρας μας καλύπτει **πιστοποιήσεις δεξιοτήτων**, **τεχνικές διδασκαλίας** και **οργάνωση εκδηλώσεων** στον κόσμο του πατινάζ.">
+     Είτε επιδιώκεστε να διαγωνιστείτε, να συμμετέχετε σε shows ή να προπονήσετε άλλους, το πρόγραμμα ανάπτυξης καριέρας μας καλύπτει <strong>πιστοποιήσεις δεξιοτήτων</strong>, <strong>τεχνικές διδασκαλίας</strong> και <strong>οργάνωση εκδηλώσεων</strong> στον κόσμο του πατινάζ.
+    </p>
+
+    <p data-en="Join workshops, seminars and one-on-one mentorships with elite skaters and coaches—gain insider insights into professional **rollerskate**, **ice** and **snow** industries." 
+       data-gr="Συμμετάσχετε σε εργαστήρια, σεμινάρια και εξατομικευμένη καθοδήγηση με πρωταθλητές και προπονητές—αποκτήστε γνώση για τις επαγγελματικές βιομηχανίες στο **rollerskate**, **πατινάζ στον πάγο** και **σκι**.">
+      Συμμετάσχετε σε εργαστήρια, σεμινάρια και εξατομικευμένη καθοδήγηση με πρωταθλητές και προπονητές—αποκτήστε γνώση για τις επαγγελματικές βιομηχανίες στο <strong>rollerskate</strong>, <strong>πατινάζ στον πάγο</strong> και <strong>σκι</strong>.
+    </p>
+
+    <!-- Image placeholders -->
+    <div class="lifestyle-images">
+      <figure>
+        <img src="PATH/TO/coach-mentorship.jpg" alt="Skating Coach Mentorship">
+        <figcaption data-en="Elite Coach Mentorship" data-gr="Καθοδήγηση με Πρωταθλητή">
+          Elite Coach Mentorship
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="PATH/TO/career-workshop.jpg" alt="Skating Career Workshop">
+        <figcaption data-en="Skating Career Workshop" data-gr="Εργαστήριο Επαγγελματικής Καριέρας">
+          Skating Career Workshop
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. Community & Local Micro-communities -->
+<section id="community" class="lifestyle-section">
+  <div class="container">
+    <h2 data-en="🤝 Supportive RollerSkate Communities Near You"
+        data-gr="🤝 Υποστηρικτικές Κοινότητες Πατινιών/Rollerskate στην περιοχή σας">
+      Υποστηρικτικές Κοινότητες Πατινάζ Στην Περιοχή Σας
+    </h2>
+
+    <p data-en="Discover local micro-communities of roller skaters and ice-ski enthusiasts ready to welcome you. Each group hosts regular meetups, skill-shares and fun social rides—perfect for skaters of all levels."
+       data-gr="Ανακαλύψτε τοπικές μικρο-κοινότητες rollerskaters και σκιέρ έτοιμες να σας υποδεχτούν. Κάθε ομάδα οργανώνει τακτικές συναντήσεις, ανταλλαγές δεξιοτήτων και διασκεδαστικές βόλτες—ιδανικές για πατινέρ όλων των επιπέδων.">
+      Ανακαλύψτε τοπικές μικρο-κοινότητες rollerskaters και σκιέρ έτοιμες να σας υποδεχτούν. Κάθε ομάδα οργανώνει τακτικές συναντήσεις, ανταλλαγές δεξιοτήτων και διασκεδαστικές βόλτες—ιδανικές για πατινέρ όλων των επιπέδων.
+    </p>
+
+    <div class="microcommunities">
+      <!-- Community 1 -->
+      <div class="community-item">
+        <a href="https://example.com/city-rollers" target="_blank" rel="noopener">
+          <img src="PATH_TO_IMAGE1.jpg" alt="City Rollers Club">
+          <h3 data-en="City Rollers Club" data-gr="City Rollers Club">City Rollers Club</h3>
+        </a>
+        <p data-en="Weekly urban tours, beginner workshops, and evening social rides." 
+           data-gr="Εβδομαδιαίες αστικές βόλτες, εργαστήρια για αρχάριους και βραδινές κοινωνικές βόλτες.">
+          Εβδομαδιαίες αστικές βόλτες, εργαστήρια για αρχάριους και βραδινές κοινωνικές βόλτες.
         </p>
       </div>
-    </section>
+
+      <!-- Community 2 -->
+      <div class="community-item">
+        <a href="https://example.com/ice-buddies" target="_blank" rel="noopener">
+          <img src="PATH_TO_IMAGE2.jpg" alt="Ice Buddies Crew">
+          <h3 data-en="Ice Buddies Crew" data-gr="Ice Buddies Crew">Ice Buddies Crew</h3>
+        </a>
+        <p data-en="Monthly meetups at the local rink & skill-share sessions." 
+           data-gr="Μηνιαίες συναντήσεις στο τοπικό παγοδρόμιο & συνεδρίες ανταλλαγής δεξιοτήτων.">
+          Μηνιαίες συναντήσεις στο τοπικό παγοδρόμιο & συνεδρίες ανταλλαγής δεξιοτήτων.
+        </p>
+      </div>
+
+      <!-- Community 3 -->
+      <div class="community-item">
+        <a href="https://example.com/snow-trailblazers" target="_blank" rel="noopener">
+          <img src="PATH_TO_IMAGE3.jpg" alt="Snow Trailblazers">
+          <h3 data-en="Snow Trailblazers" data-gr="Snow Trailblazers">Snow Trailblazers</h3>
+        </a>
+        <p data-en="Weekend trips to nearby slopes & coaching clinics." 
+           data-gr="Εκδρομές Σαββατοκύριακου σε κοντινές πλαγιές & συνεδρίες προπόνησης.">
+          Εκδρομές Σαββατοκύριακου σε κοντινές πλαγιές & συνεδρίες προπόνησης.
+        </p>
+      </div>
+    </div>
+</section>
+
+
 
     <!-- Υποσέλιδο (Footer) -->
     <footer>

@@ -4,20 +4,19 @@
     <!-- Μεταδεδομένα και σύνδεση με τα CSS αρχεία -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-en="Prices" data-gr="Τιμές">
-    </title>
+    <title data-en="Prices" data-gr="Τιμές">Prices</title>
     <link rel="stylesheet" href="prices.css" />
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="icon" href="photo/logo.png" />
   </head>
   <body>
-    <!-- Πλοήγηση (Navigation) -->
+    <!-- NAVIGATION -->
     <nav>
       <ul>
         <li>
           <a href="HomePage.html">
-            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button" />
+            <img src="photo/logo.png" alt="Hermes Logo" class="nav-button">
           </a>
         </li>
         <li>
@@ -36,8 +35,8 @@
           </a>
         </li>
         <li>
-          <a href="prices-policies.html" class="nav-link" data-en="Prices" data-gr="Τιμές">
-            Prices & Discounts
+          <a href="prices-policies.html" class="nav-link current" data-en="Prices" data-gr="Τιμές">
+            Prices &amp; Discounts
           </a>
         </li>
         <li>
@@ -45,223 +44,188 @@
             Benefits
           </a>
         </li>
-        <li>
-          <a href="merchandise.html" class="nav-link" data-en="Merchandise" data-gr="Προϊόντα">
-            Merchandise
-          </a>
-        </li>
-        <!-- Κουμπί αλλαγής γλώσσας -->
+        <!-- Language toggle -->
         <li class="nav-lang">
           <button id="language-button" onclick="toggleLanguage()">
-            <img src="photo/greeceflag.png" alt="Greece Language" />
+            <img src="photo/greeceflag.png" alt="Greece Language">
           </button>
         </li>
       </ul>
     </nav>
 
-    <!-- Ενότητα Τιμολόγησης -->
-    <section id="pricing">
-      <div class="container">
-        <h2 data-en="Subscriptions Pricing" data-gr="Τιμή συνδρομών">
+  <main class="pricing-grid">
 
-        </h2>
-        <p data-en="All lessons must be prepaid. Discounts cannot be combined."
-           data-gr="Όλα τα μαθήματα πρέπει να προπληρωθούν. Οι εκπτώσεις δεν συνδυάζονται.">
-          All lessons must be prepaid. Discounts cannot be combined.
-        </p>
-
-        <!-- Πίνακας Τιμών -->
-        <table>
-          <thead>
-            <tr>
-              <th data-en="Category" data-gr="Κατηγορία">Category</th>
-              <th data-en="Price per 4 Lessons" data-gr="Τιμή ανά 4 Μαθήματα">Price per 4 Lessons</th>
-              <th data-en="Discount" data-gr="Έκπτωση">Discount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-en="Individual" data-gr="Ατομικό">Individual</td>
-              <td data-en="€25" data-gr="25€">€25</td>
-              <td data-en="Standard rate" data-gr="Βασική τιμή">Standard rate</td>
-            </tr>
-            <tr>
-              <td data-en="Students" data-gr="Φοιτητές">Students</td>
-              <td data-en="€20" data-gr="20€">€20</td>
-              <td data-en="20% Discount" data-gr="20% Έκπτωση">20% Discount</td>
-            </tr>
-            <tr>
-              <td data-en="Referral Discount" data-gr="Έκπτωση Σύστασης">Referral Discount</td>
-              <td data-en="€5 off for the referrer" data-gr="5€ έκπτωση για τον συστήνοντα">
-                €5 off for the referrer
-              </td>
-              <td data-en="Given when referred student has an active subscription (20% discount per cycle)"
-                  data-gr="Παρέχεται όταν ο νέος μαθητής έχει ενεργή συνδρομή (20% έκπτωση ανά κύκλο)">
-                Given when referred student has an active subscription (20% discount per cycle)
-              </td>
-            </tr>
-            <tr>
-              <td data-en="Second Family Member" data-gr="Δεύτερο Μέλος Οικογένειας">Second Family Member</td>
-              <td data-en="€40" data-gr="40€">€40</td>
-              <td data-en="20% Discount (Both must have an active subscription)"
-                  data-gr="20% Έκπτωση (Απαιτείται ενεργή συνδρομή και για τους δύο)">
-                20% Discount (Both must have an active subscription)
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Subscription Prices -->
+    <section id="Subscription-prices" class="pricing-card">
+      <h2 data-en="Subscription prices" data-gr="Τιμές Συνδρομών">
+        Τιμές Συνδρομών
+      </h2>
+      <table class="pricing-table pricing-table--subscriptions">
+        <thead>
+          <tr>
+            <th data-en="Category" data-gr="Κατηγορία">Κατηγορία</th>
+            <th data-en="Discount" data-gr="Έκπτωση">Έκπτωση</th>
+            <th data-en="Price / 4 Lessons" data-gr="Τιμή / 4 Μαθήματα">
+              Τιμή / 4 Μαθήματα
+            </th>
+            <th data-en="Details" data-gr="Λεπτομέρειες">Λεπτομέρειες</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-en="Individual" data-gr="Ατομικό">Ατομικό</td>
+            <td data-en="None" data-gr="Καμία">Καμία</td>
+            <td>25€</td>
+            <td data-en="Ages 4–104" data-gr="Ηλικίες 4–104">Ηλικίες 4–104</td>
+          </tr>
+          <tr>
+            <td data-en="Student" data-gr="Φοιτητικό">Φοιτητικό</td>
+            <td>20%</td>
+            <td>20€</td>
+            <td data-en="Uni 18–24" data-gr="Φοιτητές 18–24">
+              Φοιτητές 18–24
+            </td>
+          </tr>
+          <tr>
+            <td data-en="2nd Family Member" data-gr="2ο Μέλος Οικογένειας">
+              2ο Μέλος Οικογένειας
+            </td>
+            <td>20%</td>
+            <td>40€</td>
+            <td data-en="1st-degree kinship" data-gr="1ου βαθμού συγγένεια">
+              1ου βαθμού συγγένεια
+            </td>
+          </tr>
+          <tr>
+            <td data-en="3rd Family Member" data-gr="3ο Μέλος Οικογένειας">
+              3ο Μέλος Οικογένειας
+            </td>
+            <td>30%</td>
+            <td>62€</td>
+            <td data-en="1st-degree kinship" data-gr="1ου βαθμού συγγένεια">
+              1ου βαθμού συγγένεια
+            </td>
+          </tr>
+          <tr>
+            <td data-en="Referral Discount" data-gr="Έκπτωση Σύστασης">
+              Έκπτωση Σύστασης
+            </td>
+            <td>-5€</td>
+            <td>-</td>
+            <td data-en="Active referral only" data-gr="Μόνο ενεργή σύσταση">
+              Μόνο ενεργή σύσταση
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box"
+           data-en="Note: 4 lessons prepaid; 3 absences deduct 1"
+           data-gr="Σημείωση: 4 προπληρωμένα· 3 απουσίες αφαιρούν 1">
+        Σημείωση: 4 προπληρωμένα· 3 απουσίες αφαιρούν 1
       </div>
     </section>
 
-    <!-- Ενότητα Τιμών Workshop -->
-    <section id="workshops">
-      <div class="container">
-        <h2 data-en="Workshops Pricing" data-gr="Τιμές Εργαστηρίων">
-          Workshop Pricing
-        </h2>
-        <table>
-          <thead>
-            <tr>
-              <th data-en="Participant Type" data-gr="Τύπος Συμμετέχοντα">Participant Type</th>
-              <th data-en="Price per Workshop" data-gr="Τιμή ανά Workshop">Price per Workshop</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-en="Subscribers (Active Skaters)" data-gr="Συνδρομητές (Ενεργοί Σκέιτερ)">
-                Subscribers (Active Skaters)
-              </td>
-              <td data-en="€5" data-gr="5€">€5</td>
-            </tr>
-            <tr>
-              <td data-en="Non-Subscribers (Team Members)" data-gr="Μη Συνδρομητές (Μέλη Ομάδας)">
-                Non-Subscribers (Team Members)
-              </td>
-              <td data-en="€8" data-gr="8€">€8</td>
-            </tr>
-            <tr>
-              <td data-en="Non-Subscribers (Non-Members)" data-gr="Μη Συνδρομητές (Εκτός Ομάδας)">
-                Non-Subscribers (Non-Members)
-              </td>
-              <td data-en="€10" data-gr="10€">€10</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Special Workshops -->
+    <section id="workshops" class="pricing-card">
+      <h2 data-en="Special Workshops Pricing" data-gr="Τιμές Ειδικών Μαθημάτων">
+        Τιμές Ειδικών Μαθημάτων
+      </h2>
+      <table class="pricing-table pricing-table--workshops">
+        <thead>
+          <tr>
+            <th data-en="Participants" data-gr="Συμμετέχοντες">Συμμετέχοντες</th>
+            <th data-en="Price/Lesson" data-gr="Τιμή/Μάθημα">Τιμή/Μάθημα</th>
+            <th data-en="Refund Rate" data-gr="Ποσοστό Επιστροφής">
+              Ποσοστό Επιστροφής
+            </th>
+            <th data-en="Details" data-gr="Λεπτομέρειες">Λεπτομέρειες</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-en="Active Team" data-gr="Ενεργά Μέλη">Ενεργά Μέλη</td>
+            <td>10€</td>
+            <td>50%</td>
+            <td data-en="≥1 lesson left" data-gr="≥1 μάθημα υπόλοιπο">
+              ≥1 μάθημα υπόλοιπο
+            </td>
+          </tr>
+          <tr>
+            <td data-en="Inactive Team" data-gr="Ανενεργά Μέλη">
+              Ανενεργά Μέλη
+            </td>
+            <td>15€</td>
+            <td>50%</td>
+            <td data-en="No lessons left" data-gr="Χωρίς υπόλοιπο">
+              Χωρίς υπόλοιπο
+            </td>
+          </tr>
+          <tr>
+            <td data-en="External" data-gr="Εξωτερικοί">Εξωτερικοί</td>
+            <td>20€</td>
+            <td>50%</td>
+            <td data-en="Outside team" data-gr="Εκτός ομάδας">
+              Εκτός ομάδας
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box"
+           data-en="Note: Prepay ≥5 days; 3-day notice"
+           data-gr="Σημείωση: Προπληρωμή ≥5ημ· 3ημ ειδοποίηση">
+        Σημείωση: Προπληρωμή ≥5ημ· 3ημ ειδοποίηση
       </div>
     </section>
 
-    <!-- Ενότητα Τιμών για Σχολεία -->
-    <section id="schools">
-      <div class="container">
-        <h2 data-en="Schools Pricing" data-gr="Τιμές Σχολείων">
-          Pricing & Discounts for Schools
-        </h2>
-        <table>
-          <thead>
-            <tr>
-              <th data-en="Minimum Service Fee" data-gr="Ελάχιστη Χρέωση Υπηρεσίας">Minimum Service Fee</th>
-              <th data-en="Price per Kid" data-gr="Τιμή ανά Παιδί">Price per Kid</th>
-              <th data-en="Number of Kids per Month" data-gr="Αριθμός Παιδιών ανά Μήνα">Number of Kids per Month</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-en="€100 / month" data-gr="100€ / μήνα" rowspan="5">€100 / month</td>
-              <td data-en="€20" data-gr="20€">€20</td>
-              <td data-en="5 kids / month" data-gr="5 παιδιά / μήνα">5 kids / month</td>
-            </tr>
-            <tr>
-              <td data-en="€18" data-gr="18€">€18</td>
-              <td data-en="10 kids / month" data-gr="10 παιδιά / μήνα">10 kids / month</td>
-            </tr>
-            <tr>
-              <td data-en="€16" data-gr="16€">€16</td>
-              <td data-en="15 kids / month" data-gr="15 παιδιά / μήνα">15 kids / month</td>
-            </tr>
-            <tr>
-              <td data-en="€14" data-gr="14€">€14</td>
-              <td data-en="20 kids / month" data-gr="20 παιδιά / μήνα">20 kids / month</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Schools Pricing -->
+    <section id="schools" class="pricing-card">
+      <h2 data-en="Schools Pricing" data-gr="Τιμές Σχολείων">
+        Τιμές Σχολείων
+      </h2>
+      <table class="pricing-table pricing-table--schools">
+        <thead>
+          <tr>
+            <th data-en="# Kids" data-gr="Παιδιά">Παιδιά</th>
+            <th data-en="Price/4 Lessons" data-gr="Τιμή/4 Μαθήματα">Τιμή/Παιδί</th>
+            <th data-en="Min Fee/Month" data-gr="Ελάχιστη Χρέωση/Μήνα">
+              Ελάχιστη Χρέωση/Μήνα
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>5</td><td>120€</td><td rowspan="4">120€</td></tr>
+          <tr><td>10</td><td>220€</td></tr>
+          <tr><td>15</td><td>300€</td></tr>
+          <tr><td>20</td><td>360€</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- Ενότητα Κανόνων Παρουσίας & Πληρωμής -->
-    <section id="attendance">
-      <div class="container">
-        <h2 data-en="Attendance & Payment Rules" data-gr="Κανόνες Παρουσίας & Πληρωμής">
-          Attendance & Payment Rules
-        </h2>
-        <p data-en="<strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot."
-           data-gr="<strong>❗ Προπληρωμή Μαθημάτων:</strong> Όλα τα μαθήματα προπληρώνονται για να διασφαλιστεί η θέση σας.">
-          <strong>❗ Lesson Prepayment:</strong> All lessons are prepaid to secure a spot.
-        </p>
-        <p data-en="<strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour."
-           data-gr="<strong>📅 Πολιτική Απουσιών:</strong> Εάν ένας μαθητής χάσει 3 μαθήματα χωρίς ενημέρωση, χάνει 1 διδακτική ώρα.">
-          <strong>📅 No-Show Policy:</strong> If a student misses 3 lessons without prior notice, they lose 1 lesson hour.
-        </p>
-        <p data-en="<strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund."
-           data-gr="<strong>🔄 Ακύρωση Workshop:</strong> Τα workshop προπληρώνονται εξ ολοκλήρου. Εάν χαθούν, επιστρέφεται το 50%.">
-          <strong>🔄 Workshop Cancellation:</strong> Workshops are prepaid 100%, and if missed, students receive a 50% refund.
-        </p>
-      </div>
+    <!-- Weather & Cancellations -->
+    <section id="weather" class="info-section">
+      <h2 data-en="Weather & Cancellations" data-gr="Καιρός & Ακυρώσεις">
+        Καιρός &amp; Ακυρώσεις
+      </h2>
+      <ul class="cancel-reasons">
+        <li data-en="Rainy or wet courts" data-gr="Βροχή ή βρεγμένο γήπεδο">
+          🌧 Βροχή ή βρεγμένο γήπεδο
+        </li>
+        <li data-en="Below 5°C" data-gr="Κάτω από 5°C">
+          ❄ Κάτω από 5°C
+        </li>
+        <li data-en="Above 35°C" data-gr="Πάνω από 35°C">
+          🌡️ Πάνω από 35°C
+        </li>
+      </ul>
+      <p data-en="Students notified in advance"
+         data-gr="Ενημέρωση εκ των προτέρων">
+        Οι μαθητές ενημερώνονται εκ των προτέρων
+      </p>
     </section>
 
-    <!-- Ενότητα Καιρού & Ακυρώσεων -->
-    <section id="weather">
-      <div class="container">
-        <h2 data-en="Weather & Cancellations" data-gr="Καιρός & Ακυρώσεις">
-          Weather & Cancellations
-        </h2>
-        <p data-en="Lessons will be <strong>suspended</strong> if:" data-gr="Τα μαθήματα θα <strong>αναστέλλονται</strong> εάν:">
-          Lessons will be <strong>suspended</strong> if:
-        </p>
-        <div class="cancel-reasons">
-            <ul>
-            <li data-en="🌧 <strong>Rainy or wet courts</strong>" data-gr="🌧 <strong>Βροχερό ή βρεγμένο γήπεδο</strong>">
-                🌧 <strong>Rainy or wet courts</strong>
-            </li>
-            <li data-en="❄ <strong>Temperatures below 5°C</strong>" data-gr="❄ <strong>Θερμοκρασίες κάτω από 5°C</strong>">
-                ❄ <strong>Temperatures below 5°C</strong>
-            </li>
-            <li data-en="⚠ <strong>Unsafe skating conditions</strong>" data-gr="⚠ <strong>Επικίνδυνες συνθήκες πατινάζ</strong>">
-                ⚠ <strong>Unsafe skating conditions</strong>
-            </li>
-            </ul>
-        </div>
-        <p data-en="Students will be notified in advance if lessons are postponed."
-           data-gr="Οι μαθητές θα ενημερώνονται εκ των προτέρων εάν τα μαθήματα αναβληθούν.">
-          Students will be notified in advance if lessons are postponed.
-        </p>
-      </div>
-    </section>
+  </main>
 
-    <!-- Ενότητα Αιτήματος Εξοπλισμού -->
-    <section id="equipment">
-      <div class="equipment-container">
-        <h2 data-en="Need Equipment?" data-gr="Χρειάζεστε Εξοπλισμό?">
-          Need Equipment?
-        </h2>
-        <p data-en="If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available."
-           data-gr="Εάν δεν έχετε πατίνια ή προστατευτικό εξοπλισμό, ενημερώστε μας εκ των προτέρων. Θα τα παρέχουμε εφόσον είναι διαθέσιμα.">
-          If you don’t have roller skates or protective gear, let us know in advance. We’ll provide them if available.
-        </p>
-        <form action="error.html" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required data-en="Name" data-gr="Όνοματεπώνυμο" />
-          <input type="email" name="email" placeholder="Your Email" required data-en="Email" data-gr="Ηλεκτρονικό ταχυδρομείο" />
-          <textarea name="message" placeholder="Request Equipment (e.g., skates, helmet, knee pads, elbow pads, wrist pads)" required
-            data-en="Request Equipment (e.g., skates, helmet, knee pads, elbow pads, wrist pads)"
-            data-gr="Αίτημα Εξοπλισμού (π.χ. πατίνια, κράνος, επιγονατίδες, επιαγκωνίδες, επικαρπίδες)">
-          </textarea>
-          <button type="submit" data-en="Request Equipment" data-gr="Αίτημα Εξοπλισμού">
-            Request Equipment
-          </button>
-        </form>
-      </div>
-    </section>
 
-    <!-- Υποσέλιδο (Footer) -->
     <!-- Υποσέλιδο (Footer) -->
     <footer>
         <div class="footer-row">

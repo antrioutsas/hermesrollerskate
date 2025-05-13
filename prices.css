@@ -1,273 +1,235 @@
-/* Import Manrope from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+/* ==========================================================================
+   prices.css — Enhanced Pricing & Weather Sections
+   ========================================================================== */
 
 /* ============================= */
-/* GLOBAL STYLES & CONTAINER     */
+/* IMPORTS & VARIABLES           */
 /* ============================= */
-body {
-  font-family: 'Manrope', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-page:    #f2f2f2;
+  --bg-card:    #fff;
+  --table-bg:   #f7f7f7;
+  --stripe-bg:  #fafafa;
+  --border:     #e0e0e0;
+  --accent:     #000000;
+  --text:       #000000;
+  --text-light: #555;
+
+  --space-xs:   8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+
+  --radius:     8px;
+  --fz:        16px;
+  --lh:       1.6;
+}
+
+/* ============================= */
+/* RESET & BASE                  */
+/* ============================= */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+html {
+  font-size: var(--fz);
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg-page);
+  color: var(--text);
+  line-height: var(--lh);
 }
 
 /* ============================= */
-/* PRICING SECTION               */
+/* SECTION CONTAINERS            */
 /* ============================= */
-#pricing {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-#pricing h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#pricing p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
-
-/* Table Styling for Prices */
-#pricing table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 40px;
-}
-
-#pricing th,
-#pricing td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-}
-
-#pricing th {
-  background: #222;
-  color: #fff;
-  font-size: 1.1em;
-}
-
-#pricing td {
-  font-size: 1em;
-  color: #333;
+#Subscription-prices,
+#workshops,
+#schools,
+#weather {
+  max-width: 1000px;
+  margin: var(--space-lg) auto;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: var(--space-lg) var(--space-md);
+  
 }
 
 /* ============================= */
-/* WORKSHOP PRICING SECTION      */
+/* SECTION TITLES                */
 /* ============================= */
-#workshops {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-#workshops h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#workshops table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 40px;
-}
-
-#workshops th,
-#workshops td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-}
-
-#workshops th {
-  background: #222;
-  color: #fff;
-  font-size: 1.1em;
-}
-
-#workshops td {
-  font-size: 1em;
-  color: #333;
-}
-
-/* ============================= */
-/* SCHOOLS PRICING SECTION       */
-/* ============================= */
-#schools {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
+/* Pricing subsections: left-aligned */
+#Subscription-prices h2,
+#workshops h2,
 #schools h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: clamp(1.5rem,4vw,2rem);
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  margin-bottom: var(--space-md);
+  position: relative;
 }
 
+
+/* Weather section: centered */
+#weather h2 {
+  font-size: clamp(1.5rem,4vw,2rem);
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+#weather h2::after {
+  content: '';
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  margin: var(--space-xs) auto 0;
+  border-radius: 2px;
+}
+
+/* ============================= */
+/* PRICING TABLE STYLES          */
+/* ============================= */
+#Subscription-prices table,
+#workshops table,
 #schools table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-md);
 }
 
+#Subscription-prices th,
+#Subscription-prices td,
+#workshops th,
+#workshops td,
 #schools th,
 #schools td {
-  border: 1px solid #ddd;
-  padding: 12px;
+  border: 1px solid var(--border);
+  padding: var(--space-sm) var(--space-md);
   text-align: center;
+  font-size: 1em;
+  background: var(--table-bg);
 }
 
+#Subscription-prices th,
+#workshops th,
 #schools th {
-  background: #222;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+#Subscription-prices tbody tr:nth-child(even) td,
+#workshops tbody tr:nth-child(even) td,
+#schools tbody tr:nth-child(even) td {
+  background: var(--stripe-bg);
+}
+
+#Subscription-prices tbody tr:hover td,
+#workshops tbody tr:hover td,
+#schools tbody tr:hover td {
+  background: var(--accent);
   color: #fff;
-  font-size: 1.1em;
-}
-
-#schools td {
-  font-size: 1em;
-  color: #333;
+  transition: background .2s ease;
 }
 
 /* ============================= */
-/* ATTENDANCE & PAYMENT RULES    */
+/* NOTE BOX UNDER TABLE          */
 /* ============================= */
-#attendance {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: left;
-}
-
-#attendance h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-#attendance p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  line-height: 1.8;
+.note-box {
+  max-width: 1000px;
+  margin: 0 auto var(--space-lg);
+  background: #fffbec;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.95em;
+  color: var(--text-light);
 }
 
 /* ============================= */
-/* WEATHER & CANCELLATIONS       */
+/* WEATHER SECTION STYLES        */
 /* ============================= */
-#weather {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-#weather h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
 #weather p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* Center the list block but keep bullet points left-aligned */
-.cancel-reasons {
-  text-align: center;  /* Center the entire block horizontally */
-}
-
-.cancel-reasons ul {
-  display: inline-block;     /* Make the UL an inline-block so it can be centered */
-  text-align: left;          /* Bullets & text remain left-aligned within the block */
-  list-style: disc outside;  /* Standard bullet style outside the text */
-  margin: 0 auto;
-  padding: 0;
   font-size: 1em;
-}
-
-/* ============================= */
-/* EQUIPMENT REQUEST SECTION     */
-/* ============================= */
-#equipment {
-  padding: 40px 20px;
-  background: #fff;
+  color: var(--text-light);
   text-align: center;
+  margin-bottom: var(--space-sm);
 }
 
-#equipment h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-#equipment p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* Equipment Request Form */
-#equipment form {
-  max-width: 600px;
-  margin: 0 auto;
+/* Flex bullet cards */
+.cancel-reasons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0;
+  margin: var(--space-md) 0;
 }
-
-#equipment form input,
-#equipment form textarea {
-  width: 100%;
-  padding: 12px;
+.cancel-reasons li {
+  list-style: none;
+  background: var(--table-bg);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
   font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
+  color: var(--text);
 }
-
-#equipment form input:focus,
-#equipment form textarea:focus {
-  border-color: #ffcc00;
-  outline: none;
-}
-
-#equipment form button {
-  padding: 12px;
-  background-color: #ffcc00;
-  color: #222;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#equipment form button:hover {
-  background-color: #ffaa00;
-  transform: scale(1.02);
+/* emoji via data-icon attribute */
+.cancel-reasons li::before {
+  content: attr(data-icon);
+  font-size: 1.5em;
+  color: var(--accent);
 }
 
 /* ============================= */
-/* RESPONSIVE DESIGN             */
+/* RESPONSIVE                    */
 /* ============================= */
 @media (max-width: 768px) {
-  #pricing,
+  #subscription-prices,
   #workshops,
   #schools,
-  #attendance,
-  #weather,
-  #equipment {
-    padding: 20px 10px;
+  #weather {
+    padding: var(--space-md);
+    margin: var(--space-md) auto;
   }
-
-  table, th, td {
+  #subscription-prices h2,
+  #workshops h2,
+  #schools h2,
+  #weather h2 {
+    font-size: clamp(1.25rem,6vw,1.75rem);
+    margin-bottom: var(--space-md);
+  }
+  #subscription-prices table,
+  #workshops table,
+  #schools table {
     font-size: 0.9em;
-    padding: 10px;
+  }
+  #subscription-prices th,
+  #subscription-prices td,
+  #workshops th,
+  #workshops td,
+  #schools th,
+  #schools td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+  .note-box {
+    padding: var(--space-xs) var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+  .cancel-reasons {
+    gap: var(--space-xs);
+  }
+  .cancel-reasons li {
+    flex: 1 1 100%;
   }
 }

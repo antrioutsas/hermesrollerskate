@@ -1,7 +1,9 @@
 /* Import Manrope from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
-/* Global Styles */
+/* ============================= */
+/* GLOBAL STYLES & CONTAINER     */
+/* ============================= */
 body {
   font-family: 'Manrope', sans-serif;
   line-height: 1.6;
@@ -11,167 +13,8 @@ body {
   padding: 0;
 }
 
-/* Container for consistent page width */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
-
-/* ============================= */
-/* CLASSES SECTION */
-/* ============================= */
-#classes {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-#classes h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#classes p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
-
-/* ============================= */
-/* CLASS CARDS */
-/* ============================= */
-.class-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 30px;
-  text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.class-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.class-card h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.class-card p {
-  font-size: 1em;
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.class-card h4 {
-  font-size: 1.4em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.class-card ul {
-  list-style: disc inside;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.class-card ul li {
-  margin-bottom: 8px;
-  font-size: 1em;
-}
-
-/* Status Indicators (add corresponding class to the card) */
-.class-card.full {
-  border-left: 5px solid #ff0000; /* Red for full */
-}
-.class-card.available {
-  border-left: 5px solid #00aa00; /* Green for available */
-}
-.class-card.almost-full {
-  border-left: 5px solid #ffaa00; /* Yellow for almost full */
-}
-/* ============================= */
-/* CLASS ENROLLMENT FORM       */
-/* ============================= */
-#enrollment {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.enrollment-container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;  /* Makes form labels and inputs left-aligned */
-}
-
-.enrollment-container h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.enrollment-container p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* Styling for the enrollment form */
-#classForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#classForm input,
-#classForm select {
-  width: 100%;
-  padding: 12px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
-}
-
-/* Focus state for inputs and select */
-#classForm input:focus,
-#classForm select:focus {
-  border-color: #ffcc00;
-  outline: none;
-}
-
-/* Submit Button */
-#classForm button {
-  padding: 12px;
-  background-color: #ffcc00;
-  color: #222;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect for submit button */
-#classForm button:hover {
-  background-color: #ffaa00;
-  transform: scale(1.02);
-}
-
-
-/* ============================= */
-/* RESPONSIVE DESIGN */
-/* ============================= */
-@media (max-width: 768px) {
-  .class-card {
-    margin-bottom: 20px;
-  }
 }
