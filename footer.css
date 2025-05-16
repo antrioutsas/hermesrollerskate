@@ -238,4 +238,22 @@ footer {
     gap: 20px;
     padding: 0 10px;
   }
+    .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .social-icons ul {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    text-align: left;
+    padding-left: 0;
+  }
 }

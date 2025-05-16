@@ -222,14 +222,10 @@
     .announcement-images {
       flex-direction: column;
     }
+          .announcement-images {
+    flex-direction: column;
+    align-items: center; /* ✅ This centers the items horizontally */
+  }
   }
   
-  @media (max-width: 480px) {
-    .items-container {
-      justify-content: flex-start;
-    }
-    .items {
-      width: var(--item-width-large);
-    }
-  }
   
