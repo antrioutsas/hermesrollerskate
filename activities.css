@@ -18,3 +18,131 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+/* activities.css */
+
+/* Introduction Section */
+#intro {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+#intro .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+#intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+#intro p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Base Grid for Two-Column Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Section Wrapper */
+.activity-section {
+  padding: 4rem 1rem;
+}
+.activity-section:nth-of-type(even) {
+  background-color: #f9fafb;
+}
+
+/* Section Separators */
+.activity-section:not(:first-of-type) {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Image Column */
+.activity-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.photo-note {
+  font-size: 0.875rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Content Column */
+.activity-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+.activity-content h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Goals & Target Groups */
+.learn-goals ul,
+.learn-goals p,
+.target-group p {
+  margin: 0;
+  padding: 0;
+}
+.learn-goals ul {
+  list-style: none;
+}
+.learn-goals li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+.learn-goals li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.target-group p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Meta Info Column Vertical */
+.meta-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.meta-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .meta-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -110,6 +110,7 @@
   justify-content: center;
 }
 
+
 .staff-member {
   background-color: #fff;
   padding: 20px;
@@ -153,7 +154,7 @@
 /* ============================= */
 @media (max-width: 768px) {
   .about-content,
-  .staff-list {
+  .staff-list{
     flex-direction: column;
     align-items: center;
   }
