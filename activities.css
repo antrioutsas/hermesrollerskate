@@ -135,6 +135,14 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
+.cta-section p {
+  text-align: center;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
 
 /* Responsive Breakpoint */
 @media (max-width: 768px) {

@@ -13,110 +13,89 @@ body {
   padding: 0;
 }
 
-
-/* ============================= */
-/* INTRO SECTION (Heading + Text) */
-/* ============================= */
-#classes > h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #222;
-  text-align: center;
-  margin-bottom: 1rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* --- Τίτλος σελίδας --- */
+#classes h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* --- Εισαγωγική παράγραφος --- */
 #classes > p {
   text-align: center;
-  font-size: 1rem;
-  color: #555;
   max-width: 800px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
 }
 
-/* ============================= */
-/* CLASS ARTICLES (Group & Private) */
-/* ============================= */
+/* --- Άρθρα (group & private) --- */
 #classes article {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
-  overflow: hidden;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
   gap: 2rem;
   align-items: center;
 }
 
-#classes article:nth-of-type(even) {
-  flex-direction: row-reverse;
-  background-color: #f9fafb;
-}
-
-/* ============================= */
-/* IMAGES                        */
-/* ============================= */
+/* --- Εικόνα μαθήματος --- */
 .class-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================= */
-/* CONTENT STYLING               */
-/* ============================= */
-#classes h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+/* --- Κείμενο άρθρου --- */
+#classes article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
 }
 
-#classes h3 {
-  font-size: 1.25rem;
-  margin: 1.5rem 0 0.75rem;
+#classes article h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #444;
 }
 
-#classes p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+#classes article ul {
+  padding-left: 1.2rem;
+  list-style-type: square;
 }
 
-#classes ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+#classes article li {
+  margin-bottom: 0.5rem;
 }
 
-
-
-#classes ul li::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* ============================= */
-/* RESPONSIVE STYLES             */
-/* ============================= */
-@media (max-width: 900px) {
-  #classes article {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
+/* --- Responsive διάταξη --- */
+@media (min-width: 768px) {
+  #group-classes,
+  #private-lessons {
+    flex-direction: row;
   }
 
   .class-photo {
-    order: -1;
+    flex: 1 1 40%;
   }
 
-  #classes h2 {
-    font-size: 1.5rem;
+  #classes article > div,
+  #classes article > section {
+    flex: 1 1 55%;
+  }
+}
+
+@media (max-width: 767px) {
+  #classes h1 {
+    font-size: 1.6rem;
   }
 
-  #classes h3 {
-    font-size: 1.1rem;
+  #classes article {
+    flex-direction: column;
+    text-align: left;
   }
-  
 }
