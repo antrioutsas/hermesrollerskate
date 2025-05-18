@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Χωρίς .html για index → homepage
+RewriteRule ^homepage$ index.html [L]
+
+# Χωρίς .html για τις υπόλοιπες σελίδες
+RewriteRule ^whoweare$ whoweare.html [L]
+RewriteRule ^classes$ classes.html [L]
+RewriteRule ^activities$ activities.html [L]
+RewriteRule ^prices-policies$ prices-policies.html [L]
+RewriteRule ^benefits$ benefits.html [L]
+RewriteRule ^policies$ policies.html [L]
+RewriteRule ^error$ error.html [L]
