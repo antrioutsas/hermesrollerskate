@@ -192,6 +192,23 @@ body {
   margin-right: 0.5rem;
   color: var(--accent);
 }
+/* Διορθώνει οριζόντιο scroll σε κινητά */
+.pricing-card {
+  overflow-x: auto;
+}
+
+/* Εξασφαλίζει ότι οι πίνακες δεν "ξεχειλώνουν" σε μικρές οθόνες */
+.pricing-card table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+/* Κρύβει περιττά scroll bugs */
+body {
+  overflow-x: hidden;
+}
+
 
 
 /* ============================= */
