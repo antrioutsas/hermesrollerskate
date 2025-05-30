@@ -1,19 +1,28 @@
 :root {
   /* Footer Colors */
-  --footer-bg: #222;               /* Dark background for footer */
-  --footer-text: #fff;             /* White text for footer */
-  --footer-accent: #ffcc00;         /* Accent color for links or highlights */
-  --footer-accent-hover: #ffaa00;   /* Accent color on hover */
-  
+  --footer-bg: #222;
+  /* Dark background for footer */
+  --footer-text: #fff;
+  /* White text for footer */
+  --footer-accent: #ffcc00;
+  /* Accent color for links or highlights */
+  --footer-accent-hover: #ffaa00;
+  /* Accent color on hover */
+
   /* Input & Text Colors */
-  --input-bg: #2a2a2a;             /* Input field background */
-  --text-muted: #ccc;              /* Muted text color for secondary information */
-  --text-secondary: #aaa;          /* Secondary text color for less prominent text */
-  
+  --input-bg: #2a2a2a;
+  /* Input field background */
+  --text-muted: #ccc;
+  /* Muted text color for secondary information */
+  --text-secondary: #aaa;
+  /* Secondary text color for less prominent text */
+
   /* Transitions */
-  --transition-duration: 0.3s;     /* General transition duration */
-  --transition-transform: 0.2s;    /* Transition duration for transform properties */
-  
+  --transition-duration: 0.3s;
+  /* General transition duration */
+  --transition-transform: 0.2s;
+  /* Transition duration for transform properties */
+
   /* Fonts */
   --footer-font: 'Manrope', sans-serif;
 }
@@ -37,11 +46,13 @@ footer {
 /* Top Row: Newsletter, Policies, Contact */
 .footer-row {
   display: flex;
-  justify-content: space-evenly; /* Evenly distribute columns */
+  justify-content: space-evenly;
+  /* Evenly distribute columns */
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;   /* Horizontal padding to avoid edge collisions */
+  padding: 0 20px;
+  /* Horizontal padding to avoid edge collisions */
   gap: 20px;
 }
 
@@ -68,8 +79,10 @@ footer {
 /* Newsletter Form */
 .newsletter-form {
   display: flex;
-  flex-direction: column; /* Stack input and button vertically */
-  align-items: flex-start; /* Left align elements */
+  flex-direction: column;
+  /* Stack input and button vertically */
+  align-items: flex-start;
+  /* Left align elements */
   gap: 10px;
   margin-bottom: 15px;
 }
@@ -99,8 +112,8 @@ footer {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color var(--transition-duration) ease,
-              transform var(--transition-transform) ease,
-              box-shadow var(--transition-duration) ease;
+    transform var(--transition-transform) ease,
+    box-shadow var(--transition-duration) ease;
 }
 
 .newsletter-form button:hover,
@@ -125,7 +138,8 @@ footer {
   margin: 15px 0 0;
   display: flex;
   gap: 10px;
-  justify-content: flex-start; /* Left align icons */
+  justify-content: flex-start;
+  /* Left align icons */
 }
 
 .social-icons img {
@@ -173,6 +187,7 @@ footer {
   margin-bottom: 8px;
   line-height: 1.5;
 }
+
 .footer-column.contact p:last-of-type {
   margin-bottom: 0;
 }
@@ -180,7 +195,8 @@ footer {
 /* Partners Carousel */
 .footer-partners-carousel {
   width: 100%;
-  margin: 70px 0 20px; /* 70px top, 20px bottom */
+  margin: 70px 0 20px;
+  /* 70px top, 20px bottom */
   text-align: center;
   padding: 0 20px;
 }
@@ -238,7 +254,8 @@ footer {
     gap: 20px;
     padding: 0 10px;
   }
-    .footer-row {
+
+  .footer-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
@@ -256,12 +273,13 @@ footer {
     text-align: left;
     padding-left: 0;
   }
+
   /* Footer Bottom */
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-secondary);
-  padding: 10px 0;
-}
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 10px 0;
+  }
 
 }

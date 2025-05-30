@@ -1,17 +1,22 @@
 :root {
   /* Colors */
-  --nav-bg: #222;
+  --nav-bg: #5f5d5d;
   --nav-text: #fff;
   --nav-hover: #ffcc00;
-  
+
   /* Spacing & Sizing */
-  --nav-padding-vertical: 0.625rem;   /* 10px */
-  --nav-padding-horizontal: 1.25rem;  /* 20px */
-  --nav-link-margin: 0 0.9375rem;       /* 0 15px */
-  --nav-link-padding: 0.625rem;         /* 10px */
+  --nav-padding-vertical: 0.625rem;
+  /* 10px */
+  --nav-padding-horizontal: 1.25rem;
+  /* 20px */
+  --nav-link-margin: 0 0.9375rem;
+  /* 0 15px */
+  --nav-link-padding: 0.625rem;
+  /* 10px */
   --nav-logo-size: 50px;
-  --lang-button-padding: 0.3125rem;     /* 5px */
-  
+  --lang-button-padding: 0.3125rem;
+  /* 5px */
+
   /* Transitions */
   --transition-duration: 0.3s;
   --transition-ease: ease-in-out;
@@ -60,23 +65,28 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--nav-hover);
 }
+
 .current {
   color: #ffcc00;
 }
-  .button-link {
+
+.button-link {
   display: inline-block;
   background-color: #000000;
   color: #fff;
   font-family: var(--primary-font);
   font-size: 1rem;
   padding: 0.6rem 1.4rem;
-  border-radius: 0; /* Χωρίς καμπύλες */
+  border-radius: 0;
+  /* Χωρίς καμπύλες */
   text-decoration: none;
   transition: var(--transition);
   box-shadow: var(--box-shadow);
-  margin: 1rem auto; /* Αυτό δίνει κενό πάνω/κάτω και ΚΕΝΤΡΑΡΙΖΕΙ */
+  margin: 1rem auto;
+  /* Αυτό δίνει κενό πάνω/κάτω και ΚΕΝΤΡΑΡΙΖΕΙ */
   text-align: center;
-  display: block; /* Για να ενεργοποιηθεί το margin auto */
+  display: block;
+  /* Για να ενεργοποιηθεί το margin auto */
   max-width: fit-content;
 }
 
@@ -94,8 +104,9 @@ a.button-link:hover {
   width: var(--nav-logo-size);
   height: var(--nav-logo-size);
   transition: transform var(--transition-duration) var(--transition-ease),
-              opacity var(--transition-duration) var(--transition-ease);
-  margin: 0 0.3125rem; /* 5px margin */
+    opacity var(--transition-duration) var(--transition-ease);
+  margin: 0 0.3125rem;
+  /* 5px margin */
   cursor: pointer;
 }
 
@@ -108,7 +119,8 @@ a.button-link:hover {
 /* LANGUAGE BUTTON */
 /* ============================= */
 .nav-lang {
-  margin-left: auto; /* Push language button to the right */
+  margin-left: auto;
+  /* Push language button to the right */
 }
 
 #language-button {
@@ -119,7 +131,7 @@ a.button-link:hover {
   display: flex;
   align-items: center;
   transition: transform var(--transition-duration) var(--transition-ease),
-              opacity var(--transition-duration) var(--transition-ease);
+    opacity var(--transition-duration) var(--transition-ease);
 }
 
 #language-button:hover {
@@ -146,15 +158,20 @@ a.button-link:hover {
     flex-direction: column;
     text-align: center;
   }
+
   nav ul {
     flex-direction: column;
   }
+
   nav ul li {
-    margin: 0.625rem 0; /* 10px top & bottom */
+    margin: 0.625rem 0;
+    /* 10px top & bottom */
   }
+
   .nav-lang {
     margin-left: 0;
-    margin-top: 0.625rem; /* 10px */
+    margin-top: 0.625rem;
+    /* 10px */
     justify-content: center;
   }
 }
