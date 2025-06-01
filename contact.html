@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="footer.css" />
   <link rel="icon" href="photo/logo.png" />
   <link rel="stylesheet" href="contact.css" />
-  <script type="text/javascript" src="js/contact-validation.js" defer></script>
+  <script type="text/javascript" src="js/contact-validation.js?v=1.0.7" defer></script>
   <script type="text/javascript" src="js/carousel.js" defer></script>
 </head>
 
@@ -121,6 +121,13 @@
         </div>
         <button type="submit" data-en="Send Message" data-gr="Αποστολή Μηνύματος">Send Message</button>
       </form>
+      <div id="form-response" style="margin-top: 1rem; display: none;"></div>
+
+      <button id="new-message-btn" data-en="Send another message" data-gr="Αποστολή νέου μηνύματος"
+        style="display: none; margin-top: 1rem;">
+        Αποστολή νέου μηνύματος
+      </button>
+      <div id="redirect-message" style="display: none; margin-top: 1rem;"></div>
     </div>
   </section>
 
