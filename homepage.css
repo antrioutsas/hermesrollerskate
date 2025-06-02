@@ -291,6 +291,7 @@ h3 {
     justify-content: center;
   }
 
+<<<<<<< HEAD
   .video-container {
     position: relative;
     width: 100%;
@@ -299,6 +300,67 @@ h3 {
     /* 16:9 */
     height: 0;
     overflow: hidden;
+=======
+
+  
+  /* ============================= */
+  /* RESPONSIVE DESIGN */
+  /* ============================= */
+  @media (max-width: 768px) {
+    .items-container {
+      justify-content: flex-start;
+    }
+    .items {
+      width: var(--item-width-large);
+    }
+    .announcement {
+      padding: 1rem;
+    }
+    .announcement h2 {
+      font-size: 1.5rem;
+    }
+    .announcement-images {
+      flex-direction: column;
+    }
+          .announcement-images {
+    flex-direction: column;
+    align-items: center; /* ✅ This centers the items horizontally */
+  }.videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+    #welcomeText {
+    display: none;
+  }
+  header {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 0 !important;
+    background: none !important;
+  }
+
+>>>>>>> d63d753ed538f1f77ebf5e4d5570cc745c9d6109
   }
 
   .video-container iframe {
