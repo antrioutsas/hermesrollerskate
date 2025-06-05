@@ -1,18 +1,19 @@
 <?php
 header("Content-Type: application/json");
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 // --- 1. Σύνδεση με βάση ---
 $host = "localhost";
-$user = "root";        // default για XAMPP
-$password = "";        // default για XAMPP
-$database = "hermes_rollers_skate_db";
+$user = "root";
+$password = ""; // κενό!
+$database = "hermes_rollers_db";
 
-$conn = new mysqli($host, $user, $password, $database);
+$conn = new mysqli("localhost", "root", "", "hermes_rollers_db", 3307);
+
 if ($conn->connect_error) {
     echo json_encode(["success" => false, "error" => "Database connection failed"]);
     exit;
 }
-
 // --- 2. Λήψη δεδομένων από τη φόρμα ---
 $name = $_POST["name"] ?? "";
 $surname = $_POST["surname"] ?? "";

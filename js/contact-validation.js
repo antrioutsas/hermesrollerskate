@@ -49,7 +49,7 @@ function toggleLanguage() {
 // Ενημέρωση περιεχομένου σε νέα γλώσσα
 function updateLanguage(lang) {
     const flagImage = document.querySelector("#language-button img");
-    flagImage.src = lang === "en" ? "photo/greeceflag.png" : "photo/englandflag.jpg";
+    flagImage.src = lang === "en" ? "photo/greeceflag.webp" : "photo/englandflag.webp";
     flagImage.alt = lang === "en" ? "Greece Language" : "English Language";
 
     const elements = document.querySelectorAll("[data-en]");
